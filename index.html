@@ -1,0 +1,2753 @@
+<!DOCTYPE html>
+<html lang="ta">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>பூஜா டிராவல்ஸ் & மொபைல்ஸ்</title>
+
+<style>
+
+:root{
+    --maroon:#7d1249;
+    --maroon-dark:#5c0d35;
+    --maroon-light:#a81661;
+    --blue:#155a72;
+    --blue-dark:#0b3445;
+    --blue-light:#237d98;
+    --gold:#c89b3c;
+    --gold-light:#f5d98c;
+    --cream:#fffaf0;
+    --cream-dark:#f3e8d5;
+    --white:#fff;
+    --ink:#252525;
+    --muted:#686868;
+    --border:#eadfc9;
+    --shadow:0 15px 40px rgba(40,30,15,.10);
+}
+
+*{
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    margin:0;
+    font-family:"Noto Sans Tamil","Latha","Segoe UI",Arial,sans-serif;
+    color:var(--ink);
+    background:#f8f4ec;
+    line-height:1.6;
+}
+
+a{
+    text-decoration:none;
+    color:inherit;
+}
+
+
+/* =========================
+   TOP BAR
+========================= */
+
+.topbar{
+    position:relative;
+    background:linear-gradient(
+        120deg,
+        var(--maroon-dark),
+        var(--maroon-light)
+    );
+    color:#fff;
+    padding:8px 6%;
+    display:flex;
+    justify-content:flex-end;
+    align-items:center;
+    gap:20px;
+    font-size:13px;
+}
+
+.topbar-left{
+    position:absolute;
+    left:50%;
+    transform:translateX(-50%);
+    
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    
+    font-size:11px;
+    font-weight:700;
+    letter-spacing:.3px;
+    opacity:.92;
+    white-space:nowrap;
+}
+
+.topbar-right{
+    display:flex;
+    align-items:center;
+    gap:8px;
+}
+
+.topbar a:hover{
+    color:var(--gold-light);
+}
+
+
+/* =========================
+   NAVBAR
+========================= */
+
+.navbar{
+    position:sticky;
+    top:0;
+    z-index:100;
+    background:rgba(255,255,255,.97);
+    backdrop-filter:blur(12px);
+    border-bottom:1px solid #eee4d3;
+    box-shadow:0 4px 20px rgba(0,0,0,.05);
+}
+
+.nav-inner{
+    max-width:1200px;
+    margin:auto;
+    padding:13px 5%;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:25px;
+}
+
+.brand{
+    display:flex;
+    align-items:center;
+    gap:11px;
+    color:var(--maroon);
+    font-size:19px;
+    font-weight:900;
+    line-height:1.15;
+}
+
+.brand-icon{
+    width:45px;
+    height:45px;
+    border-radius:13px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    color:#fff;
+    font-size:23px;
+    background:linear-gradient(
+        135deg,
+        var(--maroon),
+        var(--maroon-light)
+    );
+    box-shadow:0 7px 17px rgba(125,18,73,.22);
+}
+
+.brand-text small{
+    display:block;
+    margin-top:3px;
+    color:var(--blue);
+    font-size:9px;
+    letter-spacing:1.2px;
+    font-weight:800;
+}
+
+.nav-right{
+    display:flex;
+    align-items:center;
+    gap:22px;
+}
+
+.nav-links{
+    display:flex;
+    align-items:center;
+    gap:21px;
+    font-size:14px;
+    font-weight:750;
+}
+
+.nav-links a{
+    position:relative;
+    padding:5px 0;
+    transition:.25s;
+}
+
+.nav-links a::after{
+    content:"";
+    position:absolute;
+    left:0;
+    bottom:0;
+    width:0;
+    height:2px;
+    background:var(--maroon);
+    transition:.25s;
+}
+
+.nav-links a:hover{
+    color:var(--maroon);
+}
+
+.nav-links a:hover::after{
+    width:100%;
+}
+
+.language-select{
+    min-width:105px;
+    padding:8px 10px;
+    border-radius:9px;
+    border:1px solid #ddcfb9;
+    background:#fff;
+    color:var(--maroon);
+    font-weight:800;
+    cursor:pointer;
+    outline:none;
+}
+
+
+/* =========================
+   HERO
+========================= */
+
+.hero{
+    position:relative;
+    overflow:hidden;
+    padding:65px 6% 70px;
+
+    background:
+        radial-gradient(
+            circle at 10% 10%,
+            rgba(243,215,140,.40),
+            transparent 23%
+        ),
+        radial-gradient(
+            circle at 90% 90%,
+            rgba(168,22,97,.07),
+            transparent 25%
+        ),
+        linear-gradient(
+            135deg,
+            #fffdf8,
+            #f3e7d4
+        );
+}
+
+.hero-inner{
+    max-width:1100px;
+    margin:auto;
+    text-align:center;
+}
+
+.hero-badge{
+    display:inline-flex;
+    align-items:center;
+    gap:8px;
+    padding:8px 16px;
+    border-radius:50px;
+    background:#fff;
+    border:1px solid #e8d7ae;
+    color:var(--maroon);
+    font-size:13px;
+    font-weight:850;
+    box-shadow:0 6px 18px rgba(0,0,0,.05);
+}
+
+.hero h1{
+    margin:18px 0 12px;
+    font-size:clamp(42px,6vw,70px);
+    line-height:1.05;
+    letter-spacing:-1.5px;
+    color:var(--blue);
+}
+
+.hero h1 .maroon{
+    color:var(--maroon);
+}
+
+.hero h1 .gold{
+    color:var(--gold);
+}
+
+.hero-description{
+    max-width:820px;
+    margin:0 auto;
+    color:#5d5d5d;
+    font-size:18px;
+    line-height:1.8;
+}
+
+.hero-highlights{
+    max-width:900px;
+    margin:30px auto 0;
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:15px;
+}
+
+.hero-highlight{
+    padding:18px;
+    border-radius:17px;
+    background:#fff;
+    border:1px solid var(--border);
+    box-shadow:0 8px 25px rgba(60,35,10,.06);
+    transition:.25s;
+}
+
+.hero-highlight:hover{
+    transform:translateY(-4px);
+    box-shadow:var(--shadow);
+}
+
+.highlight-icon{
+    font-size:27px;
+    margin-bottom:5px;
+}
+
+.hero-highlight strong{
+    display:block;
+    color:var(--blue);
+    font-size:15px;
+}
+
+.hero-highlight span{
+    color:#777;
+    font-size:13px;
+}
+
+.hero-buttons{
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:12px;
+    margin-top:27px;
+}
+
+.btn{
+    min-height:46px;
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    gap:8px;
+    padding:11px 21px;
+    border-radius:10px;
+    font-weight:900;
+    transition:.25s;
+}
+
+.btn-primary{
+    color:#fff;
+    background:linear-gradient(
+        135deg,
+        var(--maroon),
+        var(--maroon-light)
+    );
+    box-shadow:0 9px 20px rgba(125,18,73,.22);
+}
+
+.btn-primary:hover{
+    transform:translateY(-2px);
+}
+
+.btn-outline{
+    color:var(--maroon);
+    background:#fff;
+    border:2px solid var(--maroon);
+}
+
+.btn-outline:hover{
+    background:var(--maroon);
+    color:#fff;
+}
+
+
+/* =========================
+   COMMON SECTIONS
+========================= */
+
+section{
+    padding:70px 6%;
+}
+
+.section-inner{
+    max-width:1100px;
+    margin:auto;
+}
+
+.section-heading{
+    max-width:760px;
+    margin:0 auto 38px;
+    text-align:center;
+}
+
+.section-heading h2{
+    margin:0 0 8px;
+    color:var(--maroon);
+    font-size:clamp(29px,4vw,40px);
+    line-height:1.2;
+}
+
+.section-heading p{
+    margin:0;
+    color:var(--muted);
+    font-size:15px;
+}
+
+
+/* =========================
+   TRAVELS SECTION
+========================= */
+
+.travels{
+    background:
+        linear-gradient(
+            135deg,
+            #eaf5f8,
+            #ffffff
+        );
+}
+
+.travel-grid{
+    display:grid;
+    grid-template-columns:1.05fr .95fr;
+    gap:22px;
+}
+
+.travel-card{
+    position:relative;
+    overflow:hidden;
+    padding:38px;
+    border-radius:23px;
+    color:#fff;
+
+    background:
+        linear-gradient(
+            135deg,
+            var(--blue),
+            var(--blue-dark)
+        );
+
+    box-shadow:
+        0 20px 45px
+        rgba(13,52,69,.18);
+}
+
+.travel-label{
+    display:inline-block;
+    padding:7px 13px;
+    border-radius:50px;
+    color:#ffe4a3;
+    background:rgba(255,255,255,.10);
+    border:1px solid rgba(255,255,255,.18);
+    font-size:12px;
+    font-weight:850;
+}
+
+.travel-card h3{
+    margin:17px 0 10px;
+    font-size:32px;
+    line-height:1.25;
+}
+
+.travel-card p{
+    margin:0;
+    color:#dbe9ed;
+    font-size:16px;
+    line-height:1.8;
+}
+
+.travel-list{
+    display:grid;
+    gap:10px;
+    margin-top:23px;
+}
+
+.travel-list-item{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    font-weight:700;
+    font-size:14px;
+}
+
+.travel-check{
+    width:30px;
+    height:30px;
+    flex-shrink:0;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    border-radius:9px;
+    background:rgba(255,255,255,.12);
+}
+
+.travel-card .btn{
+    margin-top:23px;
+    background:#fff;
+    color:var(--blue);
+}
+
+.travel-card .btn:hover{
+    background:var(--gold-light);
+}
+
+
+/* =========================
+   DISCOUNT CARD
+========================= */
+
+.discount-card{
+    padding:36px;
+    border-radius:23px;
+    background:#fff;
+    border:1px solid #e8d8b8;
+    box-shadow:var(--shadow);
+}
+
+.discount-icon{
+    width:62px;
+    height:62px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    border-radius:17px;
+    background:#fff6d9;
+    font-size:30px;
+    margin-bottom:17px;
+}
+
+.discount-card h3{
+    margin:0 0 11px;
+    color:var(--maroon);
+    font-size:27px;
+    line-height:1.3;
+}
+
+.discount-card p{
+    margin:0;
+    color:#666;
+    font-size:15px;
+    line-height:1.8;
+}
+
+.discount-box{
+    display:flex;
+    align-items:flex-start;
+    gap:11px;
+    margin-top:20px;
+    padding:15px;
+    border-radius:13px;
+    background:#fff9e9;
+    border:1px dashed #d8b65e;
+    color:#604c1d;
+    font-weight:750;
+    font-size:14px;
+}
+
+
+/* =========================
+   BUS SERVICES
+========================= */
+
+.bus-services{
+    margin-top:24px;
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:14px;
+}
+
+.bus-card{
+    padding:20px;
+    border-radius:17px;
+    background:#fff;
+    border:1px solid var(--border);
+    box-shadow:0 7px 20px rgba(0,0,0,.05);
+}
+
+.bus-image{
+    width:100%;
+    height:145px;
+    object-fit:cover;
+    border-radius:13px;
+    margin-bottom:12px;
+    background:#eee;
+}
+
+.bus-card h4{
+    margin:0 0 5px;
+    color:var(--blue);
+    font-size:18px;
+}
+
+.bus-card p{
+    margin:0;
+    color:#777;
+    font-size:13px;
+}
+
+
+/* =========================
+   E-SEVAI
+========================= */
+
+.esevai{
+    background:#fff;
+}
+
+.esevai-main{
+    display:grid;
+    grid-template-columns:1.1fr .9fr;
+    gap:25px;
+    align-items:stretch;
+}
+
+.esevai-intro{
+    padding:38px;
+    border-radius:23px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #fffaf0,
+            #ffffff
+        );
+
+    border:1px solid #e8d9b9;
+    box-shadow:var(--shadow);
+}
+
+.official-badge{
+    display:inline-flex;
+    align-items:center;
+    gap:8px;
+    padding:8px 14px;
+    border-radius:50px;
+    background:#edf7f1;
+    border:1px solid #cbe6d6;
+    color:#21734a;
+    font-size:13px;
+    font-weight:850;
+}
+
+.esevai-intro h3{
+    margin:17px 0 10px;
+    color:var(--maroon);
+    font-size:31px;
+    line-height:1.25;
+}
+
+.esevai-intro p{
+    margin:0 0 14px;
+    color:#626262;
+    font-size:15px;
+    line-height:1.8;
+}
+
+.official-note{
+    margin-top:20px;
+    padding:17px;
+    border-left:4px solid var(--gold);
+    border-radius:10px;
+    background:#fff8e6;
+    color:#624e20;
+    font-size:14px;
+    line-height:1.7;
+}
+
+
+/* CERTIFICATE CARD */
+
+.certificate-card{
+    padding:32px;
+    border-radius:23px;
+    background:
+        linear-gradient(
+            135deg,
+            var(--blue),
+            var(--blue-dark)
+        );
+    color:#fff;
+    box-shadow:
+        0 20px 40px
+        rgba(13,52,69,.18);
+}
+
+.certificate-card h3{
+    margin:0 0 18px;
+    font-size:25px;
+}
+
+.certificate-list{
+    display:grid;
+    gap:10px;
+}
+
+.certificate-item{
+    display:flex;
+    align-items:center;
+    gap:11px;
+    padding:11px 13px;
+    border-radius:11px;
+    background:rgba(255,255,255,.09);
+    border:1px solid rgba(255,255,255,.10);
+    font-size:14px;
+    font-weight:650;
+}
+
+.certificate-icon{
+    width:28px;
+    height:28px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    flex-shrink:0;
+    border-radius:8px;
+    background:rgba(255,255,255,.13);
+}
+
+
+/* =========================
+   SERVICES
+========================= */
+
+.services{
+    background:#f8f4ec;
+}
+
+.service-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:20px;
+}
+
+.service-card{
+    padding:27px;
+    border-radius:19px;
+    background:#fff;
+    border:1px solid var(--border);
+    box-shadow:0 8px 25px rgba(60,35,10,.05);
+    transition:.25s;
+}
+
+.service-card:hover{
+    transform:translateY(-5px);
+    box-shadow:var(--shadow);
+}
+
+.service-icon{
+    width:56px;
+    height:56px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    border-radius:15px;
+    background:#f9eaf1;
+    font-size:27px;
+    margin-bottom:14px;
+}
+
+.service-card h3{
+    margin:0 0 7px;
+    color:var(--blue);
+    font-size:20px;
+}
+
+.service-card p{
+    margin:0;
+    color:#6c6c6c;
+    font-size:14px;
+    line-height:1.7;
+}
+
+
+/* =========================
+   ABOUT
+========================= */
+
+.about{
+    background:var(--cream-dark);
+}
+
+.about-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:22px;
+}
+
+.about-box{
+    padding:32px;
+    border-radius:21px;
+    background:#fff;
+    border:1px solid rgba(200,155,60,.18);
+    box-shadow:var(--shadow);
+}
+
+.about-box h2{
+    margin:0 0 13px;
+    color:var(--maroon);
+    font-size:29px;
+}
+
+.about-box p{
+    color:#666;
+    font-size:15px;
+    line-height:1.8;
+}
+
+.why-list{
+    display:grid;
+    gap:10px;
+    margin-top:17px;
+}
+
+.why-item{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    padding:11px 13px;
+    border-radius:11px;
+    background:#fffaf0;
+    font-size:14px;
+    font-weight:700;
+    color:#444;
+}
+
+.check{
+    width:25px;
+    height:25px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    flex-shrink:0;
+    border-radius:50%;
+    background:#e8f5ee;
+    color:#27814f;
+    font-weight:900;
+}
+
+
+/* =========================
+   CONTACT
+========================= */
+
+.contact{
+    color:#fff;
+    background:
+        linear-gradient(
+            135deg,
+            var(--blue),
+            var(--blue-dark)
+        );
+}
+
+.contact .section-heading h2{
+    color:#fff;
+}
+
+.contact .section-heading p{
+    color:#d7e5e9;
+}
+
+.contact-grid{
+    max-width:850px;
+    margin:auto;
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:20px;
+}
+
+.contact-card{
+    padding:29px;
+    border-radius:19px;
+    background:rgba(255,255,255,.08);
+    border:1px solid rgba(255,255,255,.15);
+    backdrop-filter:blur(7px);
+}
+
+.contact-icon{
+    font-size:27px;
+    margin-bottom:7px;
+}
+
+.contact-card h3{
+    margin:0 0 7px;
+    font-size:20px;
+}
+
+.contact-card p{
+    margin:0 0 18px;
+    color:#e1edef;
+    font-size:15px;
+}
+
+.contact-card strong{
+    color:#ffe0a1;
+}
+
+.contact .btn-outline{
+    color:#fff;
+    border-color:#fff;
+    background:transparent;
+}
+
+.contact .btn-outline:hover{
+    color:var(--blue);
+    background:#fff;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer{
+    padding:22px 6%;
+    text-align:center;
+    color:#d9ccbf;
+    background:#211714;
+    font-size:13px;
+}
+
+.footer-brand{
+    margin-bottom:4px;
+    color:#fff;
+    font-size:14px;
+    font-weight:850;
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media(max-width:900px){
+
+    .nav-links{
+        display:none;
+    }
+
+    .hero-highlights{
+        grid-template-columns:1fr;
+        max-width:500px;
+    }
+
+    .travel-grid,
+    .esevai-main{
+        grid-template-columns:1fr;
+    }
+
+    .service-grid{
+        grid-template-columns:1fr;
+    }
+
+    .about-grid{
+        grid-template-columns:1fr;
+    }
+
+    .contact-grid{
+        grid-template-columns:1fr;
+    }
+}
+
+
+@media(max-width:600px){
+
+    .topbar{
+        justify-content:center;
+        padding:7px 4%;
+        text-align:center;
+        flex-wrap:wrap;
+    }
+
+    .topbar-left{
+        width:100%;
+        justify-content:center;
+        font-size:10px;
+    }
+
+    .topbar-right{
+        font-size:10px;
+    }
+
+    .brand{
+        font-size:15px;
+    }
+
+    .brand-icon{
+        width:39px;
+        height:39px;
+        font-size:20px;
+    }
+
+    .brand-text small{
+        font-size:7px;
+    }
+
+    .language-select{
+        min-width:87px;
+        font-size:12px;
+        padding:7px 5px;
+    }
+
+    .nav-right{
+        gap:8px;
+    }
+
+    section{
+        padding:55px 5%;
+    }
+
+    .hero{
+        padding:50px 5% 55px;
+    }
+
+    .hero h1{
+        font-size:41px;
+    }
+
+    .hero-description{
+        font-size:16px;
+    }
+
+    .travel-card,
+    .discount-card,
+    .esevai-intro,
+    .certificate-card{
+        padding:27px;
+    }
+
+    .travel-card h3{
+        font-size:27px;
+    }
+
+    .discount-card h3{
+        font-size:24px;
+    }
+
+    .esevai-intro h3{
+        font-size:27px;
+    }
+
+    .hero-buttons{
+        flex-direction:column;
+    }
+
+    .hero-buttons .btn{
+        width:100%;
+    }
+
+    .bus-services{
+        grid-template-columns:1fr;
+    }
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<!-- =====================================================
+     TOP BAR
+===================================================== -->
+
+<div class="topbar">
+
+    <div class="topbar-left">
+
+        <span data-i18n="blessing">ஸ்ரீ காமாட்சி அம்மன் துணை</span>
+
+    </div>
+
+
+    <div class="topbar-right">
+
+        <a href="tel:+919600372621">
+            📞 96003 72621
+        </a>
+
+        <span>|</span>
+
+        <a href="mailto:poojasrimobiles@gmail.com">
+            ✉ poojasrimobiles@gmail.com
+        </a>
+
+    </div>
+
+</div>
+
+
+
+<!-- =====================================================
+     NAVIGATION
+===================================================== -->
+
+<nav class="navbar">
+
+    <div class="nav-inner">
+
+
+        <a href="#home" class="brand">
+
+            <div class="brand-text">
+
+                <div data-i18n="brandName">
+                    பூஜா டிராவல்ஸ்
+                </div>
+
+                <small>
+                    POOJA TRAVELS • MOBILES • E-SEVAI
+                </small>
+
+            </div>
+
+        </a>
+
+
+        <div class="nav-right">
+
+
+            <div class="nav-links">
+
+                <a href="#home"
+                   data-i18n="navHome">
+                    முகப்பு
+                </a>
+
+                <a href="#travels"
+                   data-i18n="navTravels">
+                    டிராவல்ஸ்
+                </a>
+
+                <a href="#esevai"
+                   data-i18n="navEsevai">
+                    E-SEVAI
+                </a>
+
+                <a href="#services"
+                   data-i18n="navServices">
+                    சேவைகள்
+                </a>
+
+                <a href="#about"
+                   data-i18n="navAbout">
+                    எங்களைப் பற்றி
+                </a>
+
+                <a href="#contact"
+                   data-i18n="navContact">
+                    தொடர்பு
+                </a>
+
+            </div>
+
+
+            <select
+                id="languageSelect"
+                class="language-select">
+
+                <option value="ta">
+                    தமிழ்
+                </option>
+
+                <option value="en">
+                    English
+                </option>
+
+            </select>
+
+        </div>
+
+    </div>
+
+</nav>
+
+
+
+<main id="home">
+
+
+<!-- =====================================================
+     HERO
+===================================================== -->
+
+<section class="hero">
+
+    <div class="hero-inner">
+
+
+        <h1>
+
+            <span class="maroon"
+                  data-i18n="heroPooja">
+                பூஜா
+            </span>
+
+            <span data-i18n="heroTravels">
+                டிராவல்ஸ்
+            </span>
+
+            <br>
+
+            <span class="gold"
+                  data-i18n="heroBooking">
+                பயண டிக்கெட் முன்பதிவு
+            </span>
+
+        </h1>
+
+
+        <p
+            class="hero-description"
+            data-i18n="heroDescription">
+
+            ஆன்லைனில் வழக்கமான டிக்கெட் கட்டணத்தில்
+            பயண டிக்கெட்டுகளை எளிதாக முன்பதிவு செய்யுங்கள்.
+            எங்களிடம் தொடர்ந்து முன்பதிவு செய்யும்
+            வாடிக்கையாளர்களுக்கு பிரத்யேக தள்ளுபடிகள்
+            மற்றும் சிறப்பு சலுகைகள் வழங்கப்படும்.
+
+        </p>
+
+
+        <div class="hero-highlights">
+
+
+            <div class="hero-highlight">
+
+                <div class="highlight-icon">
+                    🎫
+                </div>
+
+                <strong data-i18n="heroFeature1">
+                    வழக்கமான டிக்கெட் கட்டணம்
+                </strong>
+
+                <span data-i18n="heroFeature1Sub">
+                    Regular Ticket Rates
+                </span>
+
+            </div>
+
+
+            <div class="hero-highlight">
+
+                <div class="highlight-icon">
+                    ⭐
+                </div>
+
+                <strong data-i18n="heroFeature2">
+                    பிரத்யேக தள்ளுபடி
+                </strong>
+
+                <span data-i18n="heroFeature2Sub">
+                    Exclusive Regular Customer Discounts
+                </span>
+
+            </div>
+
+
+            <div class="hero-highlight">
+
+                <div class="highlight-icon">
+                    ⚡
+                </div>
+
+                <strong data-i18n="heroFeature3">
+                    விரைவான முன்பதிவு
+                </strong>
+
+                <span data-i18n="heroFeature3Sub">
+                    Quick & Easy Booking
+                </span>
+
+            </div>
+
+
+        </div>
+
+
+        <div class="hero-buttons">
+
+            <a
+                href="tel:+919600372621"
+                class="btn btn-primary">
+
+                📞
+
+                <span data-i18n="bookNow">
+                    இப்போது முன்பதிவு செய்யுங்கள்
+                </span>
+
+            </a>
+
+
+            <a
+                href="#esevai"
+                class="btn btn-outline">
+
+                🏛️
+
+                <span data-i18n="viewEsevai">
+                    E-SEVAI சேவைகள்
+                </span>
+
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     TRAVELS SECTION
+===================================================== -->
+
+<section
+    id="travels"
+    class="travels">
+
+    <div class="section-inner">
+
+
+        <div class="section-heading">
+
+            <h2 data-i18n="travelsTitle">
+                பூஜா டிராவல்ஸ்
+            </h2>
+
+            <p data-i18n="travelsSubtitle">
+                எளிதான பயண டிக்கெட் முன்பதிவு மற்றும்
+                வழக்கமான வாடிக்கையாளர்களுக்கு சிறப்பு சலுகைகள்
+            </p>
+
+        </div>
+
+
+        <div class="travel-grid">
+
+
+            <!-- TRAVEL MAIN -->
+
+            <div class="travel-card">
+
+
+                <span
+                    class="travel-label"
+                    data-i18n="travelLabel">
+
+                    🚌 TRAVEL TICKET BOOKING
+
+                </span>
+
+
+                <h3 data-i18n="travelTitle">
+
+                    வழக்கமான டிக்கெட் கட்டணத்தில்
+                    பயண டிக்கெட் முன்பதிவு
+
+                </h3>
+
+
+                <p data-i18n="travelDescription">
+
+                    பூஜா டிராவல்ஸ் மூலம் பிரபலமான பயண
+                    பேருந்து சேவைகளுக்கான டிக்கெட்டுகளை
+                    ஆன்லைனில் வழக்கமான டிக்கெட் கட்டணத்தில்
+                    எளிதாக முன்பதிவு செய்யலாம்.
+
+                </p>
+
+
+                <div class="travel-list">
+
+
+                    <div class="travel-list-item">
+
+                        <span class="travel-check">
+                            ✓
+                        </span>
+
+                        <span data-i18n="travelFeature1">
+                            வழக்கமான டிக்கெட் கட்டணத்தில் முன்பதிவு
+                        </span>
+
+                    </div>
+
+
+                    <div class="travel-list-item">
+
+                        <span class="travel-check">
+                            ✓
+                        </span>
+
+                        <span data-i18n="travelFeature2">
+                            விரைவான மற்றும் எளிதான முன்பதிவு
+                        </span>
+
+                    </div>
+
+
+                    <div class="travel-list-item">
+
+                        <span class="travel-check">
+                            ✓
+                        </span>
+
+                        <span data-i18n="travelFeature3">
+                            Vivegam Travels, SBM Travels போன்ற சேவைகள்
+                        </span>
+
+                    </div>
+
+
+                    <div class="travel-list-item">
+
+                        <span class="travel-check">
+                            ✓
+                        </span>
+
+                        <span data-i18n="travelFeature4">
+                            வழக்கமான வாடிக்கையாளர்களுக்கு பிரத்யேக தள்ளுபடி
+                        </span>
+
+                    </div>
+
+
+                </div>
+
+
+                <a
+                    href="tel:+919600372621"
+                    class="btn">
+
+                    📞
+
+                    <span data-i18n="travelCall">
+                        டிக்கெட் முன்பதிவுக்கு அழைக்கவும்
+                    </span>
+
+                </a>
+
+            </div>
+
+
+
+            <!-- DISCOUNT -->
+
+            <div class="discount-card">
+
+
+                <div class="discount-icon">
+                    ⭐
+                </div>
+
+
+                <h3 data-i18n="discountTitle">
+
+                    வழக்கமான வாடிக்கையாளர்களுக்கு
+                    பிரத்யேக தள்ளுபடி
+
+                </h3>
+
+
+                <p data-i18n="discountDescription">
+
+                    தொடர்ந்து எங்களிடம் பயண டிக்கெட்
+                    முன்பதிவு செய்யும் வாடிக்கையாளர்களுக்கு
+                    சிறப்பு தள்ளுபடிகள் மற்றும் பிரத்யேக
+                    சலுகைகள் வழங்கப்படும்.
+
+                </p>
+
+
+                <div class="discount-box">
+
+                    <span>🎁</span>
+
+                    <span data-i18n="discountHighlight">
+
+                        Regular Customers -
+                        Exclusive Discount!
+
+                    </span>
+
+                </div>
+
+
+                <a
+                    href="tel:+919600372621"
+                    class="btn btn-primary"
+                    style="margin-top:20px;">
+
+                    📞
+
+                    <span data-i18n="askDiscount">
+                        சலுகையைப் பற்றி கேளுங்கள்
+                    </span>
+
+                </a>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- BUS SERVICES -->
+
+        <div
+            class="section-heading"
+            style="margin-top:50px;margin-bottom:25px;">
+
+            <h2
+                style="font-size:30px;"
+                data-i18n="busServicesTitle">
+
+                பிரபலமான பயண சேவைகள்
+
+            </h2>
+
+            <p data-i18n="busServicesSubtitle">
+
+                பிரபலமான பேருந்து சேவைகளுக்கான
+                டிக்கெட் முன்பதிவு உதவி
+
+            </p>
+
+        </div>
+
+
+        <div class="bus-services">
+
+
+            <div class="bus-card">
+
+                <!-- Replace this image URL with a properly licensed
+                     Vivegam Travels bus image -->
+
+                <img
+                    class="bus-image"
+                    src="https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?auto=format&fit=crop&w=900&q=80"
+                    alt="Travel Bus">
+
+                <h4>
+                    Vivegam Travels
+                </h4>
+
+                <p data-i18n="vivegamText">
+
+                    Vivegam Travels டிக்கெட் முன்பதிவு
+                    தொடர்பான உதவி கிடைக்கும்.
+
+                </p>
+
+            </div>
+
+
+            <div class="bus-card">
+
+                <!-- Replace this image URL with a properly licensed
+                     SBM Travels bus image -->
+
+                <img
+                    class="bus-image"
+                    src="https://images.unsplash.com/photo-1570125909232-eb263c188f7e?auto=format&fit=crop&w=900&q=80"
+                    alt="Travel Bus">
+
+                <h4>
+                    SBM Travels
+                </h4>
+
+                <p data-i18n="sbmText">
+
+                    SBM Travels டிக்கெட் முன்பதிவு
+                    தொடர்பான உதவி கிடைக்கும்.
+
+                </p>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     E-SEVAI SECTION
+===================================================== -->
+
+<section
+    id="esevai"
+    class="esevai">
+
+    <div class="section-inner">
+
+
+        <div class="section-heading">
+
+            <h2 data-i18n="esevaiTitle">
+                E-SEVAI Services
+            </h2>
+
+            <p data-i18n="esevaiSubtitle">
+
+                அரசு அங்கீகரிக்கப்பட்ட E-SEVAI மையம்
+                மூலம் பல்வேறு சான்றிதழ் சேவைகள்
+
+            </p>
+
+        </div>
+
+
+        <div class="esevai-main">
+
+
+            <!-- INTRO -->
+
+            <div class="esevai-intro">
+
+
+                <div class="official-badge">
+
+                    🏛️
+
+                    <span data-i18n="officialBadge">
+                        Government-Authorized E-SEVAI Centre
+                    </span>
+
+                </div>
+
+
+                <h3 data-i18n="esevaiHeading">
+
+                    அரசு அங்கீகரிக்கப்பட்ட
+                    E-SEVAI சேவை மையம்
+
+                </h3>
+
+
+                <p data-i18n="esevaiText1">
+
+                    அத்தியாவசிய அரசு சான்றிதழ்கள் மற்றும்
+                    குடிமக்கள் சேவைகளுக்கான விண்ணப்பங்களை
+                    எங்கள் அரசு அங்கீகரிக்கப்பட்ட E-SEVAI
+                    மையத்தின் மூலம் எளிதாகப் பெறலாம்.
+
+                </p>
+
+
+                <p data-i18n="esevaiText2">
+
+                    விண்ணப்ப செயல்முறை, தேவையான ஆவணங்கள்,
+                    ஆவண சமர்ப்பிப்பு மற்றும் பிற ஆன்லைன்
+                    நடைமுறைகளில் தேவையான உதவியை
+                    வழங்குகிறோம்.
+
+                </p>
+
+
+                <div class="official-note">
+
+                    🔐
+
+                    <span data-i18n="officialNote">
+
+                        அரசு சேவைகளை அதிகாரப்பூர்வமான
+                        E-SEVAI முறையின் மூலம் அணுகுவதற்கு
+                        எங்கள் அங்கீகரிக்கப்பட்ட மையத்தை
+                        அணுகுங்கள்.
+
+                    </span>
+
+                </div>
+
+
+                <a
+                    href="tel:+919600372621"
+                    class="btn btn-primary"
+                    style="margin-top:22px;">
+
+                    📞
+
+                    <span data-i18n="esevaiCall">
+                        E-SEVAI சேவைகளுக்கு அழைக்கவும்
+                    </span>
+
+                </a>
+
+            </div>
+
+
+
+            <!-- CERTIFICATES -->
+
+            <div class="certificate-card">
+
+
+                <h3 data-i18n="certificateTitle">
+
+                    சான்றிதழ் சேவைகள்
+
+                </h3>
+
+
+                <div class="certificate-list">
+
+
+                    <div class="certificate-item">
+
+                        <span class="certificate-icon">
+                            📄
+                        </span>
+
+                        <span data-i18n="certificate1">
+                            Income Certificate
+                        </span>
+
+                    </div>
+
+
+                    <div class="certificate-item">
+
+                        <span class="certificate-icon">
+                            👥
+                        </span>
+
+                        <span data-i18n="certificate2">
+                            Community Certificate
+                        </span>
+
+                    </div>
+
+
+                    <div class="certificate-item">
+
+                        <span class="certificate-icon">
+                            👨‍👩‍👧
+                        </span>
+
+                        <span data-i18n="certificate3">
+                            Legal Heir Certificate
+                        </span>
+
+                    </div>
+
+
+                    <div class="certificate-item">
+
+                        <span class="certificate-icon">
+                            🏠
+                        </span>
+
+                        <span data-i18n="certificate4">
+                            Nativity / Residence Certificate
+                        </span>
+
+                    </div>
+
+
+                    <div class="certificate-item">
+
+                        <span class="certificate-icon">
+                            🎓
+                        </span>
+
+                        <span data-i18n="certificate5">
+                            Other Government Certificates
+                        </span>
+
+                    </div>
+
+
+                    <div class="certificate-item">
+
+                        <span class="certificate-icon">
+                            📋
+                        </span>
+
+                        <span data-i18n="certificate6">
+                            Various Government Online Services
+                        </span>
+
+                    </div>
+
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     SERVICES
+===================================================== -->
+
+<section
+    id="services"
+    class="services">
+
+    <div class="section-inner">
+
+
+        <div class="section-heading">
+
+            <h2 data-i18n="servicesTitle">
+                எங்கள் சேவைகள்
+            </h2>
+
+            <p data-i18n="servicesSubtitle">
+                உங்கள் அன்றாட தேவைகளுக்கான
+                நம்பகமான சேவைகள்
+            </p>
+
+        </div>
+
+
+        <div class="service-grid">
+
+
+            <article class="service-card">
+
+                <div class="service-icon">
+                    🚌
+                </div>
+
+                <h3 data-i18n="serviceTravelTitle">
+                    Travels Ticket Booking
+                </h3>
+
+                <p data-i18n="serviceTravelDescription">
+
+                    வழக்கமான டிக்கெட் கட்டணத்தில்
+                    பயண டிக்கெட்டுகளை முன்பதிவு செய்யுங்கள்.
+                    வழக்கமான வாடிக்கையாளர்களுக்கு
+                    பிரத்யேக தள்ளுபடிகள் கிடைக்கும்.
+
+                </p>
+
+            </article>
+
+
+
+            <article class="service-card">
+
+                <div class="service-icon">
+                    🏛️
+                </div>
+
+                <h3 data-i18n="serviceEsevaiTitle">
+                    E-SEVAI Services
+                </h3>
+
+                <p data-i18n="serviceEsevaiDescription">
+
+                    அரசு அங்கீகரிக்கப்பட்ட E-SEVAI மையம்
+                    மூலம் Income, Community, Legal Heir
+                    மற்றும் பல்வேறு சான்றிதழ் சேவைகள்.
+
+                </p>
+
+            </article>
+
+
+
+            <article class="service-card">
+
+                <div class="service-icon">
+                    📱
+                </div>
+
+                <h3 data-i18n="mobileTitle">
+                    மொபைல் சேவைகள்
+                </h3>
+
+                <p data-i18n="mobileDescription">
+
+                    மொபைல் தொடர்பான சேவைகளுக்கு
+                    எங்களை அணுகுங்கள்.
+
+                </p>
+
+            </article>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     ABOUT
+===================================================== -->
+
+<section
+    id="about"
+    class="about">
+
+    <div class="section-inner">
+
+
+        <div class="about-grid">
+
+
+            <div class="about-box">
+
+
+                <h2 data-i18n="aboutTitle">
+                    எங்களைப் பற்றி
+                </h2>
+
+
+                <p data-i18n="aboutText1">
+
+                    பூஜா டிராவல்ஸ் மற்றும் E-SEVAI சேவை மையம்
+                    வாடிக்கையாளர்களுக்கு எளிதான, நம்பகமான
+                    மற்றும் நட்பான சேவையை வழங்கும்
+                    நோக்கத்துடன் செயல்படுகிறது.
+
+                </p>
+
+
+                <p data-i18n="aboutText2">
+
+                    பயண டிக்கெட் முன்பதிவு முதல் அரசு
+                    சான்றிதழ் சேவைகள் வரை, உங்கள்
+                    அன்றாட தேவைகளுக்கு ஒரே இடத்தில்
+                    உதவி வழங்குகிறோம்.
+
+                </p>
+
+
+            </div>
+
+
+
+            <div class="about-box">
+
+
+                <h2 data-i18n="whyTitle">
+                    ஏன் எங்களை தேர்வு செய்ய வேண்டும்?
+                </h2>
+
+
+                <div class="why-list">
+
+
+                    <div class="why-item">
+
+                        <span class="check">
+                            ✓
+                        </span>
+
+                        <span data-i18n="why1">
+                            வழக்கமான டிக்கெட் கட்டணத்தில் முன்பதிவு
+                        </span>
+
+                    </div>
+
+
+                    <div class="why-item">
+
+                        <span class="check">
+                            ✓
+                        </span>
+
+                        <span data-i18n="why2">
+                            வழக்கமான வாடிக்கையாளர்களுக்கு சிறப்பு தள்ளுபடி
+                        </span>
+
+                    </div>
+
+
+                    <div class="why-item">
+
+                        <span class="check">
+                            ✓
+                        </span>
+
+                        <span data-i18n="why3">
+                            அரசு அங்கீகரிக்கப்பட்ட E-SEVAI சேவை
+                        </span>
+
+                    </div>
+
+
+                    <div class="why-item">
+
+                        <span class="check">
+                            ✓
+                        </span>
+
+                        <span data-i18n="why4">
+                            எளிதான மற்றும் விரைவான சேவை
+                        </span>
+
+                    </div>
+
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     CONTACT
+===================================================== -->
+
+<section
+    id="contact"
+    class="contact">
+
+    <div class="section-inner">
+
+
+        <div class="section-heading">
+
+            <h2 data-i18n="contactTitle">
+                தொடர்பு கொள்ளுங்கள்
+            </h2>
+
+            <p data-i18n="contactSubtitle">
+
+                டிக்கெட் முன்பதிவு மற்றும் E-SEVAI
+                சேவைகளுக்கு எங்களை அணுகுங்கள்
+
+            </p>
+
+        </div>
+
+
+        <div class="contact-grid">
+
+
+            <div class="contact-card">
+
+                <div class="contact-icon">
+                    📞
+                </div>
+
+                <h3 data-i18n="phoneTitle">
+                    தொலைபேசி
+                </h3>
+
+                <p>
+                    <strong>
+                        96003 72621
+                    </strong>
+                </p>
+
+                <a
+                    href="tel:+919600372621"
+                    class="btn btn-primary">
+
+                    📞
+
+                    <span data-i18n="callButton">
+                        அழைக்கவும்
+                    </span>
+
+                </a>
+
+            </div>
+
+
+
+            <div class="contact-card">
+
+                <div class="contact-icon">
+                    ✉️
+                </div>
+
+                <h3 data-i18n="emailTitle">
+                    மின்னஞ்சல்
+                </h3>
+
+                <p>
+                    <strong>
+                        poojasrimobiles@gmail.com
+                    </strong>
+                </p>
+
+                <a
+                    href="mailto:poojasrimobiles@gmail.com"
+                    class="btn btn-outline">
+
+                    ✉️
+
+                    <span data-i18n="emailButton">
+                        மின்னஞ்சல் அனுப்பவும்
+                    </span>
+
+                </a>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+</main>
+
+
+
+<!-- =====================================================
+     FOOTER
+===================================================== -->
+
+<footer>
+
+    <div class="footer-brand">
+        POOJA TRAVELS • POOJA MOBILES • E-SEVAI
+    </div>
+
+    <div data-i18n="footerText">
+
+        © 2026 பூஜா டிராவல்ஸ் & மொபைல்ஸ் •
+        அனைத்து உரிமைகளும் பாதுகாக்கப்பட்டவை
+
+    </div>
+
+</footer>
+
+
+
+<!-- =====================================================
+     LANGUAGE TRANSLATIONS
+===================================================== -->
+
+<script>
+
+const translations = {
+
+    /* =================================================
+       TAMIL
+    ================================================= */
+
+    ta: {
+
+        topWelcome:
+            "பூஜா டிராவல்ஸ்",
+
+        brandName:
+            "பூஜா டிராவல்ஸ்",
+
+        navHome:
+            "முகப்பு",
+
+        navTravels:
+            "டிராவல்ஸ்",
+
+        navEsevai:
+            "E-SEVAI",
+
+        navServices:
+            "சேவைகள்",
+
+        navAbout:
+            "எங்களைப் பற்றி",
+
+        navContact:
+            "தொடர்பு",
+
+        blessing:
+            "ஸ்ரீ காமாட்சி அம்மன் துணை",
+
+
+        heroPooja:
+            "பூஜா",
+
+        heroTravels:
+            "டிராவல்ஸ்",
+
+        heroBooking:
+            "பயண டிக்கெட் முன்பதிவு",
+
+        heroDescription:
+            "ஆன்லைனில் வழக்கமான டிக்கெட் கட்டணத்தில் பயண டிக்கெட்டுகளை எளிதாக முன்பதிவு செய்யுங்கள். எங்களிடம் தொடர்ந்து முன்பதிவு செய்யும் வாடிக்கையாளர்களுக்கு பிரத்யேக தள்ளுபடிகள் மற்றும் சிறப்பு சலுகைகள் வழங்கப்படும்.",
+
+        heroFeature1:
+            "வழக்கமான டிக்கெட் கட்டணம்",
+
+        heroFeature1Sub:
+            "Regular Ticket Rates",
+
+        heroFeature2:
+            "பிரத்யேக தள்ளுபடி",
+
+        heroFeature2Sub:
+            "Exclusive Regular Customer Discounts",
+
+        heroFeature3:
+            "விரைவான முன்பதிவு",
+
+        heroFeature3Sub:
+            "Quick & Easy Booking",
+
+        bookNow:
+            "இப்போது முன்பதிவு செய்யுங்கள்",
+
+        viewEsevai:
+            "E-SEVAI சேவைகள்",
+
+
+        travelsTitle:
+            "பூஜா டிராவல்ஸ்",
+
+        travelsSubtitle:
+            "எளிதான பயண டிக்கெட் முன்பதிவு மற்றும் வழக்கமான வாடிக்கையாளர்களுக்கு சிறப்பு சலுகைகள்",
+
+        travelLabel:
+            "🚌 TRAVEL TICKET BOOKING",
+
+        travelTitle:
+            "வழக்கமான டிக்கெட் கட்டணத்தில் பயண டிக்கெட் முன்பதிவு",
+
+        travelDescription:
+            "பூஜா டிராவல்ஸ் மூலம் பிரபலமான பயண பேருந்து சேவைகளுக்கான டிக்கெட்டுகளை ஆன்லைனில் வழக்கமான டிக்கெட் கட்டணத்தில் எளிதாக முன்பதிவு செய்யலாம்.",
+
+        travelFeature1:
+            "வழக்கமான டிக்கெட் கட்டணத்தில் முன்பதிவு",
+
+        travelFeature2:
+            "விரைவான மற்றும் எளிதான முன்பதிவு",
+
+        travelFeature3:
+            "Vivegam Travels, SBM Travels போன்ற சேவைகள்",
+
+        travelFeature4:
+            "வழக்கமான வாடிக்கையாளர்களுக்கு பிரத்யேக தள்ளுபடி",
+
+        travelCall:
+            "டிக்கெட் முன்பதிவுக்கு அழைக்கவும்",
+
+
+        discountTitle:
+            "வழக்கமான வாடிக்கையாளர்களுக்கு பிரத்யேக தள்ளுபடி",
+
+        discountDescription:
+            "தொடர்ந்து எங்களிடம் பயண டிக்கெட் முன்பதிவு செய்யும் வாடிக்கையாளர்களுக்கு சிறப்பு தள்ளுபடிகள் மற்றும் பிரத்யேக சலுகைகள் வழங்கப்படும்.",
+
+        discountHighlight:
+            "வழக்கமான வாடிக்கையாளர்களுக்கு பிரத்யேக தள்ளுபடி!",
+
+        askDiscount:
+            "சலுகையைப் பற்றி கேளுங்கள்",
+
+
+        busServicesTitle:
+            "பிரபலமான பயண சேவைகள்",
+
+        busServicesSubtitle:
+            "பிரபலமான பேருந்து சேவைகளுக்கான டிக்கெட் முன்பதிவு உதவி",
+
+        vivegamText:
+            "Vivegam Travels டிக்கெட் முன்பதிவு தொடர்பான உதவி கிடைக்கும்.",
+
+        sbmText:
+            "SBM Travels டிக்கெட் முன்பதிவு தொடர்பான உதவி கிடைக்கும்.",
+
+
+        eseveiTitle:
+            "E-SEVAI Services",
+
+        eseveiSubtitle:
+            "அரசு அங்கீகரிக்கப்பட்ட E-SEVAI மையம் மூலம் பல்வேறு சான்றிதழ் சேவைகள்",
+
+        officialBadge:
+            "Government-Authorized E-SEVAI Centre",
+
+        eseveiHeading:
+            "அரசு அங்கீகரிக்கப்பட்ட E-SEVAI சேவை மையம்",
+
+        eseveiText1:
+            "அத்தியாவசிய அரசு சான்றிதழ்கள் மற்றும் குடிமக்கள் சேவைகளுக்கான விண்ணப்பங்களை எங்கள் அரசு அங்கீகரிக்கப்பட்ட E-SEVAI மையத்தின் மூலம் எளிதாகப் பெறலாம்.",
+
+        eseveiText2:
+            "விண்ணப்ப செயல்முறை, தேவையான ஆவணங்கள், ஆவண சமர்ப்பிப்பு மற்றும் பிற ஆன்லைன் நடைமுறைகளில் தேவையான உதவியை வழங்குகிறோம்.",
+
+        officialNote:
+            "அரசு சேவைகளை அதிகாரப்பூர்வமான E-SEVAI முறையின் மூலம் அணுகுவதற்கு எங்கள் அங்கீகரிக்கப்பட்ட மையத்தை அணுகுங்கள்.",
+
+        eseveiCall:
+            "E-SEVAI சேவைகளுக்கு அழைக்கவும்",
+
+
+        certificateTitle:
+            "சான்றிதழ் சேவைகள்",
+
+        certificate1:
+            "வருமானச் சான்றிதழ் (Income Certificate)",
+
+        certificate2:
+            "சமூகச் சான்றிதழ் (Community Certificate)",
+
+        certificate3:
+            "சட்ட வாரிசுச் சான்றிதழ் (Legal Heir Certificate)",
+
+        certificate4:
+            "பூர்வீகம் / இருப்பிடச் சான்றிதழ்",
+
+        certificate5:
+            "பிற அரசு சான்றிதழ்கள்",
+
+        certificate6:
+            "பல்வேறு அரசு ஆன்லைன் சேவைகள்",
+
+
+        servicesTitle:
+            "எங்கள் சேவைகள்",
+
+        servicesSubtitle:
+            "உங்கள் அன்றாட தேவைகளுக்கான நம்பகமான சேவைகள்",
+
+        serviceTravelTitle:
+            "Travels Ticket Booking",
+
+        serviceTravelDescription:
+            "வழக்கமான டிக்கெட் கட்டணத்தில் பயண டிக்கெட்டுகளை முன்பதிவு செய்யுங்கள். வழக்கமான வாடிக்கையாளர்களுக்கு பிரத்யேக தள்ளுபடிகள் கிடைக்கும்.",
+
+        serviceEsevaiTitle:
+            "E-SEVAI Services",
+
+        serviceEsevaiDescription:
+            "அரசு அங்கீகரிக்கப்பட்ட E-SEVAI மையம் மூலம் Income, Community, Legal Heir மற்றும் பல்வேறு சான்றிதழ் சேவைகள்.",
+
+        mobileTitle:
+            "மொபைல் சேவைகள்",
+
+        mobileDescription:
+            "மொபைல் தொடர்பான சேவைகளுக்கு எங்களை அணுகுங்கள்.",
+
+
+        aboutTitle:
+            "எங்களைப் பற்றி",
+
+        aboutText1:
+            "பூஜா டிராவல்ஸ் மற்றும் E-SEVAI சேவை மையம் வாடிக்கையாளர்களுக்கு எளிதான, நம்பகமான மற்றும் நட்பான சேவையை வழங்கும் நோக்கத்துடன் செயல்படுகிறது.",
+
+        aboutText2:
+            "பயண டிக்கெட் முன்பதிவு முதல் அரசு சான்றிதழ் சேவைகள் வரை, உங்கள் அன்றாட தேவைகளுக்கு ஒரே இடத்தில் உதவி வழங்குகிறோம்.",
+
+
+        whyTitle:
+            "ஏன் எங்களை தேர்வு செய்ய வேண்டும்?",
+
+        why1:
+            "வழக்கமான டிக்கெட் கட்டணத்தில் முன்பதிவு",
+
+        why2:
+            "வழக்கமான வாடிக்கையாளர்களுக்கு சிறப்பு தள்ளுபடி",
+
+        why3:
+            "அரசு அங்கீகரிக்கப்பட்ட E-SEVAI சேவை",
+
+        why4:
+            "எளிதான மற்றும் விரைவான சேவை",
+
+
+        contactTitle:
+            "தொடர்பு கொள்ளுங்கள்",
+
+        contactSubtitle:
+            "டிக்கெட் முன்பதிவு மற்றும் E-SEVAI சேவைகளுக்கு எங்களை அணுகுங்கள்",
+
+        phoneTitle:
+            "தொலைபேசி",
+
+        emailTitle:
+            "மின்னஞ்சல்",
+
+        callButton:
+            "அழைக்கவும்",
+
+        emailButton:
+            "மின்னஞ்சல் அனுப்பவும்",
+
+        footerText:
+            "© 2026 பூஜா டிராவல்ஸ் & மொபைல்ஸ் • அனைத்து உரிமைகளும் பாதுகாக்கப்பட்டவை"
+
+    },
+
+
+    /* =================================================
+       ENGLISH
+    ================================================= */
+
+    en: {
+
+        topWelcome:
+            "Pooja Travels",
+
+        brandName:
+            "Pooja Travels",
+
+        navHome:
+            "Home",
+
+        navTravels:
+            "Travels",
+
+        navEsevai:
+            "E-SEVAI",
+
+        navServices:
+            "Services",
+
+        navAbout:
+            "About Us",
+
+        navContact:
+            "Contact",
+
+        blessing:
+            "With the Blessings of Sri Kamakshi Amman",
+
+
+        heroPooja:
+            "Pooja",
+
+        heroTravels:
+            "Travels",
+
+        heroBooking:
+            "Travel Ticket Booking",
+
+        heroDescription:
+            "Book your travel tickets online at regular ticket rates. Regular customers who frequently book with us can enjoy exclusive discounts and special offers.",
+
+        heroFeature1:
+            "Regular Ticket Rates",
+
+        heroFeature1Sub:
+            "Book at Regular Ticket Rates",
+
+        heroFeature2:
+            "Exclusive Discounts",
+
+        heroFeature2Sub:
+            "For Regular Customers",
+
+        heroFeature3:
+            "Quick Booking",
+
+        heroFeature3Sub:
+            "Quick & Easy Booking",
+
+        bookNow:
+            "Book Your Ticket",
+
+        viewEsevai:
+            "E-SEVAI Services",
+
+
+        travelsTitle:
+            "Pooja Travels",
+
+        travelsSubtitle:
+            "Easy travel ticket booking with exclusive benefits for regular customers",
+
+        travelLabel:
+            "🚌 TRAVEL TICKET BOOKING",
+
+        travelTitle:
+            "Travel Ticket Booking at Regular Ticket Rates",
+
+        travelDescription:
+            "Book travel tickets easily through Pooja Travels at regular ticket rates. We provide booking assistance for popular travel bus services.",
+
+        travelFeature1:
+            "Book at regular ticket rates",
+
+        travelFeature2:
+            "Quick and easy booking",
+
+        travelFeature3:
+            "Vivegam Travels, SBM Travels and more",
+
+        travelFeature4:
+            "Exclusive discounts for regular customers",
+
+        travelCall:
+            "Call for Ticket Booking",
+
+
+        discountTitle:
+            "Exclusive Discounts for Regular Customers",
+
+        discountDescription:
+            "Customers who regularly book their travel tickets with us can enjoy special discounts and exclusive offers.",
+
+        discountHighlight:
+            "Regular customers enjoy exclusive discounts!",
+
+        askDiscount:
+            "Ask About Discounts",
+
+
+        busServicesTitle:
+            "Popular Travel Services",
+
+        busServicesSubtitle:
+            "Ticket booking assistance for popular travel bus services",
+
+        vivegamText:
+            "Travel ticket booking assistance available for Vivegam Travels.",
+
+        sbmText:
+            "Travel ticket booking assistance available for SBM Travels.",
+
+
+        eseveiTitle:
+            "E-SEVAI Services",
+
+        eseveiSubtitle:
+            "Government-authorized E-SEVAI centre for certificate and citizen services",
+
+        officialBadge:
+            "Government-Authorized E-SEVAI Centre",
+
+        eseveiHeading:
+            "Government-Authorized E-SEVAI Service Centre",
+
+        eseveiText1:
+            "Access essential government certificate and citizen services conveniently through our government-authorized E-SEVAI centre.",
+
+        eseveiText2:
+            "We assist customers with application procedures, required documents, document submission and other necessary online processes.",
+
+        officialNote:
+            "For eligible government services, visit our authorized E-SEVAI centre and get assistance through the official E-SEVAI system.",
+
+        eseveiCall:
+            "Call for E-SEVAI Services",
+
+
+        certificateTitle:
+            "Certificate Services",
+
+        certificate1:
+            "Income Certificate",
+
+        certificate2:
+            "Community Certificate",
+
+        certificate3:
+            "Legal Heir Certificate",
+
+        certificate4:
+            "Nativity / Residence Certificate",
+
+        certificate5:
+            "Other Government Certificates",
+
+        certificate6:
+            "Various Government Online Services",
+
+
+        servicesTitle:
+            "Our Services",
+
+        servicesSubtitle:
+            "Reliable services for your everyday needs",
+
+        serviceTravelTitle:
+            "Travels Ticket Booking",
+
+        serviceTravelDescription:
+            "Book travel tickets at regular ticket rates. Regular customers can enjoy exclusive discounts.",
+
+        serviceEsevaiTitle:
+            "E-SEVAI Services",
+
+        serviceEsevaiDescription:
+            "Government-authorized E-SEVAI centre providing assistance for Income, Community, Legal Heir and other certificate services.",
+
+        mobileTitle:
+            "Mobile Services",
+
+        mobileDescription:
+            "Get reliable assistance for your mobile-related service needs.",
+
+
+        aboutTitle:
+            "About Us",
+
+        aboutText1:
+            "Pooja Travels and E-SEVAI Service Centre are committed to providing easy, reliable and customer-friendly services.",
+
+        aboutText2:
+            "From travel ticket booking to government certificate services, we aim to provide convenient assistance for your everyday needs.",
+
+
+        whyTitle:
+            "Why Choose Us?",
+
+        why1:
+            "Booking at regular ticket rates",
+
+        why2:
+            "Exclusive discounts for regular customers",
+
+        why3:
+            "Government-authorized E-SEVAI service",
+
+        why4:
+            "Easy and quick service",
+
+
+        contactTitle:
+            "Get In Touch",
+
+        contactSubtitle:
+            "Contact us for ticket booking and E-SEVAI services",
+
+        phoneTitle:
+            "Phone",
+
+        emailTitle:
+            "Email",
+
+        callButton:
+            "Call Us",
+
+        emailButton:
+            "Send Email",
+
+        footerText:
+            "© 2026 Pooja Travels & Mobiles • All Rights Reserved"
+
+    }
+
+};
+
+
+
+/* =====================================================
+   LANGUAGE SWITCH
+===================================================== */
+
+const languageSelect =
+    document.getElementById("languageSelect");
+
+
+function changeLanguage(language){
+
+    const content =
+        translations[language];
+
+
+    document
+        .querySelectorAll("[data-i18n]")
+        .forEach(element => {
+
+            const key =
+                element.getAttribute("data-i18n");
+
+
+            if(content[key]){
+
+                element.textContent =
+                    content[key];
+
+            }
+
+        });
+
+
+    document.documentElement.lang =
+        language;
+
+
+    localStorage.setItem(
+        "poojaLanguage",
+        language
+    );
+
+
+    if(language === "en"){
+
+        document.title =
+            "Pooja Travels & Mobiles";
+
+    }else{
+
+        document.title =
+            "பூஜா டிராவல்ஸ் & மொபைல்ஸ்";
+
+    }
+
+}
+
+
+/* =====================================================
+   DROPDOWN
+===================================================== */
+
+languageSelect.addEventListener(
+    "change",
+    function(){
+
+        changeLanguage(
+            this.value
+        );
+
+    }
+);
+
+
+/* =====================================================
+   LOAD SAVED LANGUAGE
+===================================================== */
+
+const savedLanguage =
+    localStorage.getItem(
+        "poojaLanguage"
+    ) || "ta";
+
+
+languageSelect.value =
+    savedLanguage;
+
+
+changeLanguage(
+    savedLanguage
+);
+
+</script>
+
+
+</body>
+
+</html>
