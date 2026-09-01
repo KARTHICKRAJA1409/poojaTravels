@@ -1,2753 +1,1208 @@
 <!DOCTYPE html>
-<html lang="ta">
-
+<html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pooja Mobiles | Travels Ticket Booking, E-Sevai &amp; Printing Services</title>
+<meta name="description" content="Pooja Mobiles in Keelaeral, Ettayapuram Taluk, Thoothukudi offers travels ticket booking, government E-Sevai certificate services and printing services, all at one local shop.">
+<meta name="keywords" content="Pooja Mobiles, Keelaeral, Ettayapuram, Thoothukudi, travels ticket booking, bus ticket booking, e-sevai services, e sevai center, printing services, invitation printing">
+<meta name="theme-color" content="#7A1F2B">
 
-<title>பூஜா டிராவல்ஸ் & மொபைல்ஸ்</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Baloo+Thambi+2:wght@500;600;700&amp;family=Noto+Sans:wght@400;500;600;700&amp;family=Noto+Sans+Tamil:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
 
 <style>
+  /* ============ Design tokens ============ */
+  :root{
+    --maroon:#7A1F2B;
+    --maroon-dark:#551017;
+    --maroon-soft:#F4E4E3;
+    --gold:#C08A2E;
+    --gold-light:#F3DFAE;
+    --blue:#1E3A5F;
+    --blue-soft:#E4EAF1;
+    --cream:#FBF6EE;
+    --paper:#FFFFFF;
+    --ink:#2A211D;
+    --ink-soft:#6E6058;
+    --line:#E8DECB;
+    --radius-s:10px;
+    --radius-m:16px;
+    --radius-l:26px;
+    --shadow:0 12px 30px -14px rgba(85,16,23,0.35);
+    --shadow-soft:0 6px 18px -10px rgba(42,33,29,0.25);
+    --header-h:76px;
+    --font-display:"Baloo Thambi 2","Noto Sans Tamil","Noto Sans",sans-serif;
+    --font-body:"Noto Sans","Noto Sans Tamil",Arial,sans-serif;
+  }
 
-:root{
-    --maroon:#7d1249;
-    --maroon-dark:#5c0d35;
-    --maroon-light:#a81661;
-    --blue:#155a72;
-    --blue-dark:#0b3445;
-    --blue-light:#237d98;
-    --gold:#c89b3c;
-    --gold-light:#f5d98c;
-    --cream:#fffaf0;
-    --cream-dark:#f3e8d5;
-    --white:#fff;
-    --ink:#252525;
-    --muted:#686868;
-    --border:#eadfc9;
-    --shadow:0 15px 40px rgba(40,30,15,.10);
-}
-
-*{
-    box-sizing:border-box;
-}
-
-html{
-    scroll-behavior:smooth;
-}
-
-body{
+  *,*::before,*::after{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
     margin:0;
-    font-family:"Noto Sans Tamil","Latha","Segoe UI",Arial,sans-serif;
+    font-family:var(--font-body);
     color:var(--ink);
-    background:#f8f4ec;
+    background:var(--cream);
     line-height:1.6;
-}
+    -webkit-font-smoothing:antialiased;
+  }
+  img{max-width:100%;height:auto;display:block;}
+  a{color:inherit;}
+  button{font-family:inherit;}
+  h1,h2,h3{font-family:var(--font-display);line-height:1.25;margin:0 0 .5em;color:var(--maroon-dark);}
+  p{margin:0 0 1em;}
+  section{scroll-margin-top:calc(var(--header-h) + 14px);}
+  .container{max-width:1180px;margin:0 auto;padding:0 22px;}
+  .visually-hidden{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0;}
+  :focus-visible{outline:3px solid var(--gold);outline-offset:2px;}
 
-a{
-    text-decoration:none;
-    color:inherit;
-}
-
-
-/* =========================
-   TOP BAR
-========================= */
-
-.topbar{
-    position:relative;
-    background:linear-gradient(
-        120deg,
-        var(--maroon-dark),
-        var(--maroon-light)
-    );
-    color:#fff;
-    padding:8px 6%;
-    display:flex;
-    justify-content:flex-end;
-    align-items:center;
-    gap:20px;
-    font-size:13px;
-}
-
-.topbar-left{
-    position:absolute;
-    left:50%;
-    transform:translateX(-50%);
-    
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    
-    font-size:11px;
-    font-weight:700;
-    letter-spacing:.3px;
-    opacity:.92;
-    white-space:nowrap;
-}
-
-.topbar-right{
-    display:flex;
-    align-items:center;
-    gap:8px;
-}
-
-.topbar a:hover{
-    color:var(--gold-light);
-}
-
-
-/* =========================
-   NAVBAR
-========================= */
-
-.navbar{
-    position:sticky;
-    top:0;
-    z-index:100;
-    background:rgba(255,255,255,.97);
-    backdrop-filter:blur(12px);
-    border-bottom:1px solid #eee4d3;
-    box-shadow:0 4px 20px rgba(0,0,0,.05);
-}
-
-.nav-inner{
-    max-width:1200px;
-    margin:auto;
-    padding:13px 5%;
-    display:flex;
-    align-items:center;
-    justify-content:space-between;
-    gap:25px;
-}
-
-.brand{
-    display:flex;
-    align-items:center;
-    gap:11px;
-    color:var(--maroon);
-    font-size:19px;
-    font-weight:900;
-    line-height:1.15;
-}
-
-.brand-icon{
-    width:45px;
-    height:45px;
-    border-radius:13px;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    color:#fff;
-    font-size:23px;
-    background:linear-gradient(
-        135deg,
-        var(--maroon),
-        var(--maroon-light)
-    );
-    box-shadow:0 7px 17px rgba(125,18,73,.22);
-}
-
-.brand-text small{
-    display:block;
-    margin-top:3px;
-    color:var(--blue);
-    font-size:9px;
-    letter-spacing:1.2px;
-    font-weight:800;
-}
-
-.nav-right{
-    display:flex;
-    align-items:center;
-    gap:22px;
-}
-
-.nav-links{
-    display:flex;
-    align-items:center;
-    gap:21px;
-    font-size:14px;
-    font-weight:750;
-}
-
-.nav-links a{
-    position:relative;
-    padding:5px 0;
-    transition:.25s;
-}
-
-.nav-links a::after{
-    content:"";
-    position:absolute;
-    left:0;
-    bottom:0;
-    width:0;
-    height:2px;
-    background:var(--maroon);
-    transition:.25s;
-}
-
-.nav-links a:hover{
-    color:var(--maroon);
-}
-
-.nav-links a:hover::after{
-    width:100%;
-}
-
-.language-select{
-    min-width:105px;
-    padding:8px 10px;
-    border-radius:9px;
-    border:1px solid #ddcfb9;
-    background:#fff;
-    color:var(--maroon);
-    font-weight:800;
-    cursor:pointer;
-    outline:none;
-}
-
-
-/* =========================
-   HERO
-========================= */
-
-.hero{
-    position:relative;
-    overflow:hidden;
-    padding:65px 6% 70px;
-
-    background:
-        radial-gradient(
-            circle at 10% 10%,
-            rgba(243,215,140,.40),
-            transparent 23%
-        ),
-        radial-gradient(
-            circle at 90% 90%,
-            rgba(168,22,97,.07),
-            transparent 25%
-        ),
-        linear-gradient(
-            135deg,
-            #fffdf8,
-            #f3e7d4
-        );
-}
-
-.hero-inner{
-    max-width:1100px;
-    margin:auto;
-    text-align:center;
-}
-
-.hero-badge{
-    display:inline-flex;
-    align-items:center;
-    gap:8px;
-    padding:8px 16px;
-    border-radius:50px;
-    background:#fff;
-    border:1px solid #e8d7ae;
-    color:var(--maroon);
-    font-size:13px;
-    font-weight:850;
-    box-shadow:0 6px 18px rgba(0,0,0,.05);
-}
-
-.hero h1{
-    margin:18px 0 12px;
-    font-size:clamp(42px,6vw,70px);
-    line-height:1.05;
-    letter-spacing:-1.5px;
-    color:var(--blue);
-}
-
-.hero h1 .maroon{
-    color:var(--maroon);
-}
-
-.hero h1 .gold{
-    color:var(--gold);
-}
-
-.hero-description{
-    max-width:820px;
-    margin:0 auto;
-    color:#5d5d5d;
-    font-size:18px;
-    line-height:1.8;
-}
-
-.hero-highlights{
-    max-width:900px;
-    margin:30px auto 0;
-    display:grid;
-    grid-template-columns:repeat(3,1fr);
-    gap:15px;
-}
-
-.hero-highlight{
-    padding:18px;
-    border-radius:17px;
-    background:#fff;
-    border:1px solid var(--border);
-    box-shadow:0 8px 25px rgba(60,35,10,.06);
-    transition:.25s;
-}
-
-.hero-highlight:hover{
-    transform:translateY(-4px);
-    box-shadow:var(--shadow);
-}
-
-.highlight-icon{
-    font-size:27px;
-    margin-bottom:5px;
-}
-
-.hero-highlight strong{
-    display:block;
-    color:var(--blue);
-    font-size:15px;
-}
-
-.hero-highlight span{
-    color:#777;
-    font-size:13px;
-}
-
-.hero-buttons{
-    display:flex;
-    justify-content:center;
-    flex-wrap:wrap;
-    gap:12px;
-    margin-top:27px;
-}
-
-.btn{
-    min-height:46px;
-    display:inline-flex;
-    align-items:center;
-    justify-content:center;
-    gap:8px;
-    padding:11px 21px;
-    border-radius:10px;
-    font-weight:900;
-    transition:.25s;
-}
-
-.btn-primary{
-    color:#fff;
-    background:linear-gradient(
-        135deg,
-        var(--maroon),
-        var(--maroon-light)
-    );
-    box-shadow:0 9px 20px rgba(125,18,73,.22);
-}
-
-.btn-primary:hover{
-    transform:translateY(-2px);
-}
-
-.btn-outline{
-    color:var(--maroon);
-    background:#fff;
-    border:2px solid var(--maroon);
-}
-
-.btn-outline:hover{
-    background:var(--maroon);
-    color:#fff;
-}
-
-
-/* =========================
-   COMMON SECTIONS
-========================= */
-
-section{
-    padding:70px 6%;
-}
-
-.section-inner{
-    max-width:1100px;
-    margin:auto;
-}
-
-.section-heading{
-    max-width:760px;
-    margin:0 auto 38px;
-    text-align:center;
-}
-
-.section-heading h2{
-    margin:0 0 8px;
-    color:var(--maroon);
-    font-size:clamp(29px,4vw,40px);
+  /* ============ Buttons ============ */
+  .btn{
+    display:inline-flex;align-items:center;justify-content:center;gap:8px;
+    padding:13px 24px;border-radius:999px;border:2px solid transparent;
+    font-weight:600;font-size:.98rem;cursor:pointer;text-decoration:none;
+    transition:transform .18s ease, box-shadow .18s ease, background .18s ease;
     line-height:1.2;
-}
+  }
+  .btn:hover{transform:translateY(-2px);}
+  .btn-primary{background:var(--gold);color:var(--maroon-dark);box-shadow:var(--shadow-soft);}
+  .btn-primary:hover{background:var(--gold-light);}
+  .btn-outline{background:transparent;border-color:rgba(255,255,255,.7);color:inherit;}
+  .btn-outline:hover{background:rgba(255,255,255,.12);}
+  .btn-maroon{background:var(--maroon);color:#fff;}
+  .btn-maroon:hover{background:var(--maroon-dark);}
+  .btn-ghost{background:var(--paper);border-color:var(--line);color:var(--maroon-dark);}
+  .btn-ghost:hover{border-color:var(--gold);}
+  .btn-sm{padding:9px 18px;font-size:.88rem;}
+  .btn-block{width:100%;}
 
-.section-heading p{
-    margin:0;
-    color:var(--muted);
-    font-size:15px;
-}
+  /* ============ Header ============ */
+  header.site-header{
+    position:sticky;top:0;z-index:60;
+    background:var(--paper);
+    border-bottom:1px solid var(--line);
+    min-height:var(--header-h);
+  }
+  .header-inner{
+    min-height:var(--header-h);padding-top:10px;padding-bottom:10px;
+    display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:nowrap;
+  }
+  .brand{display:flex;align-items:center;gap:10px;text-decoration:none;color:inherit;min-width:0;}
+  .brand img{height:40px;width:40px;object-fit:contain;border-radius:10px;flex-shrink:0;}
+  .brand-text{min-width:0;}
+  .brand-text .brand-name{font-family:var(--font-display);font-size:1.1rem;color:var(--maroon-dark);font-weight:700;white-space:nowrap;}
+  .brand-text .brand-sub{display:none;font-size:.72rem;color:var(--ink-soft);letter-spacing:.02em;white-space:nowrap;}
+  @media(min-width:560px){
+    .brand-text .brand-name{font-size:1.35rem;}
+    .brand-text .brand-sub{display:block;}
+  }
 
+  nav.main-nav{display:none;align-items:center;gap:28px;}
+  nav.main-nav a{text-decoration:none;font-weight:600;font-size:.96rem;color:var(--ink);position:relative;padding:6px 2px;}
+  nav.main-nav a::after{content:"";position:absolute;left:0;right:0;bottom:-4px;height:2px;background:var(--gold);transform:scaleX(0);transition:transform .2s ease;}
+  nav.main-nav a:hover::after,nav.main-nav a:focus-visible::after{transform:scaleX(1);}
 
-/* =========================
-   TRAVELS SECTION
-========================= */
+  .lang-switch{display:flex;border:1.5px solid var(--maroon);border-radius:999px;overflow:hidden;flex-shrink:0;}
+  .lang-switch button{
+    border:none;background:transparent;padding:7px 10px;font-size:.76rem;font-weight:700;
+    cursor:pointer;color:var(--maroon);white-space:nowrap;
+  }
+  .lang-switch button.active{background:var(--maroon);color:#fff;}
+  @media(min-width:560px){
+    .lang-switch button{padding:8px 14px;font-size:.85rem;}
+  }
 
-.travels{
+  .header-actions{display:flex;align-items:center;gap:8px;flex-shrink:0;}
+  .hamburger{
+    display:inline-flex;flex-direction:column;justify-content:center;gap:5px;
+    width:38px;height:38px;border-radius:10px;border:1.5px solid var(--line);
+    background:var(--paper);cursor:pointer;flex-shrink:0;
+  }
+  @media(min-width:560px){
+    .header-actions{gap:14px;}
+    .hamburger{width:42px;height:42px;}
+  }
+  .hamburger span{display:block;height:2px;background:var(--maroon-dark);margin:0 9px;border-radius:2px;}
+
+  .mobile-nav{
+    display:none;position:fixed;left:0;right:0;bottom:0;top:64px;background:var(--paper);z-index:55;
+    padding:20px 22px;overflow-y:auto;
+  }
+  .mobile-nav.open{display:block;}
+  .mobile-nav a{display:block;padding:14px 4px;font-size:1.05rem;font-weight:600;text-decoration:none;color:var(--ink);border-bottom:1px solid var(--line);}
+  .mobile-nav .lang-switch{margin-top:18px;width:max-content;}
+
+  @media(min-width:900px){
+    nav.main-nav{display:flex;}
+    .hamburger{display:none;}
+  }
+
+  /* ============ Hero ============ */
+  .hero{
     background:
-        linear-gradient(
-            135deg,
-            #eaf5f8,
-            #ffffff
-        );
-}
-
-.travel-grid{
-    display:grid;
-    grid-template-columns:1.05fr .95fr;
-    gap:22px;
-}
-
-.travel-card{
-    position:relative;
-    overflow:hidden;
-    padding:38px;
-    border-radius:23px;
-    color:#fff;
-
-    background:
-        linear-gradient(
-            135deg,
-            var(--blue),
-            var(--blue-dark)
-        );
-
-    box-shadow:
-        0 20px 45px
-        rgba(13,52,69,.18);
-}
-
-.travel-label{
-    display:inline-block;
-    padding:7px 13px;
-    border-radius:50px;
-    color:#ffe4a3;
-    background:rgba(255,255,255,.10);
-    border:1px solid rgba(255,255,255,.18);
-    font-size:12px;
-    font-weight:850;
-}
-
-.travel-card h3{
-    margin:17px 0 10px;
-    font-size:32px;
-    line-height:1.25;
-}
-
-.travel-card p{
-    margin:0;
-    color:#dbe9ed;
-    font-size:16px;
-    line-height:1.8;
-}
-
-.travel-list{
-    display:grid;
-    gap:10px;
-    margin-top:23px;
-}
-
-.travel-list-item{
-    display:flex;
-    align-items:center;
-    gap:10px;
-    font-weight:700;
-    font-size:14px;
-}
-
-.travel-check{
-    width:30px;
-    height:30px;
-    flex-shrink:0;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    border-radius:9px;
-    background:rgba(255,255,255,.12);
-}
-
-.travel-card .btn{
-    margin-top:23px;
-    background:#fff;
-    color:var(--blue);
-}
-
-.travel-card .btn:hover{
-    background:var(--gold-light);
-}
-
-
-/* =========================
-   DISCOUNT CARD
-========================= */
-
-.discount-card{
-    padding:36px;
-    border-radius:23px;
-    background:#fff;
-    border:1px solid #e8d8b8;
-    box-shadow:var(--shadow);
-}
-
-.discount-icon{
-    width:62px;
-    height:62px;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    border-radius:17px;
-    background:#fff6d9;
-    font-size:30px;
-    margin-bottom:17px;
-}
-
-.discount-card h3{
-    margin:0 0 11px;
-    color:var(--maroon);
-    font-size:27px;
-    line-height:1.3;
-}
-
-.discount-card p{
-    margin:0;
-    color:#666;
-    font-size:15px;
-    line-height:1.8;
-}
-
-.discount-box{
-    display:flex;
-    align-items:flex-start;
-    gap:11px;
-    margin-top:20px;
-    padding:15px;
-    border-radius:13px;
-    background:#fff9e9;
-    border:1px dashed #d8b65e;
-    color:#604c1d;
-    font-weight:750;
-    font-size:14px;
-}
-
-
-/* =========================
-   BUS SERVICES
-========================= */
-
-.bus-services{
-    margin-top:24px;
-    display:grid;
-    grid-template-columns:1fr 1fr;
-    gap:14px;
-}
-
-.bus-card{
-    padding:20px;
-    border-radius:17px;
-    background:#fff;
-    border:1px solid var(--border);
-    box-shadow:0 7px 20px rgba(0,0,0,.05);
-}
-
-.bus-image{
-    width:100%;
-    height:145px;
-    object-fit:cover;
-    border-radius:13px;
-    margin-bottom:12px;
-    background:#eee;
-}
-
-.bus-card h4{
-    margin:0 0 5px;
-    color:var(--blue);
-    font-size:18px;
-}
-
-.bus-card p{
-    margin:0;
-    color:#777;
-    font-size:13px;
-}
-
-
-/* =========================
-   E-SEVAI
-========================= */
-
-.esevai{
-    background:#fff;
-}
-
-.esevai-main{
-    display:grid;
-    grid-template-columns:1.1fr .9fr;
-    gap:25px;
-    align-items:stretch;
-}
-
-.esevai-intro{
-    padding:38px;
-    border-radius:23px;
-
-    background:
-        linear-gradient(
-            135deg,
-            #fffaf0,
-            #ffffff
-        );
-
-    border:1px solid #e8d9b9;
-    box-shadow:var(--shadow);
-}
-
-.official-badge{
-    display:inline-flex;
-    align-items:center;
-    gap:8px;
-    padding:8px 14px;
-    border-radius:50px;
-    background:#edf7f1;
-    border:1px solid #cbe6d6;
-    color:#21734a;
-    font-size:13px;
-    font-weight:850;
-}
-
-.esevai-intro h3{
-    margin:17px 0 10px;
-    color:var(--maroon);
-    font-size:31px;
-    line-height:1.25;
-}
-
-.esevai-intro p{
-    margin:0 0 14px;
-    color:#626262;
-    font-size:15px;
-    line-height:1.8;
-}
-
-.official-note{
-    margin-top:20px;
-    padding:17px;
-    border-left:4px solid var(--gold);
-    border-radius:10px;
-    background:#fff8e6;
-    color:#624e20;
-    font-size:14px;
-    line-height:1.7;
-}
-
-
-/* CERTIFICATE CARD */
-
-.certificate-card{
-    padding:32px;
-    border-radius:23px;
-    background:
-        linear-gradient(
-            135deg,
-            var(--blue),
-            var(--blue-dark)
-        );
-    color:#fff;
-    box-shadow:
-        0 20px 40px
-        rgba(13,52,69,.18);
-}
-
-.certificate-card h3{
-    margin:0 0 18px;
-    font-size:25px;
-}
-
-.certificate-list{
-    display:grid;
-    gap:10px;
-}
-
-.certificate-item{
-    display:flex;
-    align-items:center;
-    gap:11px;
-    padding:11px 13px;
-    border-radius:11px;
-    background:rgba(255,255,255,.09);
-    border:1px solid rgba(255,255,255,.10);
-    font-size:14px;
-    font-weight:650;
-}
-
-.certificate-icon{
-    width:28px;
-    height:28px;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    flex-shrink:0;
-    border-radius:8px;
-    background:rgba(255,255,255,.13);
-}
-
-
-/* =========================
-   SERVICES
-========================= */
-
-.services{
-    background:#f8f4ec;
-}
-
-.service-grid{
-    display:grid;
-    grid-template-columns:repeat(3,1fr);
-    gap:20px;
-}
-
-.service-card{
-    padding:27px;
-    border-radius:19px;
-    background:#fff;
-    border:1px solid var(--border);
-    box-shadow:0 8px 25px rgba(60,35,10,.05);
-    transition:.25s;
-}
-
-.service-card:hover{
-    transform:translateY(-5px);
-    box-shadow:var(--shadow);
-}
-
-.service-icon{
-    width:56px;
-    height:56px;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    border-radius:15px;
-    background:#f9eaf1;
-    font-size:27px;
-    margin-bottom:14px;
-}
-
-.service-card h3{
-    margin:0 0 7px;
-    color:var(--blue);
-    font-size:20px;
-}
-
-.service-card p{
-    margin:0;
-    color:#6c6c6c;
-    font-size:14px;
-    line-height:1.7;
-}
-
-
-/* =========================
-   ABOUT
-========================= */
-
-.about{
-    background:var(--cream-dark);
-}
-
-.about-grid{
-    display:grid;
-    grid-template-columns:1fr 1fr;
-    gap:22px;
-}
-
-.about-box{
-    padding:32px;
-    border-radius:21px;
-    background:#fff;
-    border:1px solid rgba(200,155,60,.18);
-    box-shadow:var(--shadow);
-}
-
-.about-box h2{
-    margin:0 0 13px;
-    color:var(--maroon);
-    font-size:29px;
-}
-
-.about-box p{
-    color:#666;
-    font-size:15px;
-    line-height:1.8;
-}
-
-.why-list{
-    display:grid;
-    gap:10px;
-    margin-top:17px;
-}
-
-.why-item{
-    display:flex;
-    align-items:center;
-    gap:10px;
-    padding:11px 13px;
-    border-radius:11px;
-    background:#fffaf0;
-    font-size:14px;
-    font-weight:700;
-    color:#444;
-}
-
-.check{
-    width:25px;
-    height:25px;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    flex-shrink:0;
-    border-radius:50%;
-    background:#e8f5ee;
-    color:#27814f;
-    font-weight:900;
-}
-
-
-/* =========================
-   CONTACT
-========================= */
-
-.contact{
-    color:#fff;
-    background:
-        linear-gradient(
-            135deg,
-            var(--blue),
-            var(--blue-dark)
-        );
-}
-
-.contact .section-heading h2{
-    color:#fff;
-}
-
-.contact .section-heading p{
-    color:#d7e5e9;
-}
-
-.contact-grid{
-    max-width:850px;
-    margin:auto;
-    display:grid;
-    grid-template-columns:1fr 1fr;
-    gap:20px;
-}
-
-.contact-card{
-    padding:29px;
-    border-radius:19px;
-    background:rgba(255,255,255,.08);
-    border:1px solid rgba(255,255,255,.15);
-    backdrop-filter:blur(7px);
-}
-
-.contact-icon{
-    font-size:27px;
-    margin-bottom:7px;
-}
-
-.contact-card h3{
-    margin:0 0 7px;
-    font-size:20px;
-}
-
-.contact-card p{
-    margin:0 0 18px;
-    color:#e1edef;
-    font-size:15px;
-}
-
-.contact-card strong{
-    color:#ffe0a1;
-}
-
-.contact .btn-outline{
-    color:#fff;
-    border-color:#fff;
-    background:transparent;
-}
-
-.contact .btn-outline:hover{
-    color:var(--blue);
-    background:#fff;
-}
-
-
-/* =========================
-   FOOTER
-========================= */
-
-footer{
-    padding:22px 6%;
-    text-align:center;
-    color:#d9ccbf;
-    background:#211714;
-    font-size:13px;
-}
-
-.footer-brand{
-    margin-bottom:4px;
-    color:#fff;
-    font-size:14px;
-    font-weight:850;
-}
-
-
-/* =========================
-   MOBILE
-========================= */
-
-@media(max-width:900px){
-
-    .nav-links{
-        display:none;
-    }
-
-    .hero-highlights{
-        grid-template-columns:1fr;
-        max-width:500px;
-    }
-
-    .travel-grid,
-    .esevai-main{
-        grid-template-columns:1fr;
-    }
-
-    .service-grid{
-        grid-template-columns:1fr;
-    }
-
-    .about-grid{
-        grid-template-columns:1fr;
-    }
-
-    .contact-grid{
-        grid-template-columns:1fr;
-    }
-}
-
-
-@media(max-width:600px){
-
-    .topbar{
-        justify-content:center;
-        padding:7px 4%;
-        text-align:center;
-        flex-wrap:wrap;
-    }
-
-    .topbar-left{
-        width:100%;
-        justify-content:center;
-        font-size:10px;
-    }
-
-    .topbar-right{
-        font-size:10px;
-    }
-
-    .brand{
-        font-size:15px;
-    }
-
-    .brand-icon{
-        width:39px;
-        height:39px;
-        font-size:20px;
-    }
-
-    .brand-text small{
-        font-size:7px;
-    }
-
-    .language-select{
-        min-width:87px;
-        font-size:12px;
-        padding:7px 5px;
-    }
-
-    .nav-right{
-        gap:8px;
-    }
-
-    section{
-        padding:55px 5%;
-    }
-
-    .hero{
-        padding:50px 5% 55px;
-    }
-
-    .hero h1{
-        font-size:41px;
-    }
-
-    .hero-description{
-        font-size:16px;
-    }
-
-    .travel-card,
-    .discount-card,
-    .esevai-intro,
-    .certificate-card{
-        padding:27px;
-    }
-
-    .travel-card h3{
-        font-size:27px;
-    }
-
-    .discount-card h3{
-        font-size:24px;
-    }
-
-    .esevai-intro h3{
-        font-size:27px;
-    }
-
-    .hero-buttons{
-        flex-direction:column;
-    }
-
-    .hero-buttons .btn{
-        width:100%;
-    }
-
-    .bus-services{
-        grid-template-columns:1fr;
-    }
-}
-
+      radial-gradient(circle at 85% 0%, rgba(192,138,46,.35), transparent 55%),
+      linear-gradient(160deg,var(--maroon) 0%,var(--maroon-dark) 65%);
+    color:#fff;padding:64px 0 80px;position:relative;overflow:hidden;
+  }
+  .hero-grid{display:grid;gap:34px;}
+  .hero-tag{
+    display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,.14);
+    border:1px solid rgba(255,255,255,.35);padding:7px 16px;border-radius:999px;font-size:.82rem;margin-bottom:20px;
+  }
+  .hero h1{color:#fff;font-size:clamp(2.4rem,6vw,3.6rem);margin-bottom:.3em;}
+  .hero .subtitle{font-size:clamp(1.05rem,2.4vw,1.35rem);color:var(--gold-light);font-weight:600;margin-bottom:14px;}
+  .hero .lead{font-size:1.05rem;color:rgba(255,255,255,.88);max-width:52ch;}
+  .hero .location-line{display:flex;align-items:center;gap:8px;margin:18px 0 28px;font-weight:600;color:#fff;}
+  .hero-actions{display:flex;flex-wrap:wrap;gap:14px;}
+
+  .ticket-strip{
+    background:var(--paper);border-radius:var(--radius-l);padding:26px;color:var(--ink);
+    box-shadow:0 24px 50px -20px rgba(0,0,0,.45);position:relative;
+  }
+  .ticket-strip::before,.ticket-strip::after{
+    content:"";position:absolute;top:50%;transform:translateY(-50%);width:26px;height:26px;
+    background:var(--cream);border-radius:50%;
+  }
+  .ticket-strip::before{left:-13px;}
+  .ticket-strip::after{right:-13px;}
+  .ticket-strip h3{font-size:1.05rem;margin-bottom:14px;color:var(--maroon-dark);}
+  .ticket-row{display:flex;justify-content:space-between;padding:10px 0;border-bottom:1px dashed var(--line);font-size:.92rem;}
+  .ticket-row:last-of-type{border-bottom:none;}
+  .ticket-row span:first-child{color:var(--ink-soft);}
+  .ticket-row span:last-child{font-weight:700;color:var(--maroon-dark);}
+
+  @media(min-width:900px){
+    .hero-grid{grid-template-columns:1.15fr .85fr;align-items:center;}
+  }
+
+  /* ============ Perforated divider (ticket motif) ============ */
+  .perforation{
+    height:26px;background:
+      radial-gradient(circle at center, var(--cream) 0 7px, transparent 7px) repeat-x;
+    background-size:28px 26px;background-position:14px center;
+    background-color:var(--maroon-dark);
+  }
+
+  /* ============ Service tabs ============ */
+  .services-overview{padding:52px 0 30px;background:var(--maroon-dark);}
+  .services-overview .eyebrow{color:var(--gold-light);}
+  .service-tabs{display:grid;gap:18px;grid-template-columns:1fr;margin-top:26px;}
+  .service-tab{
+    background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.16);border-radius:var(--radius-m);
+    padding:26px;text-align:left;cursor:pointer;color:#fff;transition:background .2s ease, transform .2s ease;
+  }
+  .service-tab:hover{background:rgba(255,255,255,.12);transform:translateY(-3px);}
+  .service-tab .icon{font-size:2rem;display:block;margin-bottom:14px;}
+  .service-tab h3{color:#fff;font-size:1.2rem;}
+  .service-tab p{color:rgba(255,255,255,.78);font-size:.92rem;margin-bottom:16px;}
+  .service-tab .explore{color:var(--gold-light);font-weight:700;font-size:.9rem;}
+  @media(min-width:760px){ .service-tabs{grid-template-columns:repeat(3,1fr);} }
+
+  /* ============ Generic section styling ============ */
+  .section{padding:64px 0;}
+  .section-alt{background:var(--paper);}
+  .section-head{max-width:64ch;margin-bottom:34px;}
+  .eyebrow{
+    font-size:.82rem;font-weight:700;color:var(--maroon);
+  }
+  .section-head h2{font-size:clamp(1.7rem,3.6vw,2.3rem);}
+  .section-head p{color:var(--ink-soft);}
+
+  .card-grid{display:grid;gap:20px;grid-template-columns:1fr;}
+  @media(min-width:640px){ .card-grid{grid-template-columns:repeat(2,1fr);} }
+  @media(min-width:980px){ .card-grid.cols-4{grid-template-columns:repeat(4,1fr);} }
+
+  .feature-card{
+    background:var(--paper);border:1px solid var(--line);border-radius:var(--radius-m);
+    padding:24px;box-shadow:var(--shadow-soft);
+  }
+  .feature-card .icon{font-size:1.7rem;margin-bottom:12px;display:block;}
+  .feature-card h3{font-size:1.08rem;}
+  .feature-card p{color:var(--ink-soft);font-size:.92rem;margin-bottom:0;}
+
+  /* ============ Travels: bus operators ============ */
+  .operator-card{
+    background:var(--paper);border:1px solid var(--line);border-radius:var(--radius-m);
+    overflow:hidden;box-shadow:var(--shadow-soft);
+  }
+  .operator-media{aspect-ratio:16/10;background:var(--maroon-soft);position:relative;}
+  .operator-media img{width:100%;height:100%;object-fit:cover;}
+  .operator-body{padding:18px;}
+  .operator-body h3{font-size:1.02rem;margin-bottom:6px;}
+  .operator-body p{font-size:.88rem;color:var(--ink-soft);margin:0;}
+  .img-fallback{
+    width:100%;height:100%;display:flex;flex-direction:column;align-items:center;justify-content:center;
+    gap:6px;color:var(--maroon);background:
+      repeating-linear-gradient(45deg,var(--maroon-soft),var(--maroon-soft) 10px,#fbeceb 10px,#fbeceb 20px);
+    font-size:.8rem;font-weight:600;text-align:center;padding:10px;
+  }
+  .img-fallback .icon{font-size:1.6rem;}
+
+  /* ============ CTA banners ============ */
+  .cta-banner{
+    background:linear-gradient(120deg,var(--maroon),var(--maroon-dark));
+    color:#fff;border-radius:var(--radius-l);padding:38px;margin-top:44px;
+    display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:22px;
+  }
+  .cta-banner h3{color:#fff;font-size:1.35rem;margin-bottom:6px;}
+  .cta-banner p{color:rgba(255,255,255,.85);margin:0;}
+  .cta-banner.blue{background:linear-gradient(120deg,var(--blue),#12253b);}
+
+  /* ============ E-Sevai ============ */
+  .esevai-intro{
+    display:grid;gap:26px;align-items:center;background:var(--blue-soft);
+    border-radius:var(--radius-l);padding:30px;
+  }
+  .esevai-intro .badge{
+    display:inline-flex;align-items:center;gap:8px;background:var(--blue);color:#fff;
+    padding:8px 16px;border-radius:999px;font-size:.82rem;font-weight:700;margin-bottom:14px;
+  }
+  .esevai-media{border-radius:var(--radius-m);overflow:hidden;aspect-ratio:4/3;background:var(--blue-soft);}
+  .esevai-media img{width:100%;height:100%;object-fit:cover;}
+  @media(min-width:860px){ .esevai-intro{grid-template-columns:1fr 1fr;} }
+
+  .cert-card{
+    background:var(--paper);border:1px solid var(--line);border-left:5px solid var(--blue);
+    border-radius:var(--radius-s);padding:20px;
+  }
+  .cert-card h3{font-size:1rem;color:var(--blue);margin-bottom:6px;}
+  .cert-card p{font-size:.88rem;color:var(--ink-soft);margin:0;}
+
+  .info-box{
+    margin-top:30px;border:1px dashed var(--blue);background:var(--blue-soft);
+    border-radius:var(--radius-s);padding:18px 20px;font-size:.9rem;color:var(--ink);
+  }
+  .info-box strong{color:var(--blue);}
+
+  /* ============ Printing ============ */
+  .printing-cats .feature-card{text-align:left;}
+
+  .invitation-panel{
+    margin-top:40px;background:var(--paper);border:1px solid var(--line);border-radius:var(--radius-l);
+    padding:28px;box-shadow:var(--shadow-soft);
+  }
+  .invite-tabs{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:26px;}
+  .invite-tab{
+    padding:11px 20px;border-radius:999px;border:1.5px solid var(--line);background:var(--cream);
+    font-weight:700;font-size:.9rem;cursor:pointer;color:var(--ink);
+  }
+  .invite-tab.active{background:var(--gold);border-color:var(--gold);color:var(--maroon-dark);}
+
+  .invite-grid{display:grid;gap:20px;grid-template-columns:repeat(2,1fr);}
+  @media(min-width:640px){ .invite-grid{grid-template-columns:repeat(3,1fr);} }
+  @media(min-width:980px){ .invite-grid{grid-template-columns:repeat(4,1fr);} }
+
+  .invite-card{
+    background:var(--cream);border-radius:var(--radius-m);overflow:hidden;border:1px solid var(--line);
+    box-shadow:var(--shadow-soft);display:flex;flex-direction:column;
+  }
+  .invite-media{aspect-ratio:3/4;background:var(--gold-light);cursor:zoom-in;position:relative;}
+  .invite-media img{width:100%;height:100%;object-fit:cover;}
+  .invite-body{padding:14px;display:flex;flex-direction:column;gap:8px;flex:1;}
+  .invite-body .name{font-weight:700;font-size:.9rem;}
+  .invite-body .price{font-weight:700;color:var(--maroon);font-size:.92rem;}
+
+  /* ============ Contact ============ */
+  .contact-grid{display:grid;gap:20px;grid-template-columns:1fr;}
+  @media(min-width:760px){ .contact-grid{grid-template-columns:repeat(3,1fr);} }
+  .contact-card{
+    background:var(--paper);border:1px solid var(--line);border-radius:var(--radius-m);
+    padding:26px;text-align:center;box-shadow:var(--shadow-soft);
+  }
+  .contact-card .icon{font-size:1.9rem;margin-bottom:10px;display:block;}
+  .contact-card h3{font-size:1.05rem;}
+  .contact-card .detail{font-weight:700;color:var(--maroon-dark);margin-bottom:16px;word-break:break-word;}
+
+  .contact-address{margin-top:30px;text-align:center;color:var(--ink-soft);}
+  .contact-address strong{display:block;color:var(--maroon-dark);font-size:1.05rem;margin-bottom:4px;}
+
+  /* ============ Footer ============ */
+  footer{background:var(--maroon-dark);color:rgba(255,255,255,.86);padding:48px 0 22px;}
+  .footer-grid{display:grid;gap:30px;grid-template-columns:1fr;margin-bottom:30px;}
+  @media(min-width:760px){ .footer-grid{grid-template-columns:1.4fr 1fr 1fr;} }
+  footer h3{color:#fff;font-family:var(--font-display);font-size:1.2rem;margin-bottom:8px;}
+  footer .footer-sub{color:var(--gold-light);font-size:.88rem;margin-bottom:14px;}
+  footer nav a{display:block;padding:6px 0;text-decoration:none;color:rgba(255,255,255,.8);font-size:.92rem;}
+  footer nav a:hover{color:var(--gold-light);}
+  footer .footer-contact p{margin:0 0 8px;font-size:.92rem;}
+  footer .footer-contact a{text-decoration:none;color:rgba(255,255,255,.9);}
+  .footer-bottom{border-top:1px solid rgba(255,255,255,.15);padding-top:18px;font-size:.82rem;color:rgba(255,255,255,.6);text-align:center;}
+
+  /* ============ Floating call button ============ */
+  .floating-call{
+    position:fixed;right:18px;bottom:18px;z-index:70;
+    width:60px;height:60px;border-radius:50%;background:var(--gold);color:var(--maroon-dark);
+    display:flex;align-items:center;justify-content:center;font-size:1.5rem;text-decoration:none;
+    box-shadow:0 14px 30px -10px rgba(0,0,0,.45);
+  }
+  .floating-call:hover{background:var(--gold-light);}
+
+  /* ============ Lightbox ============ */
+  .lightbox{
+    position:fixed;inset:0;background:rgba(20,10,10,.88);z-index:100;
+    display:none;align-items:center;justify-content:center;padding:26px;
+  }
+  .lightbox.open{display:flex;}
+  .lightbox-inner{max-width:min(90vw,620px);width:100%;text-align:center;}
+  .lightbox-inner img{border-radius:var(--radius-m);max-height:76vh;width:auto;margin:0 auto;box-shadow:0 30px 60px -20px rgba(0,0,0,.6);}
+  .lightbox-caption{color:#fff;margin-top:14px;font-weight:600;}
+  .lightbox-close{
+    position:absolute;top:20px;right:22px;width:46px;height:46px;border-radius:50%;
+    background:rgba(255,255,255,.15);border:1px solid rgba(255,255,255,.4);color:#fff;font-size:1.4rem;cursor:pointer;
+  }
+  .lightbox-close:hover{background:rgba(255,255,255,.3);}
+
+  @media (prefers-reduced-motion: reduce){
+    *{animation:none !important;transition:none !important;}
+    html{scroll-behavior:auto;}
+  }
 </style>
-
 </head>
-
-
 <body>
 
+<!-- ============================================================ HEADER ============================================================ -->
+<header class="site-header">
+  <div class="container header-inner">
+    <a href="#home" class="brand" aria-label="Pooja Mobiles, home">
+      <img src="images/logo/pooja-mobiles-logo.png" alt="Pooja Mobiles logo"
+           onerror="this.style.display='none'">
+      <span class="brand-text">
+        <span class="brand-name">Pooja Mobiles</span>
+        <span class="brand-sub" data-en="Travels • E-Sevai • Printing" data-ta="டிராவல்ஸ் • இ-சேவை • பிரிண்டிங்">Travels • E-Sevai • Printing</span>
+      </span>
+    </a>
 
-<!-- =====================================================
-     TOP BAR
-===================================================== -->
+    <nav class="main-nav" aria-label="Primary">
+      <a href="#home" data-en="Home" data-ta="முகப்பு">Home</a>
+      <a href="#travels" data-en="Travels" data-ta="டிராவல்ஸ்">Travels</a>
+      <a href="#esevai" data-en="E-Sevai" data-ta="இ-சேவை">E-Sevai</a>
+      <a href="#printing" data-en="Printing" data-ta="பிரிண்டிங்">Printing</a>
+      <a href="#contact" data-en="Contact" data-ta="தொடர்பு">Contact</a>
+    </nav>
 
-<div class="topbar">
+    <div class="header-actions">
+      <div class="lang-switch" role="group" aria-label="Language switch">
+        <button type="button" data-lang="en" class="active">English</button>
+        <button type="button" data-lang="ta">தமிழ்</button>
+      </div>
+      <button class="hamburger" id="hamburgerBtn" aria-label="Open menu" aria-expanded="false" aria-controls="mobileNav">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
 
-    <div class="topbar-left">
+  <div class="mobile-nav" id="mobileNav">
+    <a href="#home" data-en="Home" data-ta="முகப்பு">Home</a>
+    <a href="#travels" data-en="Travels" data-ta="டிராவல்ஸ்">Travels</a>
+    <a href="#esevai" data-en="E-Sevai" data-ta="இ-சேவை">E-Sevai</a>
+    <a href="#printing" data-en="Printing" data-ta="பிரிண்டிங்">Printing</a>
+    <a href="#contact" data-en="Contact" data-ta="தொடர்பு">Contact</a>
+    <div class="lang-switch" role="group" aria-label="Language switch">
+      <button type="button" data-lang="en" class="active">English</button>
+      <button type="button" data-lang="ta">தமிழ்</button>
+    </div>
+  </div>
+</header>
 
-        <span data-i18n="blessing">ஸ்ரீ காமாட்சி அம்மன் துணை</span>
+<!-- ============================================================ HERO ============================================================ -->
+<section id="home" class="hero">
+  <div class="container hero-grid">
+    <div>
+      <span class="hero-tag">📍 <span data-en="Keelaeral, Ettayapuram Taluk, Thoothukudi – 628908" data-ta="கீழஈரால், எட்டையாபுரம் தாலுகா, தூத்துக்குடி – 628908">Keelaeral, Ettayapuram Taluk, Thoothukudi – 628908</span></span>
+      <h1>Pooja Mobiles</h1>
+      <p class="subtitle" data-en="Your Trusted Destination for Travels, E-Sevai &amp; Printing Services" data-ta="டிராவல்ஸ், இ-சேவை மற்றும் பிரிண்டிங் சேவைகளுக்கான நம்பகமான மையம்">Your Trusted Destination for Travels, E-Sevai &amp; Printing Services</p>
+      <p class="lead" data-en="Convenient services for your travel, government certificate applications and printing needs — all under one roof." data-ta="உங்கள் பயணம், அரசு சான்றிதழ் விண்ணப்பங்கள் மற்றும் பிரிண்டிங் தேவைகளுக்கு வசதியான சேவைகள் — அனைத்தும் ஒரே கூரையின் கீழ்.">Convenient services for your travel, government certificate applications and printing needs — all under one roof.</p>
 
+      <div class="hero-actions">
+        <a href="#services" class="btn btn-primary" data-en="Explore Our Services" data-ta="எங்கள் சேவைகளைக் காண்க">Explore Our Services</a>
+        <a href="tel:9600372621" class="btn btn-outline" data-en="📞 Call 9600372621" data-ta="📞 அழைக்கவும் 9600372621">📞 Call 9600372621</a>
+      </div>
     </div>
 
-
-    <div class="topbar-right">
-
-        <a href="tel:+919600372621">
-            📞 96003 72621
-        </a>
-
-        <span>|</span>
-
-        <a href="mailto:poojasrimobiles@gmail.com">
-            ✉ poojasrimobiles@gmail.com
-        </a>
-
+    <div class="ticket-strip">
+      <h3 data-en="Quick Enquiry Card" data-ta="விரைவு விசாரிப்பு அட்டை">Quick Enquiry Card</h3>
+      <div class="ticket-row">
+        <span data-en="Travel Tickets" data-ta="பயண டிக்கெட்">Travel Tickets</span>
+        <a href="#travels" class="btn btn-ghost btn-sm" data-en="View" data-ta="பார்க்க">Book Now</a>
+      </div>
+      <div class="ticket-row">
+        <span data-en="E-Sevai Certificates" data-ta="இ-சேவை சான்றிதழ்கள்">E-Sevai Certificates</span>
+        <a href="#esevai" class="btn btn-ghost btn-sm" data-en="View" data-ta="பார்க்க">View</a>
+      </div>
+      <div class="ticket-row">
+        <span data-en="Printing &amp; Invitations" data-ta="பிரிண்டிங் மற்றும் அழைப்பிதழ்கள்">Printing &amp; Invitations</span>
+        <a href="#printing" class="btn btn-ghost btn-sm" data-en="View" data-ta="பார்க்க">View</a>
+      </div>
     </div>
+  </div>
+</section>
+<div class="perforation" aria-hidden="true"></div>
 
-</div>
+<!-- ============================================================ SERVICE TABS ============================================================ -->
+<section id="services" class="services-overview">
+  <div class="container">
+    <span class="eyebrow" data-en="What We Offer" data-ta="நாங்கள் வழங்குவது">What We Offer</span>
+    <h2 style="color:#fff;margin-top:8px;" data-en="Three Services, One Trusted Shop" data-ta="மூன்று சேவைகள், ஒரே நம்பகமான கடை">Three Services, One Trusted Shop</h2>
 
+    <div class="service-tabs">
+      <button class="service-tab" data-target="#travels">
+        <span class="icon" aria-hidden="true">🚌</span>
+        <h3 data-en="Travels Ticket Booking" data-ta="டிராவல்ஸ் டிக்கெட் முன்பதிவு">Travels Ticket Booking</h3>
+        <p data-en="Book AC/Non-AC and Seater/Sleeper bus tickets with regular online prices, customer discounts and group booking offers." data-ta="வழக்கமான ஆன்லைன் விலையில் AC/Non-AC மற்றும் Seater/Sleeper பேருந்து டிக்கெட்டுகளை முன்பதிவு செய்யுங்கள். வழக்கமான வாடிக்கையாளர்களுக்கு தள்ளுபடி மற்றும் குழு முன்பதிவுக்கு சிறப்பு சலுகைகள்.">Book AC/Non-AC and Seater/Sleeper bus tickets with regular online prices, customer discounts and group booking offers.</p>
+        <span class="explore" data-en="Explore Service →" data-ta="சேவையைக் காண்க →">Explore Service →</span>
+      </button>
 
+      <button class="service-tab" data-target="#esevai">
+        <span class="icon" aria-hidden="true">📄</span>
+        <h3 data-en="E-Sevai Services" data-ta="இ-சேவை சேவைகள்">E-Sevai Services</h3>
+        <p data-en="Government-authorized centre assisting customers with Native, Community, Legal Heir and other certificate applications." data-ta="இருப்பிடம், சமூகம், வாரிசு மற்றும் பிற சான்றிதழ் விண்ணப்பங்களுக்கு உதவும் அரசு அங்கீகரிக்கப்பட்ட மையம்.">Government-authorized centre assisting customers with Native, Community, Legal Heir and other certificate applications.</p>
+        <span class="explore" data-en="Explore Service →" data-ta="சேவையைக் காண்க →">Explore Service →</span>
+      </button>
 
-<!-- =====================================================
-     NAVIGATION
-===================================================== -->
-
-<nav class="navbar">
-
-    <div class="nav-inner">
-
-
-        <a href="#home" class="brand">
-
-            <div class="brand-text">
-
-                <div data-i18n="brandName">
-                    பூஜா டிராவல்ஸ்
-                </div>
-
-                <small>
-                    POOJA TRAVELS • MOBILES • E-SEVAI
-                </small>
-
-            </div>
-
-        </a>
-
-
-        <div class="nav-right">
-
-
-            <div class="nav-links">
-
-                <a href="#home"
-                   data-i18n="navHome">
-                    முகப்பு
-                </a>
-
-                <a href="#travels"
-                   data-i18n="navTravels">
-                    டிராவல்ஸ்
-                </a>
-
-                <a href="#esevai"
-                   data-i18n="navEsevai">
-                    E-SEVAI
-                </a>
-
-                <a href="#services"
-                   data-i18n="navServices">
-                    சேவைகள்
-                </a>
-
-                <a href="#about"
-                   data-i18n="navAbout">
-                    எங்களைப் பற்றி
-                </a>
-
-                <a href="#contact"
-                   data-i18n="navContact">
-                    தொடர்பு
-                </a>
-
-            </div>
-
-
-            <select
-                id="languageSelect"
-                class="language-select">
-
-                <option value="ta">
-                    தமிழ்
-                </option>
-
-                <option value="en">
-                    English
-                </option>
-
-            </select>
-
-        </div>
-
+      <button class="service-tab" data-target="#printing">
+        <span class="icon" aria-hidden="true">🖨️</span>
+        <h3 data-en="Printing Services" data-ta="பிரிண்டிங் சேவைகள்">Printing Services</h3>
+        <p data-en="Printing for invitations, bill books, notices and other personal/business requirements." data-ta="அழைப்பிதழ்கள், பில் புக்குகள், அறிவிப்புகள் மற்றும் பிற தனிப்பட்ட/வணிகத் தேவைகளுக்கான பிரிண்டிங்.">Printing for invitations, bill books, notices and other personal/business requirements.</p>
+        <span class="explore" data-en="Explore Service →" data-ta="சேவையைக் காண்க →">Explore Service →</span>
+      </button>
     </div>
-
-</nav>
-
-
-
-<main id="home">
-
-
-<!-- =====================================================
-     HERO
-===================================================== -->
-
-<section class="hero">
-
-    <div class="hero-inner">
-
-
-        <h1>
-
-            <span class="maroon"
-                  data-i18n="heroPooja">
-                பூஜா
-            </span>
-
-            <span data-i18n="heroTravels">
-                டிராவல்ஸ்
-            </span>
-
-            <br>
-
-            <span class="gold"
-                  data-i18n="heroBooking">
-                பயண டிக்கெட் முன்பதிவு
-            </span>
-
-        </h1>
-
-
-        <p
-            class="hero-description"
-            data-i18n="heroDescription">
-
-            ஆன்லைனில் வழக்கமான டிக்கெட் கட்டணத்தில்
-            பயண டிக்கெட்டுகளை எளிதாக முன்பதிவு செய்யுங்கள்.
-            எங்களிடம் தொடர்ந்து முன்பதிவு செய்யும்
-            வாடிக்கையாளர்களுக்கு பிரத்யேக தள்ளுபடிகள்
-            மற்றும் சிறப்பு சலுகைகள் வழங்கப்படும்.
-
-        </p>
-
-
-        <div class="hero-highlights">
-
-
-            <div class="hero-highlight">
-
-                <div class="highlight-icon">
-                    🎫
-                </div>
-
-                <strong data-i18n="heroFeature1">
-                    வழக்கமான டிக்கெட் கட்டணம்
-                </strong>
-
-                <span data-i18n="heroFeature1Sub">
-                    Regular Ticket Rates
-                </span>
-
-            </div>
-
-
-            <div class="hero-highlight">
-
-                <div class="highlight-icon">
-                    ⭐
-                </div>
-
-                <strong data-i18n="heroFeature2">
-                    பிரத்யேக தள்ளுபடி
-                </strong>
-
-                <span data-i18n="heroFeature2Sub">
-                    Exclusive Regular Customer Discounts
-                </span>
-
-            </div>
-
-
-            <div class="hero-highlight">
-
-                <div class="highlight-icon">
-                    ⚡
-                </div>
-
-                <strong data-i18n="heroFeature3">
-                    விரைவான முன்பதிவு
-                </strong>
-
-                <span data-i18n="heroFeature3Sub">
-                    Quick & Easy Booking
-                </span>
-
-            </div>
-
-
-        </div>
-
-
-        <div class="hero-buttons">
-
-            <a
-                href="tel:+919600372621"
-                class="btn btn-primary">
-
-                📞
-
-                <span data-i18n="bookNow">
-                    இப்போது முன்பதிவு செய்யுங்கள்
-                </span>
-
-            </a>
-
-
-            <a
-                href="#esevai"
-                class="btn btn-outline">
-
-                🏛️
-
-                <span data-i18n="viewEsevai">
-                    E-SEVAI சேவைகள்
-                </span>
-
-            </a>
-
-        </div>
-
-    </div>
-
+  </div>
 </section>
 
-
-
-<!-- =====================================================
-     TRAVELS SECTION
-===================================================== -->
-
-<section
-    id="travels"
-    class="travels">
-
-    <div class="section-inner">
-
-
-        <div class="section-heading">
-
-            <h2 data-i18n="travelsTitle">
-                பூஜா டிராவல்ஸ்
-            </h2>
-
-            <p data-i18n="travelsSubtitle">
-                எளிதான பயண டிக்கெட் முன்பதிவு மற்றும்
-                வழக்கமான வாடிக்கையாளர்களுக்கு சிறப்பு சலுகைகள்
-            </p>
-
-        </div>
-
-
-        <div class="travel-grid">
-
-
-            <!-- TRAVEL MAIN -->
-
-            <div class="travel-card">
-
-
-                <span
-                    class="travel-label"
-                    data-i18n="travelLabel">
-
-                    🚌 TRAVEL TICKET BOOKING
-
-                </span>
-
-
-                <h3 data-i18n="travelTitle">
-
-                    வழக்கமான டிக்கெட் கட்டணத்தில்
-                    பயண டிக்கெட் முன்பதிவு
-
-                </h3>
-
-
-                <p data-i18n="travelDescription">
-
-                    பூஜா டிராவல்ஸ் மூலம் பிரபலமான பயண
-                    பேருந்து சேவைகளுக்கான டிக்கெட்டுகளை
-                    ஆன்லைனில் வழக்கமான டிக்கெட் கட்டணத்தில்
-                    எளிதாக முன்பதிவு செய்யலாம்.
-
-                </p>
-
-
-                <div class="travel-list">
-
-
-                    <div class="travel-list-item">
-
-                        <span class="travel-check">
-                            ✓
-                        </span>
-
-                        <span data-i18n="travelFeature1">
-                            வழக்கமான டிக்கெட் கட்டணத்தில் முன்பதிவு
-                        </span>
-
-                    </div>
-
-
-                    <div class="travel-list-item">
-
-                        <span class="travel-check">
-                            ✓
-                        </span>
-
-                        <span data-i18n="travelFeature2">
-                            விரைவான மற்றும் எளிதான முன்பதிவு
-                        </span>
-
-                    </div>
-
-
-                    <div class="travel-list-item">
-
-                        <span class="travel-check">
-                            ✓
-                        </span>
-
-                        <span data-i18n="travelFeature3">
-                            Vivegam Travels, SBM Travels போன்ற சேவைகள்
-                        </span>
-
-                    </div>
-
-
-                    <div class="travel-list-item">
-
-                        <span class="travel-check">
-                            ✓
-                        </span>
-
-                        <span data-i18n="travelFeature4">
-                            வழக்கமான வாடிக்கையாளர்களுக்கு பிரத்யேக தள்ளுபடி
-                        </span>
-
-                    </div>
-
-
-                </div>
-
-
-                <a
-                    href="tel:+919600372621"
-                    class="btn">
-
-                    📞
-
-                    <span data-i18n="travelCall">
-                        டிக்கெட் முன்பதிவுக்கு அழைக்கவும்
-                    </span>
-
-                </a>
-
-            </div>
-
-
-
-            <!-- DISCOUNT -->
-
-            <div class="discount-card">
-
-
-                <div class="discount-icon">
-                    ⭐
-                </div>
-
-
-                <h3 data-i18n="discountTitle">
-
-                    வழக்கமான வாடிக்கையாளர்களுக்கு
-                    பிரத்யேக தள்ளுபடி
-
-                </h3>
-
-
-                <p data-i18n="discountDescription">
-
-                    தொடர்ந்து எங்களிடம் பயண டிக்கெட்
-                    முன்பதிவு செய்யும் வாடிக்கையாளர்களுக்கு
-                    சிறப்பு தள்ளுபடிகள் மற்றும் பிரத்யேக
-                    சலுகைகள் வழங்கப்படும்.
-
-                </p>
-
-
-                <div class="discount-box">
-
-                    <span>🎁</span>
-
-                    <span data-i18n="discountHighlight">
-
-                        Regular Customers -
-                        Exclusive Discount!
-
-                    </span>
-
-                </div>
-
-
-                <a
-                    href="tel:+919600372621"
-                    class="btn btn-primary"
-                    style="margin-top:20px;">
-
-                    📞
-
-                    <span data-i18n="askDiscount">
-                        சலுகையைப் பற்றி கேளுங்கள்
-                    </span>
-
-                </a>
-
-            </div>
-
-        </div>
-
-
-
-        <!-- BUS SERVICES -->
-
-        <div
-            class="section-heading"
-            style="margin-top:50px;margin-bottom:25px;">
-
-            <h2
-                style="font-size:30px;"
-                data-i18n="busServicesTitle">
-
-                பிரபலமான பயண சேவைகள்
-
-            </h2>
-
-            <p data-i18n="busServicesSubtitle">
-
-                பிரபலமான பேருந்து சேவைகளுக்கான
-                டிக்கெட் முன்பதிவு உதவி
-
-            </p>
-
-        </div>
-
-
-        <div class="bus-services">
-
-
-            <div class="bus-card">
-
-                <!-- Replace this image URL with a properly licensed
-                     Vivegam Travels bus image -->
-
-                <img
-                    class="bus-image"
-                    src="https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?auto=format&fit=crop&w=900&q=80"
-                    alt="Travel Bus">
-
-                <h4>
-                    Vivegam Travels
-                </h4>
-
-                <p data-i18n="vivegamText">
-
-                    Vivegam Travels டிக்கெட் முன்பதிவு
-                    தொடர்பான உதவி கிடைக்கும்.
-
-                </p>
-
-            </div>
-
-
-            <div class="bus-card">
-
-                <!-- Replace this image URL with a properly licensed
-                     SBM Travels bus image -->
-
-                <img
-                    class="bus-image"
-                    src="https://images.unsplash.com/photo-1570125909232-eb263c188f7e?auto=format&fit=crop&w=900&q=80"
-                    alt="Travel Bus">
-
-                <h4>
-                    SBM Travels
-                </h4>
-
-                <p data-i18n="sbmText">
-
-                    SBM Travels டிக்கெட் முன்பதிவு
-                    தொடர்பான உதவி கிடைக்கும்.
-
-                </p>
-
-            </div>
-
-
-        </div>
-
+<!-- ============================================================ TRAVELS ============================================================ -->
+<section id="travels" class="section section-alt">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow" data-en="Travels" data-ta="டிராவல்ஸ்">Travels</span>
+      <h2 data-en="Travels Ticket Booking" data-ta="டிராவல்ஸ் டிக்கெட் முன்பதிவு">Travels Ticket Booking</h2>
+      <p data-en="Book your bus tickets with ease at regular online ticket prices. Regular customers can enjoy exclusive discounts, while group bookings are eligible for special offers. Choose from AC / Non-AC and Seater / Sleeper travel options based on your preference." data-ta="வழக்கமான ஆன்லைன் டிக்கெட் விலையில் உங்கள் பேருந்து டிக்கெட்டுகளை எளிதாக முன்பதிவு செய்யுங்கள். வழக்கமான வாடிக்கையாளர்கள் சிறப்பு தள்ளுபடிகளை பெறலாம், குழுவாக முன்பதிவு செய்பவர்களுக்கு சிறப்பு சலுகைகள் உண்டு. உங்கள் விருப்பப்படி AC / Non-AC மற்றும் Seater / Sleeper பயண வகைகளைத் தேர்வு செய்யலாம்.">Book your bus tickets with ease at regular online ticket prices. Regular customers can enjoy exclusive discounts, while group bookings are eligible for special offers. Choose from AC / Non-AC and Seater / Sleeper travel options based on your preference.</p>
     </div>
 
+    <div class="card-grid cols-4">
+      <div class="feature-card">
+        <span class="icon" aria-hidden="true">🖥️</span>
+        <h3 data-en="Online Ticket Booking" data-ta="ஆன்லைன் டிக்கெட் முன்பதிவு">Online Ticket Booking</h3>
+        <p data-en="Conveniently book your travel tickets through Pooja Mobiles without any hassle." data-ta="எந்த சிரமமும் இன்றி பூஜா மொபைல்ஸ் மூலம் உங்கள் பயண டிக்கெட்டுகளை வசதியாக முன்பதிவு செய்யுங்கள்.">Conveniently book your travel tickets through Pooja Mobiles without any hassle.</p>
+      </div>
+      <div class="feature-card">
+        <span class="icon" aria-hidden="true">🎟️</span>
+        <h3 data-en="Regular Customer Discounts" data-ta="வழக்கமான வாடிக்கையாளர் தள்ளுபடி">Regular Customer Discounts</h3>
+        <p data-en="Our regular customers can receive exclusive discounts on ticket bookings." data-ta="எங்கள் வழக்கமான வாடிக்கையாளர்கள் டிக்கெட் முன்பதிவுகளில் சிறப்பு தள்ளுபடி பெறலாம்.">Our regular customers can receive exclusive discounts on ticket bookings.</p>
+      </div>
+      <div class="feature-card">
+        <span class="icon" aria-hidden="true">👥</span>
+        <h3 data-en="Group Booking" data-ta="குழு முன்பதிவு">Group Booking</h3>
+        <p data-en="Special offers are available for group bookings — perfect for trips and functions." data-ta="குழு முன்பதிவுகளுக்கு சிறப்பு சலுகைகள் உள்ளன — பயணங்கள் மற்றும் நிகழ்ச்சிகளுக்கு ஏற்றது.">Special offers are available for group bookings — perfect for trips and functions.</p>
+      </div>
+      <div class="feature-card">
+        <span class="icon" aria-hidden="true">🚏</span>
+        <h3 data-en="Multiple Bus Options" data-ta="பல பேருந்து வகைகள்">Multiple Bus Options</h3>
+        <p data-en="Choose from AC, Non-AC, Seater and Sleeper buses based on your comfort." data-ta="உங்கள் வசதிக்கேற்ப AC, Non-AC, Seater மற்றும் Sleeper பேருந்துகளில் தேர்வு செய்யலாம்.">Choose from AC, Non-AC, Seater and Sleeper buses based on your comfort.</p>
+      </div>
+    </div>
+
+    <div style="margin-top:50px;">
+      <h3 data-en="Popular Bus Operators" data-ta="பிரபலமான பேருந்து நிறுவனங்கள்">Popular Bus Operators</h3>
+      <p style="color:var(--ink-soft);max-width:60ch;" data-en="A few of the operators we regularly book with." data-ta="நாங்கள் வழக்கமாக முன்பதிவு செய்யும் சில நிறுவனங்கள்.">A few of the operators we regularly book with.</p>
+
+      <!-- OPERATOR CARDS: add/remove <article class="operator-card"> blocks as needed -->
+      <div class="card-grid cols-4" id="operatorGrid">
+        <article class="operator-card">
+          <div class="operator-media">
+            <img src="images/travels/apple.jpg" alt="Apple Travels bus" loading="lazy"
+                 onerror="window.showImgFallback(this,'🚌')">
+          </div>
+          <div class="operator-body">
+            <h3>Apple Travels</h3>
+            <p data-en="Regular AC &amp; Non-AC services on popular routes." data-ta="பிரபலமான வழித்தடங்களில் வழக்கமான AC &amp; Non-AC சேவைகள்.">Regular AC &amp; Non-AC services on popular routes.</p>
+          </div>
+        </article>
+        <article class="operator-card">
+          <div class="operator-media">
+            <img src="images/travels/Vivegam.png" alt="Vivegam Travels bus" loading="lazy"
+                 onerror="window.showImgFallback(this,'🚌')">
+          </div>
+          <div class="operator-body">
+            <h3>Vivegam Travels</h3>
+            <p data-en="Regular AC &amp; Non-AC services on popular routes." data-ta="பிரபலமான வழித்தடங்களில் வழக்கமான AC &amp; Non-AC சேவைகள்.">Regular AC &amp; Non-AC services on popular routes.</p>
+          </div>
+        </article>
+        <article class="operator-card">
+          <div class="operator-media">
+            <img src="images/travels/sbm.jpg" alt="SBM Travels bus" loading="lazy"
+                 onerror="window.showImgFallback(this,'🚌')">
+          </div>
+          <div class="operator-body">
+            <h3>SBM Travels</h3>
+            <p data-en="Comfortable Seater &amp; Sleeper options available." data-ta="வசதியான Seater &amp; Sleeper விருப்பங்கள் கிடைக்கும்.">Comfortable Seater &amp; Sleeper options available.</p>
+          </div>
+        </article>
+        <article class="operator-card">
+          <div class="operator-media">
+            <img src="images/travels/vkv.jpg" alt="VKV Travels bus" loading="lazy"
+                 onerror="window.showImgFallback(this,'🚌')">
+          </div>
+          <div class="operator-body">
+            <h3>VKV Travels</h3>
+            <p data-en="Long-distance AC sleeper coaches." data-ta="நீண்ட தூர AC ஸ்லீப்பர் பேருந்துகள்.">Long-distance AC sleeper coaches.</p>
+          </div>
+        </article>
+        <article class="operator-card">
+          <div class="operator-media">
+            <img src="images/travels/prm.jpg" alt="PRM Travels bus" loading="lazy"
+                 onerror="window.showImgFallback(this,'🚌')">
+          </div>
+          <div class="operator-body">
+            <h3>PRM Travels</h3>
+            <p data-en="Frequent departures across South India." data-ta="தென்னிந்தியா முழுவதும் அடிக்கடி புறப்படும் சேவைகள்.">Frequent departures across South India.</p>
+          </div>
+        </article>
+        <article class="operator-card">
+          <div class="operator-media">
+            <img src="images/travels/thenmozhi.jpg" alt="Thenmozhi Travels bus" loading="lazy"
+                 onerror="window.showImgFallback(this,'🚌')">
+          </div>
+          <div class="operator-body">
+            <h3>Thenmozhi Travels</h3>
+            <p data-en="Frequent departures across South India." data-ta="தென்னிந்தியா முழுவதும் அடிக்கடி புறப்படும் சேவைகள்.">Frequent departures across South India.</p>
+          </div>
+        </article>
+        <article class="operator-card">
+          <div class="operator-media">
+            <img src="images/travels/sasi.jpg" alt="Sasi Travels bus" loading="lazy"
+                 onerror="window.showImgFallback(this,'🚌')">
+          </div>
+          <div class="operator-body">
+            <h3>Sasi Travels</h3>
+            <p data-en="Frequent departures across South India." data-ta="தென்னிந்தியா முழுவதும் அடிக்கடி புறப்படும் சேவைகள்.">Frequent departures across South India.</p>
+          </div>
+        </article>
+        <article class="operator-card">
+          <div class="operator-media">
+            <img src="images/travels/muthu.jpg" alt="Muthu Travels bus" loading="lazy"
+                 onerror="window.showImgFallback(this,'🚌')">
+          </div>
+          <div class="operator-body">
+            <h3>Muthu Travels</h3>
+            <p data-en="Frequent departures across South India." data-ta="தென்னிந்தியா முழுவதும் அடிக்கடி புறப்படும் சேவைகள்.">Frequent departures across South India.</p>
+          </div>
+        </article>
+        <article class="operator-card">
+          <div class="operator-media">
+            <img src="images/travels/ttt.jpg" alt="TTT Travels bus" loading="lazy"
+                 onerror="window.showImgFallback(this,'🚌')">
+          </div>
+          <div class="operator-body">
+            <h3>TTT Travels</h3>
+            <p data-en="Frequent departures across South India." data-ta="தென்னிந்தியா முழுவதும் அடிக்கடி புறப்படும் சேவைகள்.">Frequent departures across South India.</p>
+          </div>
+        </article>
+        <article class="operator-card">
+          <div class="operator-media">
+            <img src="images/travels/lion.jpg" alt="Lion Travels bus" loading="lazy"
+                 onerror="window.showImgFallback(this,'🚌')">
+          </div>
+          <div class="operator-body">
+            <h3>Lion Travels</h3>
+            <p data-en="Frequent departures across South India." data-ta="தென்னிந்தியா முழுவதும் அடிக்கடி புறப்படும் சேவைகள்.">Frequent departures across South India.</p>
+          </div>
+        </article>
+        <article class="operator-card">
+          <div class="operator-media">
+            <img src="images/travels/tmv.jpg" alt="Tmv Travels bus" loading="lazy"
+                 onerror="window.showImgFallback(this,'🚌')">
+          </div>
+          <div class="operator-body">
+            <h3>Tmv (Thirumalaivasan) Travels</h3>
+            <p data-en="Frequent departures across South India." data-ta="தென்னிந்தியா முழுவதும் அடிக்கடி புறப்படும் சேவைகள்.">Frequent departures across South India.</p>
+          </div>
+        </article>
+        <article class="operator-card">
+          <div class="operator-media">
+            <img src="images/travels/sms.jpg" alt="SMS Travels bus" loading="lazy"
+                 onerror="window.showImgFallback(this,'🚌')">
+          </div>
+          <div class="operator-body">
+            <h3>SMS Travels</h3>
+            <p data-en="Frequent departures across South India." data-ta="தென்னிந்தியா முழுவதும் அடிக்கடி புறப்படும் சேவைகள்.">Frequent departures across South India.</p>
+          </div>
+        </article>
+        <article class="operator-card">
+          <div class="operator-media">
+            <img src="images/travels/senthur.jpg" alt="Senthur Velan Travels bus" loading="lazy"
+                 onerror="window.showImgFallback(this,'🚌')">
+          </div>
+          <div class="operator-body">
+            <h3>Senthur Velan Travels</h3>
+            <p data-en="Frequent departures across South India." data-ta="தென்னிந்தியா முழுவதும் அடிக்கடி புறப்படும் சேவைகள்.">Frequent departures across South India.</p>
+          </div>
+        </article>
+        <article class="operator-card">
+          <div class="operator-media">
+            <img src="images/travels/devi.jpg" alt="Devi Travels bus" loading="lazy"
+                 onerror="window.showImgFallback(this,'🚌')">
+          </div>
+          <div class="operator-body">
+            <h3>Devi Travels</h3>
+            <p data-en="Frequent departures across South India." data-ta="தென்னிந்தியா முழுவதும் அடிக்கடி புறப்படும் சேவைகள்.">Frequent departures across South India.</p>
+          </div>
+        </article>
+        <article class="operator-card">
+          <div class="operator-media">
+            <img src="images/travels/siva.jpg" alt="Sri Siva Travels bus" loading="lazy"
+                 onerror="window.showImgFallback(this,'🚌')">
+          </div>
+          <div class="operator-body">
+            <h3>Sri Siva Travels</h3>
+            <p data-en="Frequent departures across South India." data-ta="தென்னிந்தியா முழுவதும் அடிக்கடி புறப்படும் சேவைகள்.">Frequent departures across South India.</p>
+          </div>
+        </article>
+        <article class="operator-card">
+          <div class="operator-media">
+            <img src="images/travels/mrm.jpg" alt="MRM Travels bus" loading="lazy"
+                 onerror="window.showImgFallback(this,'🚌')">
+          </div>
+          <div class="operator-body">
+            <h3>MRM Travels</h3>
+            <p data-en="Frequent departures across South India." data-ta="தென்னிந்தியா முழுவதும் அடிக்கடி புறப்படும் சேவைகள்.">Frequent departures across South India.</p>
+          </div>
+        </article>
+        <article class="operator-card">
+          <div class="operator-media">
+            <img src="images/travels/jbs.jpg" alt="JBS Travels bus" loading="lazy"
+                 onerror="window.showImgFallback(this,'🚌')">
+          </div>
+          <div class="operator-body">
+            <h3>JBS Travels</h3>
+            <p data-en="Frequent departures across South India." data-ta="தென்னிந்தியா முழுவதும் அடிக்கடி புறப்படும் சேவைகள்.">Frequent departures across South India.</p>
+          </div>
+        </article>
+        <article class="operator-card">
+          <div class="operator-media">
+            <img src="images/travels/rrr.jpg" alt="RRR Travels bus" loading="lazy"
+                 onerror="window.showImgFallback(this,'🚌')">
+          </div>
+          <div class="operator-body">
+            <h3>RRR Travels</h3>
+            <p data-en="Frequent departures across South India." data-ta="தென்னிந்தியா முழுவதும் அடிக்கடி புறப்படும் சேவைகள்.">Frequent departures across South India.</p>
+          </div>
+        </article>
+        <article class="operator-card">
+          <div class="operator-media">
+            <img src="images/travels/dharani.jpg" alt="Dharani Travels bus" loading="lazy"
+                 onerror="window.showImgFallback(this,'🚌')">
+          </div>
+          <div class="operator-body">
+            <h3>Dharani Travels</h3>
+            <p data-en="Frequent departures across South India." data-ta="தென்னிந்தியா முழுவதும் அடிக்கடி புறப்படும் சேவைகள்.">Frequent departures across South India.</p>
+          </div>
+        </article>
+        <article class="operator-card">
+          <div class="operator-media">
+            <img src="images/travels/pal.jpg" alt="PAL SLNT Travels bus" loading="lazy"
+                 onerror="window.showImgFallback(this,'🚌')">
+          </div>
+          <div class="operator-body">
+            <h3>PAL SLNT Travels</h3>
+            <p data-en="Frequent departures across South India." data-ta="தென்னிந்தியா முழுவதும் அடிக்கடி புறப்படும் சேவைகள்.">Frequent departures across South India.</p>
+          </div>
+        </article>
+        <article class="operator-card">
+          <div class="operator-media">
+            <img src="images/travels/alayan.jpg" alt="Al Ayan Travels bus" loading="lazy"
+                 onerror="window.showImgFallback(this,'🚌')">
+          </div>
+          <div class="operator-body">
+            <h3>Al Ayan Travels</h3>
+            <p data-en="Frequent departures across South India." data-ta="தென்னிந்தியா முழுவதும் அடிக்கடி புறப்படும் சேவைகள்.">Frequent departures across South India.</p>
+          </div>
+        </article>
+        <article class="operator-card">
+          <div class="operator-media">
+            <img src="images/travels/rpt.jpg" alt="RPT Travels bus" loading="lazy"
+                 onerror="window.showImgFallback(this,'🚌')">
+          </div>
+          <div class="operator-body">
+            <h3>RP Tours & Travels</h3>
+            <p data-en="Frequent departures across South India." data-ta="தென்னிந்தியா முழுவதும் அடிக்கடி புறப்படும் சேவைகள்.">Frequent departures across South India.</p>
+          </div>
+        </article>
+        <article class="operator-card">
+          <div class="operator-media">
+            <img src="images/travels/samsteve.jpg" alt="Samsteve Travels bus" loading="lazy"
+                 onerror="window.showImgFallback(this,'🚌')">
+          </div>
+          <div class="operator-body">
+            <h3>Samsteve Travels</h3>
+            <p data-en="Frequent departures across South India." data-ta="தென்னிந்தியா முழுவதும் அடிக்கடி புறப்படும் சேவைகள்.">Frequent departures across South India.</p>
+          </div>
+        </article>
+        <article class="operator-card">
+          <div class="operator-media">
+            <img src="images/travels/abi.jpg" alt="ABI Travels bus" loading="lazy"
+                 onerror="window.showImgFallback(this,'🚌')">
+          </div>
+          <div class="operator-body">
+            <h3>ABI Travels</h3>
+            <p data-en="Frequent departures across South India." data-ta="தென்னிந்தியா முழுவதும் அடிக்கடி புறப்படும் சேவைகள்.">Frequent departures across South India.</p>
+          </div>
+        </article>
+        <article class="operator-card">
+          <div class="operator-media">
+            <img src="images/travels/national.jpg" alt="National Travels CHN bus" loading="lazy"
+                 onerror="window.showImgFallback(this,'🚌')">
+          </div>
+          <div class="operator-body">
+            <h3>National Travels CHN</h3>
+            <p data-en="Frequent departures across South India." data-ta="தென்னிந்தியா முழுவதும் அடிக்கடி புறப்படும் சேவைகள்.">Frequent departures across South India.</p>
+          </div>
+        </article>
+        <article class="operator-card">
+          <div class="operator-media">
+            <img src="images/travels/sreedevi.jpg" alt="Sree Devi Express" loading="lazy"
+                 onerror="window.showImgFallback(this,'🚌')">
+          </div>
+          <div class="operator-body">
+            <h3>Sree Devi Express Travels</h3>
+            <p data-en="Frequent departures across South India." data-ta="தென்னிந்தியா முழுவதும் அடிக்கடி புறப்படும் சேவைகள்.">Frequent departures across South India.</p>
+          </div>
+        </article>
+        <article class="operator-card">
+          <div class="operator-media">
+            <img src="images/travels/plr.jpg" alt="PLR Travels" loading="lazy"
+                 onerror="window.showImgFallback(this,'🚌')">
+          </div>
+          <div class="operator-body">
+            <h3>PLR Travels</h3>
+            <p data-en="Frequent departures across South India." data-ta="தென்னிந்தியா முழுவதும் அடிக்கடி புறப்படும் சேவைகள்.">Frequent departures across South India.</p>
+          </div>
+        </article>
+        <article class="operator-card">
+          <div class="operator-media">
+            <img src="images/travels/vetrivel.jpg" alt="vetrivel" loading="lazy"
+                 onerror="window.showImgFallback(this,'🚌')">
+          </div>
+          <div class="operator-body">
+            <h3>Vetrivel Travels</h3>
+            <p data-en="Frequent departures across South India." data-ta="தென்னிந்தியா முழுவதும் அடிக்கடி புறப்படும் சேவைகள்.">Frequent departures across South India.</p>
+          </div>
+        </article>
+        <article class="operator-card">
+          <div class="operator-media">
+            <img src="images/travels/sorna.jpg" alt="Sorna Travels" loading="lazy"
+                 onerror="window.showImgFallback(this,'🚌')">
+          </div>
+          <div class="operator-body">
+            <h3>Sorna Travels</h3>
+            <p data-en="Frequent departures across South India." data-ta="தென்னிந்தியா முழுவதும் அடிக்கடி புறப்படும் சேவைகள்.">Frequent departures across South India.</p>
+          </div>
+        </article>
+        <article class="operator-card">
+          <div class="operator-media">
+            <img src="images/travels/avk.jpg" alt="AVK Travels" loading="lazy"
+                 onerror="window.showImgFallback(this,'🚌')">
+          </div>
+          <div class="operator-body">
+            <h3>AVK Travels</h3>
+            <p data-en="Frequent departures across South India." data-ta="தென்னிந்தியா முழுவதும் அடிக்கடி புறப்படும் சேவைகள்.">Frequent departures across South India.</p>
+          </div>
+        </article>
+        <article class="operator-card">
+          <div class="operator-media">
+            <img src="images/travels/ybm.jpg" alt="YBM Travels bus" loading="lazy"
+                 onerror="window.showImgFallback(this,'🚌')">
+          </div>
+          <div class="operator-body">
+            <h3>YBM Travels</h3>
+            <p data-en="Frequent departures across South India." data-ta="தென்னிந்தியா முழுவதும் அடிக்கடி புறப்படும் சேவைகள்.">Frequent departures across South India.</p>
+          </div>
+        </article>
+      </div>
+    </div>
+
+    <div class="cta-banner">
+      <div>
+        <h3 data-en="Need help booking your ticket?" data-ta="உங்கள் டிக்கெட்டை முன்பதிவு செய்ய உதவி வேண்டுமா?">Need help booking your ticket?</h3>
+        <p data-en="Call Pooja Mobiles today: 9600372621" data-ta="இன்றே பூஜா மொபைல்ஸை அழைக்கவும்: 9600372621">Call Pooja Mobiles today: 9600372621</p>
+      </div>
+      <a href="tel:9600372621" class="btn btn-primary" data-en="Call Now" data-ta="இப்போது அழைக்கவும்">Call Now</a>
+    </div>
+  </div>
 </section>
 
-
-
-<!-- =====================================================
-     E-SEVAI SECTION
-===================================================== -->
-
-<section
-    id="esevai"
-    class="esevai">
-
-    <div class="section-inner">
-
-
-        <div class="section-heading">
-
-            <h2 data-i18n="esevaiTitle">
-                E-SEVAI Services
-            </h2>
-
-            <p data-i18n="esevaiSubtitle">
-
-                அரசு அங்கீகரிக்கப்பட்ட E-SEVAI மையம்
-                மூலம் பல்வேறு சான்றிதழ் சேவைகள்
-
-            </p>
-
-        </div>
-
-
-        <div class="esevai-main">
-
-
-            <!-- INTRO -->
-
-            <div class="esevai-intro">
-
-
-                <div class="official-badge">
-
-                    🏛️
-
-                    <span data-i18n="officialBadge">
-                        Government-Authorized E-SEVAI Centre
-                    </span>
-
-                </div>
-
-
-                <h3 data-i18n="esevaiHeading">
-
-                    அரசு அங்கீகரிக்கப்பட்ட
-                    E-SEVAI சேவை மையம்
-
-                </h3>
-
-
-                <p data-i18n="esevaiText1">
-
-                    அத்தியாவசிய அரசு சான்றிதழ்கள் மற்றும்
-                    குடிமக்கள் சேவைகளுக்கான விண்ணப்பங்களை
-                    எங்கள் அரசு அங்கீகரிக்கப்பட்ட E-SEVAI
-                    மையத்தின் மூலம் எளிதாகப் பெறலாம்.
-
-                </p>
-
-
-                <p data-i18n="esevaiText2">
-
-                    விண்ணப்ப செயல்முறை, தேவையான ஆவணங்கள்,
-                    ஆவண சமர்ப்பிப்பு மற்றும் பிற ஆன்லைன்
-                    நடைமுறைகளில் தேவையான உதவியை
-                    வழங்குகிறோம்.
-
-                </p>
-
-
-                <div class="official-note">
-
-                    🔐
-
-                    <span data-i18n="officialNote">
-
-                        அரசு சேவைகளை அதிகாரப்பூர்வமான
-                        E-SEVAI முறையின் மூலம் அணுகுவதற்கு
-                        எங்கள் அங்கீகரிக்கப்பட்ட மையத்தை
-                        அணுகுங்கள்.
-
-                    </span>
-
-                </div>
-
-
-                <a
-                    href="tel:+919600372621"
-                    class="btn btn-primary"
-                    style="margin-top:22px;">
-
-                    📞
-
-                    <span data-i18n="esevaiCall">
-                        E-SEVAI சேவைகளுக்கு அழைக்கவும்
-                    </span>
-
-                </a>
-
-            </div>
-
-
-
-            <!-- CERTIFICATES -->
-
-            <div class="certificate-card">
-
-
-                <h3 data-i18n="certificateTitle">
-
-                    சான்றிதழ் சேவைகள்
-
-                </h3>
-
-
-                <div class="certificate-list">
-
-
-                    <div class="certificate-item">
-
-                        <span class="certificate-icon">
-                            📄
-                        </span>
-
-                        <span data-i18n="certificate1">
-                            Income Certificate
-                        </span>
-
-                    </div>
-
-
-                    <div class="certificate-item">
-
-                        <span class="certificate-icon">
-                            👥
-                        </span>
-
-                        <span data-i18n="certificate2">
-                            Community Certificate
-                        </span>
-
-                    </div>
-
-
-                    <div class="certificate-item">
-
-                        <span class="certificate-icon">
-                            👨‍👩‍👧
-                        </span>
-
-                        <span data-i18n="certificate3">
-                            Legal Heir Certificate
-                        </span>
-
-                    </div>
-
-
-                    <div class="certificate-item">
-
-                        <span class="certificate-icon">
-                            🏠
-                        </span>
-
-                        <span data-i18n="certificate4">
-                            Nativity / Residence Certificate
-                        </span>
-
-                    </div>
-
-
-                    <div class="certificate-item">
-
-                        <span class="certificate-icon">
-                            🎓
-                        </span>
-
-                        <span data-i18n="certificate5">
-                            Other Government Certificates
-                        </span>
-
-                    </div>
-
-
-                    <div class="certificate-item">
-
-                        <span class="certificate-icon">
-                            📋
-                        </span>
-
-                        <span data-i18n="certificate6">
-                            Various Government Online Services
-                        </span>
-
-                    </div>
-
-
-                </div>
-
-            </div>
-
-        </div>
-
+<!-- ============================================================ E-SEVAI ============================================================ -->
+<section id="esevai" class="section">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow" style="color:var(--blue);" data-en="E-Sevai" data-ta="இ-சேவை">E-Sevai</span>
+      <h2 data-en="E-Sevai Services" data-ta="இ-சேவை மையம்">E-Sevai Services</h2>
     </div>
 
+    <div class="esevai-intro">
+      <div>
+        <span class="badge">✔ <span data-en="Government-Authorized E-Sevai Centre" data-ta="அரசு அங்கீகரிக்கப்பட்ட இ-சேவை மையம்">Government-Authorized E-Sevai Centre</span></span>
+        <p data-en="We provide assistance for applying for various government certificates and citizen services, guiding you through the required steps at our centre." data-ta="பல்வேறு அரசு சான்றிதழ்கள் மற்றும் குடிமக்கள் சேவைகளுக்கு விண்ணப்பிக்க எங்கள் மையத்தில் தேவையான வழிகாட்டுதலுடன் உதவி வழங்குகிறோம்.">We provide assistance for applying for various government certificates and citizen services, guiding you through the required steps at our centre.</p>
+      </div>
+      <div class="esevai-media">
+        <img src="images/eseva/eseva-center.jpg" alt="Pooja Mobiles E-Sevai centre" loading="lazy"
+             onerror="window.showImgFallback(this,'📄')">
+      </div>
+    </div>
+
+    <div class="card-grid cols-4" style="margin-top:34px;">
+      <div class="cert-card">
+        <h3 data-en="Native Certificate" data-ta="இருப்பிடச் சான்றிதழ்">Native Certificate</h3>
+        <p data-en="Assistance applying for a native/residency certificate." data-ta="இருப்பிடச் சான்றிதழுக்கு விண்ணப்பிக்க உதவி.">Assistance applying for a native/residency certificate.</p>
+      </div>
+      <div class="cert-card">
+        <h3 data-en="Community Certificate" data-ta="சமூகச் சான்றிதழ்">Community Certificate</h3>
+        <p data-en="Assistance applying for a community certificate." data-ta="சமூகச் சான்றிதழுக்கு விண்ணப்பிக்க உதவி.">Assistance applying for a community certificate.</p>
+      </div>
+      <div class="cert-card">
+        <h3 data-en="Legal Heir Certificate" data-ta="வாரிசுச் சான்றிதழ்">Legal Heir Certificate</h3>
+        <p data-en="Assistance applying for a legal heir certificate." data-ta="வாரிசுச் சான்றிதழுக்கு விண்ணப்பிக்க உதவி.">Assistance applying for a legal heir certificate.</p>
+      </div>
+      <div class="cert-card">
+        <h3 data-en="Income Certificate" data-ta="வருமானச் சான்றிதழ்">Income Certificate</h3>
+        <p data-en="Assistance applying for an income certificate." data-ta="வருமானச் சான்றிதழுக்கு விண்ணப்பிக்க உதவி.">Assistance applying for an income certificate.</p>
+      </div>
+      <div class="cert-card">
+        <h3 data-en="Residence Certificate" data-ta="குடியிருப்புச் சான்றிதழ்">Residence Certificate</h3>
+        <p data-en="Assistance applying for a residence certificate." data-ta="குடியிருப்புச் சான்றிதழுக்கு விண்ணப்பிக்க உதவி.">Assistance applying for a residence certificate.</p>
+      </div>
+      <div class="cert-card">
+        <h3 data-en="Other Government Certificates" data-ta="பிற அரசு சான்றிதழ்கள்">Other Government Certificates</h3>
+        <p data-en="Ask us about other citizen service certificates you may need." data-ta="உங்களுக்குத் தேவையான பிற குடிமக்கள் சேவை சான்றிதழ்கள் பற்றி எங்களிடம் கேளுங்கள்.">Ask us about other citizen service certificates you may need.</p>
+      </div>
+    </div>
+
+    <div class="info-box">
+      <strong data-en="Please note:" data-ta="தயவுசெய்து கவனிக்கவும்:">Please note:</strong>
+      <span data-en=" Customers can visit the centre for assistance with government certificate applications and related E-Sevai services. Required documents and processing requirements may vary depending on the service." data-ta=" அரசு சான்றிதழ் விண்ணப்பங்கள் மற்றும் தொடர்புடைய இ-சேவைகளுக்கு உதவி பெற வாடிக்கையாளர்கள் எங்கள் மையத்திற்கு நேரில் வரலாம். தேவையான ஆவணங்கள் மற்றும் செயலாக்க நடைமுறைகள் சேவையைப் பொறுத்து மாறுபடலாம்.">Customers can visit the centre for assistance with government certificate applications and related E-Sevai services. Required documents and processing requirements may vary depending on the service.</span>
+    </div>
+
+    <div class="cta-banner blue">
+      <div>
+        <h3 data-en="Need help with a certificate application?" data-ta="சான்றிதழ் விண்ணப்பத்திற்கு உதவி வேண்டுமா?">Need help with a certificate application?</h3>
+        <p data-en="Visit Pooja Mobiles or call 9600372621." data-ta="பூஜா மொபைல்ஸை நேரில் வருகை தரவும் அல்லது 9600372621 ஐ அழைக்கவும்.">Visit Pooja Mobiles or call 9600372621.</p>
+      </div>
+      <a href="tel:9600372621" class="btn btn-primary" data-en="Call Now" data-ta="இப்போது அழைக்கவும்">Call Now</a>
+    </div>
+  </div>
 </section>
 
-
-
-<!-- =====================================================
-     SERVICES
-===================================================== -->
-
-<section
-    id="services"
-    class="services">
-
-    <div class="section-inner">
-
-
-        <div class="section-heading">
-
-            <h2 data-i18n="servicesTitle">
-                எங்கள் சேவைகள்
-            </h2>
-
-            <p data-i18n="servicesSubtitle">
-                உங்கள் அன்றாட தேவைகளுக்கான
-                நம்பகமான சேவைகள்
-            </p>
-
-        </div>
-
-
-        <div class="service-grid">
-
-
-            <article class="service-card">
-
-                <div class="service-icon">
-                    🚌
-                </div>
-
-                <h3 data-i18n="serviceTravelTitle">
-                    Travels Ticket Booking
-                </h3>
-
-                <p data-i18n="serviceTravelDescription">
-
-                    வழக்கமான டிக்கெட் கட்டணத்தில்
-                    பயண டிக்கெட்டுகளை முன்பதிவு செய்யுங்கள்.
-                    வழக்கமான வாடிக்கையாளர்களுக்கு
-                    பிரத்யேக தள்ளுபடிகள் கிடைக்கும்.
-
-                </p>
-
-            </article>
-
-
-
-            <article class="service-card">
-
-                <div class="service-icon">
-                    🏛️
-                </div>
-
-                <h3 data-i18n="serviceEsevaiTitle">
-                    E-SEVAI Services
-                </h3>
-
-                <p data-i18n="serviceEsevaiDescription">
-
-                    அரசு அங்கீகரிக்கப்பட்ட E-SEVAI மையம்
-                    மூலம் Income, Community, Legal Heir
-                    மற்றும் பல்வேறு சான்றிதழ் சேவைகள்.
-
-                </p>
-
-            </article>
-
-
-
-            <article class="service-card">
-
-                <div class="service-icon">
-                    📱
-                </div>
-
-                <h3 data-i18n="mobileTitle">
-                    மொபைல் சேவைகள்
-                </h3>
-
-                <p data-i18n="mobileDescription">
-
-                    மொபைல் தொடர்பான சேவைகளுக்கு
-                    எங்களை அணுகுங்கள்.
-
-                </p>
-
-            </article>
-
-
-        </div>
-
+<!-- ============================================================ PRINTING ============================================================ -->
+<section id="printing" class="section section-alt">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow" data-en="Printing" data-ta="பிரிண்டிங்">Printing</span>
+      <h2 data-en="Printing Services" data-ta="பிரிண்டிங் சேவைகள்">Printing Services</h2>
+      <p data-en="Quality printing services for personal, business and special-event requirements." data-ta="தனிப்பட்ட, வணிக மற்றும் சிறப்பு நிகழ்வுத் தேவைகளுக்கான தரமான பிரிண்டிங் சேவைகள்.">Quality printing services for personal, business and special-event requirements.</p>
     </div>
 
+    <div class="card-grid cols-4 printing-cats">
+      <div class="feature-card">
+        <span class="icon" aria-hidden="true">🎉</span>
+        <h3 data-en="Invitation Card Printing" data-ta="அழைப்பிதழ் பிரிண்டிங்">Invitation Card Printing</h3>
+        <p data-en="Designs for house warming, wedding and puberty ceremony invitations." data-ta="கிரகப்பிரவேசம், திருமணம் மற்றும் பூப்புனித நீராட்டு விழா அழைப்பிதழ் வடிவமைப்புகள்.">Designs for house warming, wedding and puberty ceremony invitations.</p>
+      </div>
+      <div class="feature-card">
+        <span class="icon" aria-hidden="true">🧾</span>
+        <h3 data-en="Bill Book Printing" data-ta="பில் புக் பிரிண்டிங்">Bill Book Printing</h3>
+        <p data-en="Custom bill books for shops and businesses." data-ta="கடைகள் மற்றும் வணிகங்களுக்கான தனிப்பயன் பில் புக்குகள்.">Custom bill books for shops and businesses.</p>
+      </div>
+      <div class="feature-card">
+        <span class="icon" aria-hidden="true">📢</span>
+        <h3 data-en="Notice Printing" data-ta="அறிவிப்பு பிரிண்டிங்">Notice Printing</h3>
+        <p data-en="Notices for community, school and business announcements." data-ta="சமூக, பள்ளி மற்றும் வணிக அறிவிப்புகளுக்கான நோட்டீஸ்கள்.">Notices for community, school and business announcements.</p>
+      </div>
+      <div class="feature-card">
+        <span class="icon" aria-hidden="true">🪪</span>
+        <h3 data-en="Visiting Cards" data-ta="விசிட்டிங் கார்டுகள்">Visiting Cards</h3>
+        <p data-en="Professional visiting cards for individuals and businesses." data-ta="தனிநபர்கள் மற்றும் வணிகங்களுக்கான தொழில்முறை விசிட்டிங் கார்டுகள்.">Professional visiting cards for individuals and businesses.</p>
+      </div>
+    </div>
+
+    <!-- Invitations subsection -->
+    <div class="invitation-panel">
+      <div class="section-head" style="margin-bottom:22px;">
+        <h3 style="font-size:1.4rem;" data-en="Invitation Card Printing" data-ta="அழைப்பிதழ் பிரிண்டிங்">Invitation Card Printing</h3>
+        <p style="margin:0;" data-en="Choose an invitation design based on your event. Prices below are placeholders — please enquire for the latest rates." data-ta="உங்கள் நிகழ்விற்கேற்ப அழைப்பிதழ் வடிவமைப்பைத் தேர்வு செய்யுங்கள். கீழே உள்ள விலைகள் மாதிரி மட்டுமே — சமீபத்திய விலைக்கு விசாரிக்கவும்.">Choose an invitation design based on your event. Prices below are placeholders — please enquire for the latest rates.</p>
+      </div>
+
+      <div class="invite-tabs" role="tablist" aria-label="Invitation categories">
+        <button class="invite-tab active" data-category="houseWarming" role="tab" aria-selected="true"
+                data-en="House Warming" data-ta="கிரகப்பிரவேசம்">House Warming</button>
+        <button class="invite-tab" data-category="wedding" role="tab" aria-selected="false"
+                data-en="Wedding" data-ta="திருமணம்">Wedding</button>
+        <button class="invite-tab" data-category="puberty" role="tab" aria-selected="false"
+                data-en="Puberty Ceremony" data-ta="பூப்புனித நீராட்டு விழா">Puberty Ceremony</button>
+      </div>
+
+      <div class="invite-grid" id="inviteGrid" aria-live="polite"></div>
+    </div>
+
+    <div class="cta-banner">
+      <div>
+        <h3 data-en="Have a printing requirement?" data-ta="பிரிண்டிங் தேவை உள்ளதா?">Have a printing requirement?</h3>
+        <p data-en="Call or visit Pooja Mobiles — we're happy to help." data-ta="பூஜா மொபைல்ஸை அழைக்கவும் அல்லது வருகை தரவும் — உதவ தயாராக உள்ளோம்.">Call or visit Pooja Mobiles — we're happy to help.</p>
+      </div>
+      <a href="tel:9600372621" class="btn btn-primary" data-en="Call Now" data-ta="இப்போது அழைக்கவும்">Call Now</a>
+    </div>
+  </div>
 </section>
 
-
-
-<!-- =====================================================
-     ABOUT
-===================================================== -->
-
-<section
-    id="about"
-    class="about">
-
-    <div class="section-inner">
-
-
-        <div class="about-grid">
-
-
-            <div class="about-box">
-
-
-                <h2 data-i18n="aboutTitle">
-                    எங்களைப் பற்றி
-                </h2>
-
-
-                <p data-i18n="aboutText1">
-
-                    பூஜா டிராவல்ஸ் மற்றும் E-SEVAI சேவை மையம்
-                    வாடிக்கையாளர்களுக்கு எளிதான, நம்பகமான
-                    மற்றும் நட்பான சேவையை வழங்கும்
-                    நோக்கத்துடன் செயல்படுகிறது.
-
-                </p>
-
-
-                <p data-i18n="aboutText2">
-
-                    பயண டிக்கெட் முன்பதிவு முதல் அரசு
-                    சான்றிதழ் சேவைகள் வரை, உங்கள்
-                    அன்றாட தேவைகளுக்கு ஒரே இடத்தில்
-                    உதவி வழங்குகிறோம்.
-
-                </p>
-
-
-            </div>
-
-
-
-            <div class="about-box">
-
-
-                <h2 data-i18n="whyTitle">
-                    ஏன் எங்களை தேர்வு செய்ய வேண்டும்?
-                </h2>
-
-
-                <div class="why-list">
-
-
-                    <div class="why-item">
-
-                        <span class="check">
-                            ✓
-                        </span>
-
-                        <span data-i18n="why1">
-                            வழக்கமான டிக்கெட் கட்டணத்தில் முன்பதிவு
-                        </span>
-
-                    </div>
-
-
-                    <div class="why-item">
-
-                        <span class="check">
-                            ✓
-                        </span>
-
-                        <span data-i18n="why2">
-                            வழக்கமான வாடிக்கையாளர்களுக்கு சிறப்பு தள்ளுபடி
-                        </span>
-
-                    </div>
-
-
-                    <div class="why-item">
-
-                        <span class="check">
-                            ✓
-                        </span>
-
-                        <span data-i18n="why3">
-                            அரசு அங்கீகரிக்கப்பட்ட E-SEVAI சேவை
-                        </span>
-
-                    </div>
-
-
-                    <div class="why-item">
-
-                        <span class="check">
-                            ✓
-                        </span>
-
-                        <span data-i18n="why4">
-                            எளிதான மற்றும் விரைவான சேவை
-                        </span>
-
-                    </div>
-
-
-                </div>
-
-            </div>
-
-        </div>
-
+<!-- ============================================================ CONTACT ============================================================ -->
+<section id="contact" class="section">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow" data-en="Contact" data-ta="தொடர்பு">Contact</span>
+      <h2 data-en="Contact Pooja Mobiles" data-ta="பூஜா மொபைல்ஸை தொடர்புகொள்ளுங்கள்">Contact Pooja Mobiles</h2>
     </div>
 
+    <div class="contact-grid">
+      <div class="contact-card">
+        <span class="icon" aria-hidden="true">📞</span>
+        <h3 data-en="Call Us" data-ta="எங்களை அழைக்கவும்">Call Us</h3>
+        <div class="detail"><a href="tel:9600372621">9600372621</a></div>
+        <a href="tel:9600372621" class="btn btn-maroon btn-sm btn-block" data-en="Call Now" data-ta="இப்போது அழைக்கவும்">Call Now</a>
+      </div>
+      <div class="contact-card">
+        <span class="icon" aria-hidden="true">✉️</span>
+        <h3 data-en="Email Us" data-ta="எங்களுக்கு மின்னஞ்சல் அனுப்புங்கள்">Email Us</h3>
+        <div class="detail"><a href="mailto:poojamobiles@gmail.com">poojamobiles@gmail.com</a></div>
+        <a href="mailto:poojamobiles@gmail.com" class="btn btn-maroon btn-sm btn-block" data-en="Send Email" data-ta="மின்னஞ்சல் அனுப்பவும்">Send Email</a>
+      </div>
+      <div class="contact-card">
+        <span class="icon" aria-hidden="true">📍</span>
+        <h3 data-en="Visit Us" data-ta="வருகை தரவும்">Visit Us</h3>
+        <div class="detail" style="font-weight:600;font-size:.92rem;" data-en="Keelaeral, Ettayapuram Taluk, Thoothukudi – 628908" data-ta="கீழஈரால், எட்டையாபுரம் தாலுகா, தூத்துக்குடி – 628908">Keelaeral, Ettayapuram Taluk, Thoothukudi – 628908</div>
+        <a href="https://www.google.com/maps/search/?api=1&query=Pooja+Mobiles+Keelaeral+Ettayapuram+Thoothukudi" target="_blank" rel="noopener" class="btn btn-maroon btn-sm btn-block" data-en="Get Directions" data-ta="வழி பெறவும்">Get Directions</a>
+      </div>
+    </div>
+
+    <div class="contact-address">
+      <strong>Pooja Mobiles</strong>
+      <span data-en="Keelaeral, Ettayapuram Taluk, Thoothukudi – 628908, Tamil Nadu, India" data-ta="கீழஈரால், எட்டையாபுரம் தாலுகா, தூத்துக்குடி – 628908, தமிழ்நாடு, இந்தியா">Keelaeral, Ettayapuram Taluk, Thoothukudi – 628908, Tamil Nadu, India</span>
+    </div>
+  </div>
 </section>
 
-
-
-<!-- =====================================================
-     CONTACT
-===================================================== -->
-
-<section
-    id="contact"
-    class="contact">
-
-    <div class="section-inner">
-
-
-        <div class="section-heading">
-
-            <h2 data-i18n="contactTitle">
-                தொடர்பு கொள்ளுங்கள்
-            </h2>
-
-            <p data-i18n="contactSubtitle">
-
-                டிக்கெட் முன்பதிவு மற்றும் E-SEVAI
-                சேவைகளுக்கு எங்களை அணுகுங்கள்
-
-            </p>
-
-        </div>
-
-
-        <div class="contact-grid">
-
-
-            <div class="contact-card">
-
-                <div class="contact-icon">
-                    📞
-                </div>
-
-                <h3 data-i18n="phoneTitle">
-                    தொலைபேசி
-                </h3>
-
-                <p>
-                    <strong>
-                        96003 72621
-                    </strong>
-                </p>
-
-                <a
-                    href="tel:+919600372621"
-                    class="btn btn-primary">
-
-                    📞
-
-                    <span data-i18n="callButton">
-                        அழைக்கவும்
-                    </span>
-
-                </a>
-
-            </div>
-
-
-
-            <div class="contact-card">
-
-                <div class="contact-icon">
-                    ✉️
-                </div>
-
-                <h3 data-i18n="emailTitle">
-                    மின்னஞ்சல்
-                </h3>
-
-                <p>
-                    <strong>
-                        poojasrimobiles@gmail.com
-                    </strong>
-                </p>
-
-                <a
-                    href="mailto:poojasrimobiles@gmail.com"
-                    class="btn btn-outline">
-
-                    ✉️
-
-                    <span data-i18n="emailButton">
-                        மின்னஞ்சல் அனுப்பவும்
-                    </span>
-
-                </a>
-
-            </div>
-
-
-        </div>
-
+<!-- ============================================================ FOOTER ============================================================ -->
+<footer id="footer">
+  <div class="container footer-grid">
+    <div>
+      <h3>Pooja Mobiles</h3>
+      <p class="footer-sub" data-en="Travels • E-Sevai • Printing Services" data-ta="டிராவல்ஸ் • இ-சேவை • பிரிண்டிங் சேவைகள்">Travels • E-Sevai • Printing Services</p>
+      <p style="font-size:.88rem;max-width:40ch;" data-en="Your trusted local one-stop shop for travel tickets, government E-Sevai assistance and printing." data-ta="பயண டிக்கெட், அரசு இ-சேவை உதவி மற்றும் பிரிண்டிங் ஆகியவற்றிற்கான உங்கள் நம்பகமான உள்ளூர் ஒரே இடக் கடை.">Your trusted local one-stop shop for travel tickets, government E-Sevai assistance and printing.</p>
     </div>
-
-</section>
-
-
-</main>
-
-
-
-<!-- =====================================================
-     FOOTER
-===================================================== -->
-
-<footer>
-
-    <div class="footer-brand">
-        POOJA TRAVELS • POOJA MOBILES • E-SEVAI
+    <nav aria-label="Footer">
+      <a href="#home" data-en="Home" data-ta="முகப்பு">Home</a>
+      <a href="#travels" data-en="Travels" data-ta="டிராவல்ஸ்">Travels</a>
+      <a href="#esevai" data-en="E-Sevai" data-ta="இ-சேவை">E-Sevai</a>
+      <a href="#printing" data-en="Printing" data-ta="பிரிண்டிங்">Printing</a>
+      <a href="#contact" data-en="Contact" data-ta="தொடர்பு">Contact</a>
+    </nav>
+    <div class="footer-contact">
+      <p data-en="Keelaeral, Ettayapuram Taluk, Thoothukudi – 628908" data-ta="கீழஈரால், எட்டையாபுரம் தாலுகா, தூத்துக்குடி – 628908">Keelaeral, Ettayapuram Taluk, Thoothukudi – 628908</p>
+      <p><a href="tel:9600372621">📞 9600372621</a></p>
+      <p><a href="mailto:poojamobiles@gmail.com">✉️ poojamobiles@gmail.com</a></p>
     </div>
-
-    <div data-i18n="footerText">
-
-        © 2026 பூஜா டிராவல்ஸ் & மொபைல்ஸ் •
-        அனைத்து உரிமைகளும் பாதுகாக்கப்பட்டவை
-
-    </div>
-
+  </div>
+  <div class="container footer-bottom">
+    <span data-en="© 2026 Pooja Mobiles. All Rights Reserved." data-ta="© 2026 பூஜா மொபைல்ஸ். அனைத்து உரிமைகளும் பாதுகாக்கப்பட்டவை.">© 2026 Pooja Mobiles. All Rights Reserved.</span>
+  </div>
 </footer>
 
+<!-- Floating call button -->
+<a href="tel:9600372621" class="floating-call" aria-label="Call Pooja Mobiles now">📞</a>
 
-
-<!-- =====================================================
-     LANGUAGE TRANSLATIONS
-===================================================== -->
+<!-- Lightbox -->
+<div class="lightbox" id="lightbox">
+  <button class="lightbox-close" id="lightboxClose" aria-label="Close image preview">✕</button>
+  <div class="lightbox-inner">
+    <img id="lightboxImg" src="" alt="">
+    <div class="lightbox-caption" id="lightboxCaption"></div>
+  </div>
+</div>
 
 <script>
-
-const translations = {
-
-    /* =================================================
-       TAMIL
-    ================================================= */
-
-    ta: {
-
-        topWelcome:
-            "பூஜா டிராவல்ஸ்",
-
-        brandName:
-            "பூஜா டிராவல்ஸ்",
-
-        navHome:
-            "முகப்பு",
-
-        navTravels:
-            "டிராவல்ஸ்",
-
-        navEsevai:
-            "E-SEVAI",
-
-        navServices:
-            "சேவைகள்",
-
-        navAbout:
-            "எங்களைப் பற்றி",
-
-        navContact:
-            "தொடர்பு",
-
-        blessing:
-            "ஸ்ரீ காமாட்சி அம்மன் துணை",
-
-
-        heroPooja:
-            "பூஜா",
-
-        heroTravels:
-            "டிராவல்ஸ்",
-
-        heroBooking:
-            "பயண டிக்கெட் முன்பதிவு",
-
-        heroDescription:
-            "ஆன்லைனில் வழக்கமான டிக்கெட் கட்டணத்தில் பயண டிக்கெட்டுகளை எளிதாக முன்பதிவு செய்யுங்கள். எங்களிடம் தொடர்ந்து முன்பதிவு செய்யும் வாடிக்கையாளர்களுக்கு பிரத்யேக தள்ளுபடிகள் மற்றும் சிறப்பு சலுகைகள் வழங்கப்படும்.",
-
-        heroFeature1:
-            "வழக்கமான டிக்கெட் கட்டணம்",
-
-        heroFeature1Sub:
-            "Regular Ticket Rates",
-
-        heroFeature2:
-            "பிரத்யேக தள்ளுபடி",
-
-        heroFeature2Sub:
-            "Exclusive Regular Customer Discounts",
-
-        heroFeature3:
-            "விரைவான முன்பதிவு",
-
-        heroFeature3Sub:
-            "Quick & Easy Booking",
-
-        bookNow:
-            "இப்போது முன்பதிவு செய்யுங்கள்",
-
-        viewEsevai:
-            "E-SEVAI சேவைகள்",
-
-
-        travelsTitle:
-            "பூஜா டிராவல்ஸ்",
-
-        travelsSubtitle:
-            "எளிதான பயண டிக்கெட் முன்பதிவு மற்றும் வழக்கமான வாடிக்கையாளர்களுக்கு சிறப்பு சலுகைகள்",
-
-        travelLabel:
-            "🚌 TRAVEL TICKET BOOKING",
-
-        travelTitle:
-            "வழக்கமான டிக்கெட் கட்டணத்தில் பயண டிக்கெட் முன்பதிவு",
-
-        travelDescription:
-            "பூஜா டிராவல்ஸ் மூலம் பிரபலமான பயண பேருந்து சேவைகளுக்கான டிக்கெட்டுகளை ஆன்லைனில் வழக்கமான டிக்கெட் கட்டணத்தில் எளிதாக முன்பதிவு செய்யலாம்.",
-
-        travelFeature1:
-            "வழக்கமான டிக்கெட் கட்டணத்தில் முன்பதிவு",
-
-        travelFeature2:
-            "விரைவான மற்றும் எளிதான முன்பதிவு",
-
-        travelFeature3:
-            "Vivegam Travels, SBM Travels போன்ற சேவைகள்",
-
-        travelFeature4:
-            "வழக்கமான வாடிக்கையாளர்களுக்கு பிரத்யேக தள்ளுபடி",
-
-        travelCall:
-            "டிக்கெட் முன்பதிவுக்கு அழைக்கவும்",
-
-
-        discountTitle:
-            "வழக்கமான வாடிக்கையாளர்களுக்கு பிரத்யேக தள்ளுபடி",
-
-        discountDescription:
-            "தொடர்ந்து எங்களிடம் பயண டிக்கெட் முன்பதிவு செய்யும் வாடிக்கையாளர்களுக்கு சிறப்பு தள்ளுபடிகள் மற்றும் பிரத்யேக சலுகைகள் வழங்கப்படும்.",
-
-        discountHighlight:
-            "வழக்கமான வாடிக்கையாளர்களுக்கு பிரத்யேக தள்ளுபடி!",
-
-        askDiscount:
-            "சலுகையைப் பற்றி கேளுங்கள்",
-
-
-        busServicesTitle:
-            "பிரபலமான பயண சேவைகள்",
-
-        busServicesSubtitle:
-            "பிரபலமான பேருந்து சேவைகளுக்கான டிக்கெட் முன்பதிவு உதவி",
-
-        vivegamText:
-            "Vivegam Travels டிக்கெட் முன்பதிவு தொடர்பான உதவி கிடைக்கும்.",
-
-        sbmText:
-            "SBM Travels டிக்கெட் முன்பதிவு தொடர்பான உதவி கிடைக்கும்.",
-
-
-        eseveiTitle:
-            "E-SEVAI Services",
-
-        eseveiSubtitle:
-            "அரசு அங்கீகரிக்கப்பட்ட E-SEVAI மையம் மூலம் பல்வேறு சான்றிதழ் சேவைகள்",
-
-        officialBadge:
-            "Government-Authorized E-SEVAI Centre",
-
-        eseveiHeading:
-            "அரசு அங்கீகரிக்கப்பட்ட E-SEVAI சேவை மையம்",
-
-        eseveiText1:
-            "அத்தியாவசிய அரசு சான்றிதழ்கள் மற்றும் குடிமக்கள் சேவைகளுக்கான விண்ணப்பங்களை எங்கள் அரசு அங்கீகரிக்கப்பட்ட E-SEVAI மையத்தின் மூலம் எளிதாகப் பெறலாம்.",
-
-        eseveiText2:
-            "விண்ணப்ப செயல்முறை, தேவையான ஆவணங்கள், ஆவண சமர்ப்பிப்பு மற்றும் பிற ஆன்லைன் நடைமுறைகளில் தேவையான உதவியை வழங்குகிறோம்.",
-
-        officialNote:
-            "அரசு சேவைகளை அதிகாரப்பூர்வமான E-SEVAI முறையின் மூலம் அணுகுவதற்கு எங்கள் அங்கீகரிக்கப்பட்ட மையத்தை அணுகுங்கள்.",
-
-        eseveiCall:
-            "E-SEVAI சேவைகளுக்கு அழைக்கவும்",
-
-
-        certificateTitle:
-            "சான்றிதழ் சேவைகள்",
-
-        certificate1:
-            "வருமானச் சான்றிதழ் (Income Certificate)",
-
-        certificate2:
-            "சமூகச் சான்றிதழ் (Community Certificate)",
-
-        certificate3:
-            "சட்ட வாரிசுச் சான்றிதழ் (Legal Heir Certificate)",
-
-        certificate4:
-            "பூர்வீகம் / இருப்பிடச் சான்றிதழ்",
-
-        certificate5:
-            "பிற அரசு சான்றிதழ்கள்",
-
-        certificate6:
-            "பல்வேறு அரசு ஆன்லைன் சேவைகள்",
-
-
-        servicesTitle:
-            "எங்கள் சேவைகள்",
-
-        servicesSubtitle:
-            "உங்கள் அன்றாட தேவைகளுக்கான நம்பகமான சேவைகள்",
-
-        serviceTravelTitle:
-            "Travels Ticket Booking",
-
-        serviceTravelDescription:
-            "வழக்கமான டிக்கெட் கட்டணத்தில் பயண டிக்கெட்டுகளை முன்பதிவு செய்யுங்கள். வழக்கமான வாடிக்கையாளர்களுக்கு பிரத்யேக தள்ளுபடிகள் கிடைக்கும்.",
-
-        serviceEsevaiTitle:
-            "E-SEVAI Services",
-
-        serviceEsevaiDescription:
-            "அரசு அங்கீகரிக்கப்பட்ட E-SEVAI மையம் மூலம் Income, Community, Legal Heir மற்றும் பல்வேறு சான்றிதழ் சேவைகள்.",
-
-        mobileTitle:
-            "மொபைல் சேவைகள்",
-
-        mobileDescription:
-            "மொபைல் தொடர்பான சேவைகளுக்கு எங்களை அணுகுங்கள்.",
-
-
-        aboutTitle:
-            "எங்களைப் பற்றி",
-
-        aboutText1:
-            "பூஜா டிராவல்ஸ் மற்றும் E-SEVAI சேவை மையம் வாடிக்கையாளர்களுக்கு எளிதான, நம்பகமான மற்றும் நட்பான சேவையை வழங்கும் நோக்கத்துடன் செயல்படுகிறது.",
-
-        aboutText2:
-            "பயண டிக்கெட் முன்பதிவு முதல் அரசு சான்றிதழ் சேவைகள் வரை, உங்கள் அன்றாட தேவைகளுக்கு ஒரே இடத்தில் உதவி வழங்குகிறோம்.",
-
-
-        whyTitle:
-            "ஏன் எங்களை தேர்வு செய்ய வேண்டும்?",
-
-        why1:
-            "வழக்கமான டிக்கெட் கட்டணத்தில் முன்பதிவு",
-
-        why2:
-            "வழக்கமான வாடிக்கையாளர்களுக்கு சிறப்பு தள்ளுபடி",
-
-        why3:
-            "அரசு அங்கீகரிக்கப்பட்ட E-SEVAI சேவை",
-
-        why4:
-            "எளிதான மற்றும் விரைவான சேவை",
-
-
-        contactTitle:
-            "தொடர்பு கொள்ளுங்கள்",
-
-        contactSubtitle:
-            "டிக்கெட் முன்பதிவு மற்றும் E-SEVAI சேவைகளுக்கு எங்களை அணுகுங்கள்",
-
-        phoneTitle:
-            "தொலைபேசி",
-
-        emailTitle:
-            "மின்னஞ்சல்",
-
-        callButton:
-            "அழைக்கவும்",
-
-        emailButton:
-            "மின்னஞ்சல் அனுப்பவும்",
-
-        footerText:
-            "© 2026 பூஜா டிராவல்ஸ் & மொபைல்ஸ் • அனைத்து உரிமைகளும் பாதுகாக்கப்பட்டவை"
-
-    },
-
-
-    /* =================================================
-       ENGLISH
-    ================================================= */
-
-    en: {
-
-        topWelcome:
-            "Pooja Travels",
-
-        brandName:
-            "Pooja Travels",
-
-        navHome:
-            "Home",
-
-        navTravels:
-            "Travels",
-
-        navEsevai:
-            "E-SEVAI",
-
-        navServices:
-            "Services",
-
-        navAbout:
-            "About Us",
-
-        navContact:
-            "Contact",
-
-        blessing:
-            "With the Blessings of Sri Kamakshi Amman",
-
-
-        heroPooja:
-            "Pooja",
-
-        heroTravels:
-            "Travels",
-
-        heroBooking:
-            "Travel Ticket Booking",
-
-        heroDescription:
-            "Book your travel tickets online at regular ticket rates. Regular customers who frequently book with us can enjoy exclusive discounts and special offers.",
-
-        heroFeature1:
-            "Regular Ticket Rates",
-
-        heroFeature1Sub:
-            "Book at Regular Ticket Rates",
-
-        heroFeature2:
-            "Exclusive Discounts",
-
-        heroFeature2Sub:
-            "For Regular Customers",
-
-        heroFeature3:
-            "Quick Booking",
-
-        heroFeature3Sub:
-            "Quick & Easy Booking",
-
-        bookNow:
-            "Book Your Ticket",
-
-        viewEsevai:
-            "E-SEVAI Services",
-
-
-        travelsTitle:
-            "Pooja Travels",
-
-        travelsSubtitle:
-            "Easy travel ticket booking with exclusive benefits for regular customers",
-
-        travelLabel:
-            "🚌 TRAVEL TICKET BOOKING",
-
-        travelTitle:
-            "Travel Ticket Booking at Regular Ticket Rates",
-
-        travelDescription:
-            "Book travel tickets easily through Pooja Travels at regular ticket rates. We provide booking assistance for popular travel bus services.",
-
-        travelFeature1:
-            "Book at regular ticket rates",
-
-        travelFeature2:
-            "Quick and easy booking",
-
-        travelFeature3:
-            "Vivegam Travels, SBM Travels and more",
-
-        travelFeature4:
-            "Exclusive discounts for regular customers",
-
-        travelCall:
-            "Call for Ticket Booking",
-
-
-        discountTitle:
-            "Exclusive Discounts for Regular Customers",
-
-        discountDescription:
-            "Customers who regularly book their travel tickets with us can enjoy special discounts and exclusive offers.",
-
-        discountHighlight:
-            "Regular customers enjoy exclusive discounts!",
-
-        askDiscount:
-            "Ask About Discounts",
-
-
-        busServicesTitle:
-            "Popular Travel Services",
-
-        busServicesSubtitle:
-            "Ticket booking assistance for popular travel bus services",
-
-        vivegamText:
-            "Travel ticket booking assistance available for Vivegam Travels.",
-
-        sbmText:
-            "Travel ticket booking assistance available for SBM Travels.",
-
-
-        eseveiTitle:
-            "E-SEVAI Services",
-
-        eseveiSubtitle:
-            "Government-authorized E-SEVAI centre for certificate and citizen services",
-
-        officialBadge:
-            "Government-Authorized E-SEVAI Centre",
-
-        eseveiHeading:
-            "Government-Authorized E-SEVAI Service Centre",
-
-        eseveiText1:
-            "Access essential government certificate and citizen services conveniently through our government-authorized E-SEVAI centre.",
-
-        eseveiText2:
-            "We assist customers with application procedures, required documents, document submission and other necessary online processes.",
-
-        officialNote:
-            "For eligible government services, visit our authorized E-SEVAI centre and get assistance through the official E-SEVAI system.",
-
-        eseveiCall:
-            "Call for E-SEVAI Services",
-
-
-        certificateTitle:
-            "Certificate Services",
-
-        certificate1:
-            "Income Certificate",
-
-        certificate2:
-            "Community Certificate",
-
-        certificate3:
-            "Legal Heir Certificate",
-
-        certificate4:
-            "Nativity / Residence Certificate",
-
-        certificate5:
-            "Other Government Certificates",
-
-        certificate6:
-            "Various Government Online Services",
-
-
-        servicesTitle:
-            "Our Services",
-
-        servicesSubtitle:
-            "Reliable services for your everyday needs",
-
-        serviceTravelTitle:
-            "Travels Ticket Booking",
-
-        serviceTravelDescription:
-            "Book travel tickets at regular ticket rates. Regular customers can enjoy exclusive discounts.",
-
-        serviceEsevaiTitle:
-            "E-SEVAI Services",
-
-        serviceEsevaiDescription:
-            "Government-authorized E-SEVAI centre providing assistance for Income, Community, Legal Heir and other certificate services.",
-
-        mobileTitle:
-            "Mobile Services",
-
-        mobileDescription:
-            "Get reliable assistance for your mobile-related service needs.",
-
-
-        aboutTitle:
-            "About Us",
-
-        aboutText1:
-            "Pooja Travels and E-SEVAI Service Centre are committed to providing easy, reliable and customer-friendly services.",
-
-        aboutText2:
-            "From travel ticket booking to government certificate services, we aim to provide convenient assistance for your everyday needs.",
-
-
-        whyTitle:
-            "Why Choose Us?",
-
-        why1:
-            "Booking at regular ticket rates",
-
-        why2:
-            "Exclusive discounts for regular customers",
-
-        why3:
-            "Government-authorized E-SEVAI service",
-
-        why4:
-            "Easy and quick service",
-
-
-        contactTitle:
-            "Get In Touch",
-
-        contactSubtitle:
-            "Contact us for ticket booking and E-SEVAI services",
-
-        phoneTitle:
-            "Phone",
-
-        emailTitle:
-            "Email",
-
-        callButton:
-            "Call Us",
-
-        emailButton:
-            "Send Email",
-
-        footerText:
-            "© 2026 Pooja Travels & Mobiles • All Rights Reserved"
-
-    }
-
-};
-
-
-
-/* =====================================================
-   LANGUAGE SWITCH
-===================================================== */
-
-const languageSelect =
-    document.getElementById("languageSelect");
-
-
-function changeLanguage(language){
-
-    const content =
-        translations[language];
-
-
-    document
-        .querySelectorAll("[data-i18n]")
-        .forEach(element => {
-
-            const key =
-                element.getAttribute("data-i18n");
-
-
-            if(content[key]){
-
-                element.textContent =
-                    content[key];
-
-            }
-
-        });
-
-
-    document.documentElement.lang =
-        language;
-
-
-    localStorage.setItem(
-        "poojaLanguage",
-        language
-    );
-
-
-    if(language === "en"){
-
-        document.title =
-            "Pooja Travels & Mobiles";
-
-    }else{
-
-        document.title =
-            "பூஜா டிராவல்ஸ் & மொபைல்ஸ்";
-
-    }
-
-}
-
-
-/* =====================================================
-   DROPDOWN
-===================================================== */
-
-languageSelect.addEventListener(
-    "change",
-    function(){
-
-        changeLanguage(
-            this.value
-        );
-
-    }
-);
-
-
-/* =====================================================
-   LOAD SAVED LANGUAGE
-===================================================== */
-
-const savedLanguage =
-    localStorage.getItem(
-        "poojaLanguage"
-    ) || "ta";
-
-
-languageSelect.value =
-    savedLanguage;
-
-
-changeLanguage(
-    savedLanguage
-);
-
+(function(){
+  "use strict";
+
+  /* ============ Language switching ============ */
+  var STORAGE_KEY = "poojaMobilesLang";
+  var currentLang = localStorage.getItem(STORAGE_KEY) || "en";
+
+  function applyLanguage(lang){
+    currentLang = lang;
+    document.documentElement.lang = lang === "ta" ? "ta" : "en";
+    document.querySelectorAll("[data-en]").forEach(function(el){
+      var value = lang === "ta" ? el.getAttribute("data-ta") : el.getAttribute("data-en");
+      if (value !== null) { el.textContent = value; }
+    });
+    document.querySelectorAll(".lang-switch button").forEach(function(btn){
+      btn.classList.toggle("active", btn.getAttribute("data-lang") === lang);
+    });
+    localStorage.setItem(STORAGE_KEY, lang);
+    renderInvitationGallery(activeCategory);
+  }
+
+  document.querySelectorAll(".lang-switch button").forEach(function(btn){
+    btn.addEventListener("click", function(){
+      applyLanguage(btn.getAttribute("data-lang"));
+    });
+  });
+
+  /* ============ Mobile nav ============ */
+  var hamburgerBtn = document.getElementById("hamburgerBtn");
+  var mobileNav = document.getElementById("mobileNav");
+  var siteHeader = document.querySelector(".site-header");
+  function positionMobileNav(){
+    mobileNav.style.top = siteHeader.offsetHeight + "px";
+  }
+  window.addEventListener("resize", positionMobileNav);
+  hamburgerBtn.addEventListener("click", function(){
+    positionMobileNav();
+    var isOpen = mobileNav.classList.toggle("open");
+    hamburgerBtn.setAttribute("aria-expanded", isOpen ? "true" : "false");
+  });
+  mobileNav.querySelectorAll("a").forEach(function(a){
+    a.addEventListener("click", function(){
+      mobileNav.classList.remove("open");
+      hamburgerBtn.setAttribute("aria-expanded", "false");
+    });
+  });
+
+  /* ============ Service tab smooth scroll ============ */
+  document.querySelectorAll(".service-tab").forEach(function(tab){
+    tab.addEventListener("click", function(){
+      var target = document.querySelector(tab.getAttribute("data-target"));
+      if (target) { target.scrollIntoView({behavior:"smooth"}); }
+    });
+  });
+
+  /* ============ Image fallback helper ============ */
+  window.showImgFallback = function(imgEl, icon){
+    var parent = imgEl.parentElement;
+    imgEl.remove();
+    var fallback = document.createElement("div");
+    fallback.className = "img-fallback";
+    fallback.innerHTML = '<span class="icon" aria-hidden="true">' + icon + '</span><span data-en="Image coming soon" data-ta="படம் விரைவில்">Image coming soon</span>';
+    parent.appendChild(fallback);
+    var textEl = fallback.querySelector("[data-en]");
+    textEl.textContent = currentLang === "ta" ? textEl.getAttribute("data-ta") : textEl.getAttribute("data-en");
+  };
+
+  /* ============ Invitation gallery ============ */
+  var invitationProducts = {
+    houseWarming: [
+      { id:"hw1", nameEn:"House Warming Invitation – Design 01", nameTa:"கிரகப்பிரவேசம் அழைப்பிதழ் – வடிவமைப்பு 01", image:"images/printing/invitations/house-warming/invitation-01.jpg" },
+      { id:"hw2", nameEn:"House Warming Invitation – Design 02", nameTa:"கிரகப்பிரவேசம் அழைப்பிதழ் – வடிவமைப்பு 02", image:"images/printing/invitations/house-warming/invitation-02.jpg" },
+      { id:"hw3", nameEn:"House Warming Invitation – Design 03", nameTa:"கிரகப்பிரவேசம் அழைப்பிதழ் – வடிவமைப்பு 03", image:"images/printing/invitations/house-warming/invitation-03.jpg" },
+      { id:"hw4", nameEn:"House Warming Invitation – Design 04", nameTa:"கிரகப்பிரவேசம் அழைப்பிதழ் – வடிவமைப்பு 04", image:"images/printing/invitations/house-warming/invitation-04.jpg" }
+    ],
+    wedding: [
+      { id:"wd1", nameEn:"Wedding Invitation – Design 01", nameTa:"திருமண அழைப்பிதழ் – வடிவமைப்பு 01", image:"images/printing/invitations/wedding/invitation-01.jpg" },
+      { id:"wd2", nameEn:"Wedding Invitation – Design 02", nameTa:"திருமண அழைப்பிதழ் – வடிவமைப்பு 02", image:"images/printing/invitations/wedding/invitation-02.jpg" },
+      { id:"wd3", nameEn:"Wedding Invitation – Design 03", nameTa:"திருமண அழைப்பிதழ் – வடிவமைப்பு 03", image:"images/printing/invitations/wedding/invitation-03.jpg" },
+      { id:"wd4", nameEn:"Wedding Invitation – Design 04", nameTa:"திருமண அழைப்பிதழ் – வடிவமைப்பு 04", image:"images/printing/invitations/wedding/invitation-04.jpg" }
+    ],
+    puberty: [
+      { id:"pb1", nameEn:"Puberty Ceremony Invitation – Design 01", nameTa:"பூப்புனித நீராட்டு விழா அழைப்பிதழ் – வடிவமைப்பு 01", image:"images/printing/invitations/puberty/invitation-01.jpg" },
+      { id:"pb2", nameEn:"Puberty Ceremony Invitation – Design 02", nameTa:"பூப்புனித நீராட்டு விழா அழைப்பிதழ் – வடிவமைப்பு 02", image:"images/printing/invitations/puberty/invitation-02.jpg" },
+      { id:"pb3", nameEn:"Puberty Ceremony Invitation – Design 03", nameTa:"பூப்புனித நீராட்டு விழா அழைப்பிதழ் – வடிவமைப்பு 03", image:"images/printing/invitations/puberty/invitation-03.jpg" },
+      { id:"pb4", nameEn:"Puberty Ceremony Invitation – Design 04", nameTa:"பூப்புனித நீராட்டு விழா அழைப்பிதழ் – வடிவமைப்பு 04", image:"images/printing/invitations/puberty/invitation-04.jpg" }
+    ]
+  };
+  // NOTE: All prices below are placeholders. Replace "₹XX / Piece" with actual pricing whenever available.
+  var PLACEHOLDER_PRICE_EN = "₹XX / Piece";
+  var PLACEHOLDER_PRICE_TA = "₹XX / ஒரு பீஸ்";
+
+  var activeCategory = "houseWarming";
+  var inviteGrid = document.getElementById("inviteGrid");
+
+  function renderInvitationGallery(category){
+    activeCategory = category;
+    var items = invitationProducts[category] || [];
+    inviteGrid.innerHTML = "";
+    items.forEach(function(item){
+      var name = currentLang === "ta" ? item.nameTa : item.nameEn;
+      var price = currentLang === "ta" ? PLACEHOLDER_PRICE_TA : PLACEHOLDER_PRICE_EN;
+      var enquireLabel = currentLang === "ta" ? "விசாரிக்கவும்" : "Enquire Now";
+      var whatsappMsgEn = "Hello Pooja Mobiles,\n\nI am interested in " + item.nameEn + ".\n\nPlease share the price and other details.";
+      var whatsappMsgTa = "வணக்கம் பூஜா மொபைல்ஸ்,\n\nநான் " + item.nameTa + " குறித்து ஆர்வமாக உள்ளேன்.\n\nவிலை மற்றும் பிற விவரங்களைத் தெரிவிக்கவும்.";
+      var whatsappMsg = currentLang === "ta" ? whatsappMsgTa : whatsappMsgEn;
+      var waLink = "https://wa.me/919600372621?text=" + encodeURIComponent(whatsappMsg);
+
+      var card = document.createElement("article");
+      card.className = "invite-card";
+
+      var media = document.createElement("div");
+      media.className = "invite-media";
+      var img = document.createElement("img");
+      img.src = item.image;
+      img.alt = name;
+      img.loading = "lazy";
+      img.addEventListener("error", function(){ window.showImgFallback(img, "🎉"); });
+      img.addEventListener("click", function(){ openLightbox(img.src, name); });
+      media.appendChild(img);
+
+      var body = document.createElement("div");
+      body.className = "invite-body";
+      body.innerHTML =
+        '<span class="name">' + name + '</span>' +
+        '<span class="price">' + price + '</span>' +
+        '<a class="btn btn-maroon btn-sm btn-block" target="_blank" rel="noopener" href="' + waLink + '">' + enquireLabel + '</a>' +
+        '<a class="btn btn-ghost btn-sm btn-block" href="tel:9600372621">' + (currentLang === "ta" ? "இப்போது அழைக்கவும்" : "Call Now") + '</a>';
+
+      card.appendChild(media);
+      card.appendChild(body);
+      inviteGrid.appendChild(card);
+    });
+  }
+
+  document.querySelectorAll(".invite-tab").forEach(function(tab){
+    tab.addEventListener("click", function(){
+      document.querySelectorAll(".invite-tab").forEach(function(t){
+        t.classList.remove("active");
+        t.setAttribute("aria-selected","false");
+      });
+      tab.classList.add("active");
+      tab.setAttribute("aria-selected","true");
+      renderInvitationGallery(tab.getAttribute("data-category"));
+    });
+  });
+
+  /* ============ Lightbox ============ */
+  var lightbox = document.getElementById("lightbox");
+  var lightboxImg = document.getElementById("lightboxImg");
+  var lightboxCaption = document.getElementById("lightboxCaption");
+  var lightboxClose = document.getElementById("lightboxClose");
+
+  function openLightbox(src, caption){
+    lightboxImg.src = src;
+    lightboxImg.alt = caption;
+    lightboxCaption.textContent = caption;
+    lightbox.classList.add("open");
+  }
+  function closeLightbox(){
+    lightbox.classList.remove("open");
+    lightboxImg.src = "";
+  }
+  lightboxClose.addEventListener("click", closeLightbox);
+  lightbox.addEventListener("click", function(e){
+    if (e.target === lightbox) { closeLightbox(); }
+  });
+  document.addEventListener("keydown", function(e){
+    if (e.key === "Escape" && lightbox.classList.contains("open")) { closeLightbox(); }
+  });
+
+  /* ============ Init ============ */
+  applyLanguage(currentLang);
+  renderInvitationGallery(activeCategory);
+})();
 </script>
-
-
 </body>
-
 </html>
