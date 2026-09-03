@@ -1133,6 +1133,7 @@
         opacity: 0;
         transform: scale(.94);
       }
+
       to {
         opacity: 1;
         transform: scale(1);
@@ -1234,13 +1235,10 @@
 
 
   <!-- ============================================================ LAUNCH BANNER POPUP ============================================================ -->
-  <div class="launch-popup" id="launchPopup" role="dialog" aria-modal="true"
-    aria-label="Launch banner">
+  <div class="launch-popup" id="launchPopup" role="dialog" aria-modal="true" aria-label="Launch banner">
     <div class="launch-popup-content">
-      <button type="button" class="launch-popup-close" id="launchPopupClose"
-        aria-label="Close banner">&times;</button>
-      <img class="launch-popup-image" src="images/launch.png"
-        alt="Launch banner"
+      <button type="button" class="launch-popup-close" id="launchPopupClose" aria-label="Close banner">&times;</button>
+      <img class="launch-popup-image" src="images/launch.png" alt="Launch banner"
         onerror="this.closest('.launch-popup').hidden = true">
     </div>
   </div>
@@ -1249,8 +1247,7 @@
   <header class="site-header">
     <div class="container header-inner">
       <a href="#home" class="brand" aria-label="Pooja Sri Mobiles & Travels, home">
-        <img src="images/favicon.png" alt="Pooja Sri Mobiles & Travels logo"
-          onerror="this.style.display='none'">
+        <img src="images/favicon.png" alt="Pooja Sri Mobiles & Travels logo" onerror="this.style.display='none'">
         <span class="brand-text">
           <span class="brand-name">Pooja Sri Mobiles & Travels</span>
           <span class="brand-sub" data-en="Travels • E-Sevai • Printing"
@@ -1798,6 +1795,42 @@
           </article>
           <article class="operator-card">
             <div class="operator-media">
+              <img src="images/travels/zing.jpg" alt="Zing Bus" loading="lazy"
+                onerror="window.showImgFallback(this,'🚌')">
+            </div>
+            <div class="operator-body">
+              <h3>Zing Bus</h3>
+              <p data-en="AC Seater & Sleeper Buses Available."
+                data-ta="AC இருக்கை மற்றும் படுக்கை வசதி கொண்ட பேருந்துகள் உள்ளன.">
+              </p>
+            </div>
+          </article>
+          <article class="operator-card">
+            <div class="operator-media">
+              <img src="images/travels/intrCity.jpg" alt="IntrCity Travels" loading="lazy"
+                onerror="window.showImgFallback(this,'🚌')">
+            </div>
+            <div class="operator-body">
+              <h3>IntrCity Travels</h3>
+              <p data-en="AC Seater & Sleeper Buses Available."
+                data-ta="AC இருக்கை மற்றும் படுக்கை வசதி கொண்ட பேருந்துகள் உள்ளன.">
+              </p>
+            </div>
+          </article>
+          <article class="operator-card">
+            <div class="operator-media">
+              <img src="images/travels/flix.jpg" alt="Flix Bus" loading="lazy"
+                onerror="window.showImgFallback(this,'🚌')">
+            </div>
+            <div class="operator-body">
+              <h3>Flix Bus</h3>
+              <p data-en="AC Seater & Sleeper Buses Available."
+                data-ta="AC இருக்கை மற்றும் படுக்கை வசதி கொண்ட பேருந்துகள் உள்ளன.">
+              </p>
+            </div>
+          </article>
+          <article class="operator-card">
+            <div class="operator-media">
               <img src="images/travels/royalroad.jpg" alt="Royal RoadLinks bus" loading="lazy"
                 onerror="window.showImgFallback(this,'🚌')">
             </div>
@@ -1967,6 +2000,20 @@
               </p>
             </div>
           </article>
+
+          <article class="operator-card">
+            <div class="operator-media">
+              <img src="images/travels/veevee.jpg" alt="Vee Vee Travels" loading="lazy"
+                onerror="window.showImgFallback(this,'🚌')">
+            </div>
+            <div class="operator-body">
+              <h3>Vee Vee Travels</h3>
+              <p data-en="AC Seater & Sleeper Buses Available."
+                data-ta="AC இருக்கை மற்றும் படுக்கை வசதி கொண்ட பேருந்துகள் உள்ளன.">Frequent departures across
+                South India.
+              </p>
+            </div>
+          </article>
         </div>
       </div>
 
@@ -1994,7 +2041,8 @@
       <div class="esevai-intro">
         <div>
           <span class="badge">✔ <span data-en="State & Central Government-Authorized E-Sevai Centre"
-              data-ta="மாநில மற்றும் மத்திய அரசு அங்கீகரிக்கப்பட்ட இ-சேவை மையம்">Government-Authorized E-Sevai Centre</span></span>
+              data-ta="மாநில மற்றும் மத்திய அரசு அங்கீகரிக்கப்பட்ட இ-சேவை மையம்">Government-Authorized E-Sevai
+              Centre</span></span>
           <p data-en="We provide assistance for applying for various government certificates and citizen services, guiding you through the required steps at our centre."
             data-ta="பல்வேறு அரசு சான்றிதழ்கள் மற்றும் குடிமக்கள் சேவைகளுக்கு விண்ணப்பிக்க எங்கள் மையத்தில் தேவையான வழிகாட்டுதலுடன் உதவி வழங்குகிறோம்.">
             We provide assistance for applying for various government certificates and citizen services, guiding you
@@ -2015,18 +2063,18 @@
         </div>
         <div class="cert-card">
           <h3 data-en="Community Certificate" data-ta="சமூகச் சான்றிதழ்">Community Certificate</h3>
-          <p data-en="Assistance applying for a community certificate."
-            data-ta="சமூகச் சான்றிதழுக்கு விண்ணப்பிக்க.">Assistance applying for a community certificate.</p>
+          <p data-en="Assistance applying for a community certificate." data-ta="சமூகச் சான்றிதழுக்கு விண்ணப்பிக்க.">
+            Assistance applying for a community certificate.</p>
         </div>
         <div class="cert-card">
           <h3 data-en="Legal Heir Certificate" data-ta="வாரிசுச் சான்றிதழ்">Legal Heir Certificate</h3>
-          <p data-en="Assistance applying for a legal heir certificate."
-            data-ta="வாரிசுச் சான்றிதழுக்கு விண்ணப்பிக்க.">Assistance applying for a legal heir certificate.</p>
+          <p data-en="Assistance applying for a legal heir certificate." data-ta="வாரிசுச் சான்றிதழுக்கு விண்ணப்பிக்க.">
+            Assistance applying for a legal heir certificate.</p>
         </div>
         <div class="cert-card">
           <h3 data-en="Income Certificate" data-ta="வருமானச் சான்றிதழ்">Income Certificate</h3>
-          <p data-en="Assistance applying for an income certificate."
-            data-ta="வருமானச் சான்றிதழுக்கு விண்ணப்பிக்க.">Assistance applying for an income certificate.</p>
+          <p data-en="Assistance applying for an income certificate." data-ta="வருமானச் சான்றிதழுக்கு விண்ணப்பிக்க.">
+            Assistance applying for an income certificate.</p>
         </div>
         <div class="cert-card">
           <h3 data-en="Residence Certificate" data-ta="குடியிருப்புச் சான்றிதழ்">Residence Certificate</h3>
@@ -2056,7 +2104,8 @@
           <h3 data-en="Need help with a certificate application?" data-ta="சான்றிதழ் விண்ணப்பத்திற்கு உதவி வேண்டுமா?">
             Need help with a certificate application?</h3>
           <p data-en="Visit Pooja Sri Mobiles & Travels or call 9600372621."
-            data-ta="பூஜா ஸ்ரீ மொபைல்ஸை நேரில் வருகை தரவும் அல்லது 9600372621 ஐ அழைக்கவும்.">Visit Pooja Sri Mobiles & Travels or
+            data-ta="பூஜா ஸ்ரீ மொபைல்ஸை நேரில் வருகை தரவும் அல்லது 9600372621 ஐ அழைக்கவும்.">Visit Pooja Sri Mobiles &
+            Travels or
             call
             9600372621.</p>
         </div>
@@ -2137,7 +2186,8 @@
         <div>
           <h3 data-en="Have a printing requirement?" data-ta="பிரிண்டிங் தேவை உள்ளதா?">Have a printing requirement?</h3>
           <p data-en="Call or visit Pooja Sri Mobiles & Travels — we're happy to help."
-            data-ta="பூஜா ஸ்ரீ மொபைல்ஸை அழைக்கவும் அல்லது வருகை தரவும் — உதவ தயாராக உள்ளோம்.">Call or visit Pooja Mobiles &
+            data-ta="பூஜா ஸ்ரீ மொபைல்ஸை அழைக்கவும் அல்லது வருகை தரவும் — உதவ தயாராக உள்ளோம்.">Call or visit Pooja
+            Mobiles &
             Travels —
             we're happy to help.</p>
         </div>
@@ -2151,7 +2201,8 @@
     <div class="container">
       <div class="section-head">
         <span class="eyebrow" data-en="Contact" data-ta="தொடர்பு">Contact</span>
-        <h2 data-en="Contact Pooja Sri Mobiles & Travels" data-ta="பூஜா ஸ்ரீ மொபைல்ஸை தொடர்புகொள்ளுங்கள்">Contact Pooja Mobiles &
+        <h2 data-en="Contact Pooja Sri Mobiles & Travels" data-ta="பூஜா ஸ்ரீ மொபைல்ஸை தொடர்புகொள்ளுங்கள்">Contact Pooja
+          Mobiles &
           Travels</h2>
       </div>
 
@@ -2221,7 +2272,8 @@
     </div>
     <div class="container footer-bottom">
       <span data-en="© 2026 Pooja Sri Mobiles & Travels. All Rights Reserved."
-        data-ta="© 2026 பூஜா ஸ்ரீ மொபைல்ஸ். அனைத்து உரிமைகளும் பாதுகாக்கப்பட்டவை.">© 2026 Pooja Sri Mobiles & Travels. All Rights
+        data-ta="© 2026 பூஜா ஸ்ரீ மொபைல்ஸ். அனைத்து உரிமைகளும் பாதுகாக்கப்பட்டவை.">© 2026 Pooja Sri Mobiles & Travels.
+        All Rights
         Reserved.</span>
     </div>
   </footer>
