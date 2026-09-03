@@ -1063,6 +1063,106 @@
       background: var(--gold-light);
     }
 
+
+    /* ============ Launch Banner Popup ============ */
+    .launch-popup {
+      position: fixed;
+      inset: 0;
+      z-index: 200;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+      background: rgba(0, 0, 0, .72);
+      backdrop-filter: blur(3px);
+      -webkit-backdrop-filter: blur(3px);
+    }
+
+    .launch-popup[hidden] {
+      display: none;
+    }
+
+    .launch-popup-content {
+      position: relative;
+      width: min(92vw, 900px);
+      max-height: 92vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      animation: launchPopupIn .25s ease-out;
+    }
+
+    .launch-popup-image {
+      display: block;
+      width: 100%;
+      max-width: 100%;
+      max-height: 88vh;
+      height: auto;
+      object-fit: contain;
+      border-radius: 16px;
+      box-shadow: 0 24px 60px rgba(0, 0, 0, .45);
+    }
+
+    .launch-popup-close {
+      position: absolute;
+      top: -14px;
+      right: -14px;
+      width: 42px;
+      height: 42px;
+      border: 2px solid #fff;
+      border-radius: 50%;
+      background: var(--maroon);
+      color: #fff;
+      font-size: 1.5rem;
+      line-height: 1;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 6px 18px rgba(0, 0, 0, .35);
+      z-index: 1;
+    }
+
+    .launch-popup-close:hover {
+      background: var(--maroon-dark);
+      transform: scale(1.05);
+    }
+
+    @keyframes launchPopupIn {
+      from {
+        opacity: 0;
+        transform: scale(.94);
+      }
+      to {
+        opacity: 1;
+        transform: scale(1);
+      }
+    }
+
+    @media (max-width: 600px) {
+      .launch-popup {
+        padding: 14px;
+      }
+
+      .launch-popup-content {
+        width: 96vw;
+        max-height: 90vh;
+      }
+
+      .launch-popup-image {
+        max-height: 82vh;
+        border-radius: 12px;
+      }
+
+      .launch-popup-close {
+        top: -10px;
+        right: -6px;
+        width: 38px;
+        height: 38px;
+        font-size: 1.3rem;
+      }
+    }
+
     /* ============ Lightbox ============ */
     .lightbox {
       position: fixed;
@@ -1131,6 +1231,19 @@
 </head>
 
 <body>
+
+
+  <!-- ============================================================ LAUNCH BANNER POPUP ============================================================ -->
+  <div class="launch-popup" id="launchPopup" role="dialog" aria-modal="true"
+    aria-label="Launch banner">
+    <div class="launch-popup-content">
+      <button type="button" class="launch-popup-close" id="launchPopupClose"
+        aria-label="Close banner">&times;</button>
+      <img class="launch-popup-image" src="images/launch.png"
+        alt="Launch banner"
+        onerror="this.closest('.launch-popup').hidden = true">
+    </div>
+  </div>
 
   <!-- ============================================================ HEADER ============================================================ -->
   <header class="site-header">
@@ -2322,6 +2435,38 @@
       document.addEventListener("keydown", function (e) {
         if (e.key === "Escape" && lightbox.classList.contains("open")) { closeLightbox(); }
       });
+
+
+      /* ============ Launch Banner Popup ============ */
+      var launchPopup = document.getElementById("launchPopup");
+      var launchPopupClose = document.getElementById("launchPopupClose");
+
+      function closeLaunchPopup() {
+        launchPopup.hidden = true;
+        document.body.style.overflow = "";
+      }
+
+      function openLaunchPopup() {
+        launchPopup.hidden = false;
+        document.body.style.overflow = "hidden";
+      }
+
+      launchPopupClose.addEventListener("click", closeLaunchPopup);
+
+      launchPopup.addEventListener("click", function (e) {
+        if (e.target === launchPopup) {
+          closeLaunchPopup();
+        }
+      });
+
+      document.addEventListener("keydown", function (e) {
+        if (e.key === "Escape" && !launchPopup.hidden) {
+          closeLaunchPopup();
+        }
+      });
+
+      /* Show the launch banner every time the page is opened/refreshed. */
+      openLaunchPopup();
 
       /* ============ Init ============ */
       applyLanguage(currentLang);
